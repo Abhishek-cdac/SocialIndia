@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="notificationmgmt" extends="default">
+ 
+  <action name="getnotificationaction" class="com.socialindia.notificationmaster.NotificationServices" method="getnotification">
+    <result name="success">resources/jsp/notification/getnotification.jsp</result>
+     <result name="input">resources/jsp/notification/getnotification.jsp</result>
+  </action> 
+  <action name="postnotificationpage" class="com.socialindia.notificationmaster.NotificationServices" method="notificationForm">
+			<result name="success">resources/jsp/notification/notification.jsp</result>
+			<result name="input">resources/jsp/notification/notification.jsp</result>
+		</action>
+		 <action name="notificationdatatable" class="com.socialindia.notificationmaster.NotificationMasterDTable">
+    <result type="json"></result>
+  </action>
+   <action name="notificationreadaction" class="com.socialindia.notificationmaster.NotificationServices" method="notificationReadForm">
+    <result name="success">resources/jsp/notification/getnotification.jsp</result>
+     <result name="input">resources/jsp/notification/getnotification.jsp</result>
+  </action> 
+  <action name="deletenotificationaction" class="com.socialindia.notificationmaster.NotificationServices" method="notificationDeleteForm">
+  <result name="success">resources/jsp/notification/notification.jsp</result>
+    <result name="input">resources/jsp/notification/notification.jsp</result>
+  </action>
+   <action name="viewNotificationAction" class="com.socialindia.event.EventServices" method="viewServices">
+ 	<result name="success">resources/jsp/event/eventView.jsp</result>
+     <result name="input">resources/jsp/event/eventView.jsp</result>
+  </action>
+ </package>
+</struts>

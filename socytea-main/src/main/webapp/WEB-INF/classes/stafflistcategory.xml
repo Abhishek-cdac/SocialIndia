@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC  "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="staffcategorylist" extends="default">
+
+  <action name="staffcategorymanagedatatable" class="com.socialindia.staffcategorymaster.StaffCategoryMasterDTable">
+    <result type="json"></result>
+  </action>
+  
+  	<!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  	<action name="stfcatecrtstss" class="com.socialindia.staffcategorymaster.StaffcatgeAlertMsg">    
+     <result name="success">resources/jsp/staffcategorymgmt/staffcategorymgmt.jsp</result>   
+  	</action>
+  	<!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+  
+   <action name="createstaffcategorytype" class="com.socialindia.staffcategorymaster.StaffCategoryServices" method="StaffCategoryCreateFun">	
+   
+   <result name="success" type="redirectAction">stfcatecrtstss</result>
+    <result name="input" type="redirectAction">stfcatecrtstss</result>
+    <result name="error" type="redirectAction">stfcatecrtstss</result> 
+    <!-- <result name="success">resources/jsp/staffcategorymgmt/staffcategorymgmt.jsp</result>
+    <result name="input">resources/jsp/staffcategorymgmt/staffcategorymgmt.jsp</result>
+    <result name="error">resources/jsp/staffcategorymgmt/staffcategorymgmt.jsp</result> -->
+  </action> 
+   <action name="deleteactionstaffcategory" class="com.socialindia.staffcategorymaster.StaffCategoryServices" method="deleteActionfun">	
+    <result name="success">resources/jsp/staffcategorymgmt/staffcategorymgmt.jsp</result>
+    <result name="input">resources/jsp/staffcategorymgmt/staffcategorymgmt.jsp</result>
+    <result name="error">resources/jsp/staffcategorymgmt/staffcategorymgmt.jsp</result>
+  </action> 
+   <action name="activeactionstaffcategory" class="com.socialindia.staffcategorymaster.StaffCategoryServices"
+   method="activeActionfun">	
+    <result name="success">resources/jsp/staffcategorymgmt/staffcategorymgmt.jsp</result>
+    <result name="input">resources/jsp/staffcategorymgmt/staffcategorymgmt.jsp</result>
+    <result name="error">resources/jsp/staffcategorymgmt/staffcategorymgmt.jsp</result>
+  </action> 
+ </package>
+</struts>

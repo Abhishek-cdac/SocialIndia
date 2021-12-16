@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="educationlist" extends="default">
+
+  <action name="educationmanagedatatable" class="com.socialindia.educationlistmaster.EducationMasterDTable">
+    <result type="json"></result>
+  </action>
+  
+  	<!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  	<action name="edutioncrtsts" class="com.socialindia.educationlistmaster.EductionAlertMsg">    
+    	<result name="success">resources/jsp/educationlist/education.jsp</result>  
+  	</action>
+  	<!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+  
+   <action name="createeducationtype" class="com.socialindia.educationlistmaster.EducationServices"  method="educationCreateFun">	
+    <result name="success" type="redirectAction">edutioncrtsts</result>
+    <result name="input" type="redirectAction">edutioncrtsts</result>
+    <result name="error" type="redirectAction">edutioncrtsts</result>
+    <!--  <result name="success">resources/jsp/educationlist/education.jsp</result>
+    <result name="input">resources/jsp/educationlist/education.jsp</result>
+    <result name="error">resources/jsp/educationlist/education.jsp</result> -->
+  </action> 
+   <action name="deleteactioneducation" class="com.socialindia.educationlistmaster.EducationServices"
+   method="deleteActionfun">	
+    <result name="success">resources/jsp/educationlist/education.jsp</result>
+    <result name="input">resources/jsp/educationlist/education.jsp</result>
+    <result name="error">resources/jsp/educationlist/education.jsp</result>
+  </action> 
+   <action name="activeactioneducation" class="com.socialindia.educationlistmaster.EducationServices"
+   method="activeActionfun">	
+    <result name="success">resources/jsp/educationlist/education.jsp</result>
+    <result name="input">resources/jsp/educationlist/education.jsp</result>
+    <result name="error">resources/jsp/educationlist/education.jsp</result>
+  </action> 
+ </package>
+</struts>

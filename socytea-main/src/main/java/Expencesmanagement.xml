@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="expencesmgmt" extends="default">
+
+ <action name="Expencesmgmtdatatable" class="com.socialindia.expencesmgmt.ExpenseMgmtTbl">
+    <result type="json"></result>
+  </action>
+    <action name="createExpences" class="com.socialindia.expencesmgmt.ExpencesServices">
+    <result name="success">resources/jsp/expencesmgmt/expencesCreation.jsp</result>
+  </action>
+  
+  <!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  <action name="expencectssts" class="com.socialindia.expencesmgmt.Expencectralertmsg">
+     <result name="success">resources/jsp/expencesmgmt/expencesmanagement.jsp</result>
+  </action>
+  <!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+  
+   <action name="expencesCreateAction" class="com.socialindia.expencesmgmt.ExpencesServices" method="expenceCreateFun">
+    <!--<result name="success">resources/jsp/expencesmgmt/expencesmanagement.jsp</result>
+     <result name="input">resources/jsp/expencesmgmt/expencesmanagement.jsp</result>-->
+     
+    <result name="success" type="redirectAction">expencectssts</result>
+    <result name="input" type="redirectAction">expencectssts</result>
+    <result name="error">resources/jsp/expencesmgmt/expencesCreation.jsp</result>
+  </action>
+  
+  
+   <action name="deleteexpence" class="com.socialindia.expencesmgmt.ExpencesServices" method="deleteExpenceAction">
+  <result name="success">resources/jsp/expencesmgmt/expencesmanagement.jsp</result>
+    <result name="input">resources/jsp/expencesmgmt/expencesmanagement.jsp</result>
+  </action>
+  <action name="viewexpenceform" class="com.socialindia.expencesmgmt.ExpencesServices" method="modifyServices">
+  <result name="success">resources/jsp/expencesmgmt/expenceView.jsp</result>
+    <result name="input">resources/jsp/expencesmgmt/expenceView.jsp</result>
+  </action>
+   <action name="editexpenceform" class="com.socialindia.expencesmgmt.ExpencesServices" method="modifyServices">
+  <result name="success">resources/jsp/expencesmgmt/expencesModify.jsp</result>
+    <result name="input">resources/jsp/expencesmgmt/expencesModify.jsp</result>
+  </action>
+   <action name="expencesUpdateAction" class="com.socialindia.expencesmgmt.ExpencesServices" method="toexpencemodifyform">
+  <result name="success">resources/jsp/expencesmgmt/expencesmanagement.jsp</result>
+    <result name="input">resources/jsp/expencesmgmt/expencesModify.jsp</result>
+    <result name="error">resources/jsp/expencesmgmt/expencesModify.jsp</result>
+  </action>
+ </package>
+</struts>

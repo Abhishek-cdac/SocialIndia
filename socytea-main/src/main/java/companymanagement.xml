@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC  "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="companymgmt" extends="default">
+
+ <action name="companymgmtdatatable" class="com.socialindia.companymgmt.companyMgmtMasterTable">
+    <result type="json"></result>
+  </action>
+  
+   <action name="createNewcompanyform" class="com.socialindia.companymgmt.CompanyMgmtAction">
+     <result name="success">resources/jsp/companymgmt/companyadd.jsp</result>
+    <result name="input">resources/jsp/companymgmt/companyadd.jsp</result>
+  </action>
+  
+   <!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+   <action name="cmpnymgmtcrtsts" class="com.socialindia.companymgmt.CompanyMgmtalertmsg">
+    	<result name="success">resources/jsp/companymgmt/companymanagement.jsp</result>
+   </action>
+   <!--Refresh / reload avoid to recall or reinsert [Alert Purpose End]-->
+  
+   <action name="companymgmtadd" class="com.socialindia.companymgmt.CompanyMgmtAction" method="companymgmtaddaction">
+   		<!--<result name="success">resources/jsp/companymgmt/companymanagement.jsp</result>-->
+     	<result name="success" type="redirectAction">cmpnymgmtcrtsts</result>     
+    	<result name="input">resources/jsp/companymgmt/companyadd.jsp</result>
+     	<result name="error">resources/jsp/companymgmt/companyadd.jsp</result>
+  </action>
+  
+  <action name="deletecompany" class="com.socialindia.companymgmt.CompanyMgmtAction" method="deletecompanyActionFunction" >
+     <result name="success">resources/jsp/companymgmt/companymanagement.jsp</result>
+    <result name="input">resources/jsp/companymgmt/companymanagement.jsp</result>
+     <result name="error">resources/jsp/companymgmt/companymanagement.jsp</result>
+  </action>
+  <action name="viewcompanyform" class="com.socialindia.companymgmt.CompanyMgmtAction" method="viewcompanyActionFunction" >
+     <result name="success">resources/jsp/companymgmt/companyview.jsp</result>
+    <result name="input">resources/jsp/companymgmt/companyview.jsp</result>
+     <result name="error">resources/jsp/companymgmt/companymanagement.jsp</result>
+  </action>
+   <action name="editcompanyform" class="com.socialindia.companymgmt.CompanyMgmtAction" method="viewcompanyActionFunction" >
+     <result name="success">resources/jsp/companymgmt/company_Edit.jsp</result>
+    <result name="input">resources/jsp/companymgmt/company_Edit.jsp</result>
+     <result name="error">resources/jsp/companymgmt/companymanagement.jsp</result>
+  </action>
+   <action name="companyEditSubmitaction" class="com.socialindia.companymgmt.CompanyMgmtAction" method="updatedcompanyActionFunction" >
+     <result name="success">resources/jsp/companymgmt/companymanagement.jsp</result>
+    <result name="input">resources/jsp/companymgmt/companymanagement.jsp</result>
+     <result name="error">resources/jsp/companymgmt/company_Edit.jsp</result>
+  </action>
+ </package>
+</struts>

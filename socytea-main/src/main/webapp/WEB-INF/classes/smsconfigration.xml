@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="smsconfig" extends="default">
+
+ <action name="smsUpdated" class="com.socialindia.SMSconfig.SMSconfigmgmt" method="updateSMS">
+ 	<result name="success">resources/jsp/emailconfig/ajax.jsp</result>
+    <result name="input">resources/jsp/emailconfig/ajax.jsp</result>
+  </action>
+  
+  <action name="smsEnginStart" class="com.socialindia.SMSconfig.SMSconfigmgmt" method="smsEnginStart">
+<result name="success">resources/jsp/emailconfig/ajax.jsp</result>
+    <result name="input">resources/jsp/emailconfig/ajax.jsp</result>
+  </action>
+  <action name="smsEnginStop" class="com.socialindia.SMSconfig.SMSconfigmgmt" method="smsEnginStop">
+<result name="success">resources/jsp/emailconfig/ajax.jsp</result>
+    <result name="input">resources/jsp/emailconfig/ajax.jsp</result>
+  </action>
+  
+ </package>
+</struts>

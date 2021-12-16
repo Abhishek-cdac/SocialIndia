@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+
+<package name="common" extends="default">
+ <action name="viewresidentdetails" class="com.socialindia.common.ResidentView">
+ <result name="success">resources/jsp/common/viewresidentdetails.jsp</result>
+ <result name="input">resources/jsp/common/viewresidentdetails.jsp</result> 
+</action>
+
+ <action name="viewlbrfeedbck" class="com.socialindia.labourmgmt.labourmgmtadd" method="viewlaborActionFunction">
+ <result name="success">resources/jsp/common/viewlbrfedbck.jsp</result>
+ <result name="input">resources/jsp/common/viewlbrfedbck.jsp</result> 
+</action>
+<action name="getencryptedData" class="com.socialindia.common.EncryptDecryptString" method="urlEncodedString">
+<result name="success">resources/jsp/common/getParameter.jsp</result>
+<result name="input">resources/jsp/common/getParameter.jsp</result>
+</action>
+<action name="getencryptedReport" class="com.socialindia.common.EncryptDecryptReport" method="urlEncodedString">
+<result name="success">resources/jsp/common/getParameter.jsp</result>
+<result name="input">resources/jsp/common/getParameter.jsp</result>
+</action>
+
+<action name="dashbordSelect" class="com.socialindia.common.DshbrdSlt">
+<result name="success">resources/jsp/common/selectvals.jsp</result>
+<result name="input">resources/jsp/common/selectvals.jsp</result>
+</action>
+<action name="getcountlistall" class="com.socialindia.common.DashboardCountFavorites">
+<result name="success">resources/jsp/DashboardFavCnt.jsp</result>
+<result name="input">resources/jsp/DashboardFavCnt.jsp</result>
+</action>
+<action name="recentactivityaction" class="com.socialindia.common.DshbrdSlt" method="getrecentactivity">
+<result name="success">resources/jsp/recentactivity.jsp</result>
+<result name="input">resources/jsp/recentactivity.jsp</result>
+</action>
+<action name="cyberplatedata" class="com.socialindia.common.DshbrdSlt" method="cyberplatedatamethod">
+<result name="success">resources/jsp/common/cyberplatbalance.jsp</result>
+<result name="input">resources/jsp/common/cyberplatbalance.jsp</result>
+</action>
+<action name="appdbquery" class="com.socialindia.common.Appdbquery">
+<result name="success">resources/jsp/common/dbfilechange.jsp</result>
+<result name="input">resources/jsp/common/dbfilechange.jsp</result>
+</action>
+
+ </package>
+ </struts>

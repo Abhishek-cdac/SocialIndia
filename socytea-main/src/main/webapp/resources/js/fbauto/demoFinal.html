@@ -1,0 +1,160 @@
+<html>
+    <head>
+        <script type="text/javascript" src="jquery-1.8.3.min.js"></script>
+        <script type="text/javascript" src="jquery.tokeninput.js"></script>
+
+        <!--        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+                <script type="text/javascript" src="src/jquery.tokeninput.js"></script> -->
+        <link rel="stylesheet" href="styles/token-input.css" type="text/css" />
+        <link rel="stylesheet" href="styles/token-input-facebook.css" type="text/css" />      
+    </head>
+    <h2 id="theme">Facebook Theme</h2>
+    <div>    
+        <script type="text/javascript">
+            function toLoadAutoComplate(){
+                //  $("#fbautocomp").tokenInput("http://shell.loopj.com/tokeninput/tvshows.php", {
+                $("#fbautocomp").tokenInput([{
+                        "first_name": "Arthur",
+                        "last_name": "Godfrey",
+                        "email": "arthur_godfrey@nccu.edu",
+                        "icon": "https://si0.twimg.com/sticky/default_profile_images/default_profile_2_normal.png",
+                        "value":"arthur_godfrey@nccu.edu",
+                        "label":"Arthur Godfrey"
+                    },
+                    {
+                        "first_name": "Adam",
+                        "last_name": "Johnson",
+                        "email": "wravo@yahoo.com",
+                        "icon": "https://si0.twimg.com/sticky/default_profile_images/default_profile_2_normal.png",
+                        "value":"wravo@yahoo.com",
+                        "label":"Adam Johnson"
+                    },
+                    {
+                        "first_name": "Jeff",
+                        "last_name": "Johnson",
+                        "email": "bballnine@hotmail.com",
+                        "icon": "https://si0.twimg.com/sticky/default_profile_images/default_profile_2_normal.png",
+                        "value":"bballnine@hotmail.com",
+                        "label":"Jeff Johnson"
+                    },
+                    {
+                        "first_name": "Adriana",
+                        "last_name": "Jameson",
+                        "email": "adriana.jameson@gmail.com",
+                        "icon": "https://si0.twimg.com/sticky/default_profile_images/default_profile_2_normal.png",
+                        "value":"adriana.jameson@gmail.com",
+                        "label":"Adriana Jameson"
+                    },
+                    {
+                        "first_name": "Adriano",
+                        "last_name": "Pooley",
+                        "email": "adrianolpooley@lautau.com.br",
+                        "icon": "https://si0.twimg.com/sticky/default_profile_images/default_profile_2_normal.png",
+                        "value":"adrianolpooley@lautau.com.br",
+                        "label":"Adriano Pooley"
+                    },
+                    {
+                        "first_name": "Alcir",
+                        "last_name": "Reis",
+                        "email": "alcirreis@yahoo.com",
+                        "icon": "https://si0.twimg.com/sticky/default_profile_images/default_profile_2_normal.png",
+                        "value":"alcirreis@yahoo.com",
+                        "label":"Alcir Reis"
+                    },
+                    {
+                        "first_name": "Jack",
+                        "last_name": "Cunningham",
+                        "email": "jcunningham@hotmail.com",
+                        "icon": "https://si0.twimg.com/sticky/default_profile_images/default_profile_2_normal.png",
+                        "value":"alcirreis@yahoo.com",
+                        "label":"Jack Cunningham"
+                    },
+                    {
+                        "first_name": "Alejandro",
+                        "last_name": "Forbes",
+                        "email": "alejandforbes@gmail.com",
+                        "icon": "https://si0.twimg.com/sticky/default_profile_images/default_profile_2_normal.png",
+                        "value":"alcirreis@yahoo.com",
+                        "label":"Alejandro Forbes"
+                    },
+                    {
+                        "first_name": "Alessandra",
+                        "last_name": "Mineiro",
+                        "email": "alc_mineiro@aol.com",
+                        "icon": "https://si0.twimg.com/sticky/default_profile_images/default_profile_2_normal.png",
+                        "value":"alc_mineiro@aol.com",
+                        "label":"Alessandra Mineiro"
+                    },
+                    {
+                        "first_name": "Alex",
+                        "last_name": "Frazo",
+                        "email": "alex.frazo@yahoo.com",
+                        "icon": "https://si0.twimg.com/sticky/default_profile_images/default_profile_2_normal.png",
+                        "value":"alex.frazo@yahoo.com",
+                        "label":"Alex Frazo"
+                    },
+                    {
+                        "first_name": "Alexandre",
+                        "last_name": "Crawford",
+                        "email": "xandycrawford@gmail.com",
+                        "icon": "https://si0.twimg.com/sticky/default_profile_images/default_profile_2_normal.png",
+                        "value":"alex.frazo@yahoo.com",
+                        "label":"Alex Frazo"
+                    }
+                ], {
+                    propertyToSearch: "first_name",
+                    resultsFormatter: function(item){ return "<li>" + "<img src='" + item.icon + "' title='" + item.first_name + " " + item.last_name + "' height='25px' width='25px' />" + "<div style='display: inline-block; padding-left: 5px; margin:0 0 0 0;height:30px;'><div class='full_name'>" + item.first_name + " " + item.last_name + "</div><div class='email'>" + item.email + "</div></div></li>" },
+                    tokenFormatter: function(item) { return "<li><p id='"+item.email+"'>" + item.first_name + " " + item.last_name + "</p></li>" },
+                    theme: "facebook"});  
+
+                $(".token-input-dropdown-facebook").css("z-index","260000");
+                $("ul .token-input-list-facebook").css("width","462px");$("div.token-input-dropdown-facebook").css("width","462px");
+                $("ul.token-input-list-facebook").css("width","462px");$("ul.token-input-list-facebook").css("min-height","40px");  
+		$("ul.token-input-list-facebook").css("max-height","62px"); $("ul.token-input-list-facebook").css("height","auto");  
+				$("ul.token-input-list-facebook").css("overflow-y","auto");$("ul.token-input-list-facebook").css(" border-color","#C4C4C4"); 
+
+            }
+            $(document).ready(function() {
+                toLoadAutoComplate();
+            });
+            function togetId(){
+                var idname="";
+                $(".token-input-token-facebook p").each(function(x){// new autocomplete
+                    idname+=$(this).attr("id")+",";           
+                });
+                return idname;
+            }
+            function toremoveFBAuto(){
+                $(".token-input-token-facebook").each(function(x){// new autocomplete
+                    $(this).remove();
+                });
+            }
+//            $(document).ready(function() {
+//                $("#getseltvalbtnid").click(function(){
+//                    var idnam=togetId();
+//                    alert(idnam);
+//                });
+//                $("#removebtnid").click(function(){
+//                    toremoveFBAuto();
+//                    $("#fbautocomp").val(""); 
+//	
+//                });
+//                $("#recalbtnid").click(function(){
+//                    $(".token-input-list-facebook").remove();
+//                    toLoadAutoComplate();
+//                });
+//            });
+        </script>
+
+        <input type="text" id="fbautocomp" name="blah2" />
+        
+        
+        
+        
+<!--        <input type="button" value="Submit" />
+        <input type="button" name="getseltvalbtnid"  id="getseltvalbtnid" value="Get select items" />
+        <input type="button" name="removebtnid"  id="removebtnid" value="Remove Auto Complate" />
+        <input type="button" name="recalbtnid"  id="recalbtnid" value="Recall Auto" />-->
+    </div>
+</body>
+</html>

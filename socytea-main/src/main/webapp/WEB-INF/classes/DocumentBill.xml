@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC  "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="DocumentBill" extends="default">
+ 
+ <!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  <action name="maintenuplssts" class="com.socialindia.docbillmaintenance.Billmaintenancealertmsg">    
+    	<result name="success">resources/jsp/docBillmaintenance/docBillMainteance.jsp</result>  
+  </action>
+  <!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+ 
+  	<action name="billdocumentfilesubmit" class="com.socialindia.docbillmaintenance.BillMaintenance">  
+  	 <result name="success">resources/jsp/utilitymgmt/documentview.jsp</result>  	
+  	 <result name="input" type="redirectAction">maintenuplssts</result>   
+  
+   	<!-- <result name="success" >resources/jsp/utilitymgmt/documentview.jsp</result>
+    	 <result name="input">resources/jsp/docBillmaintenance/docBillMainteance.jsp</result> -->
+  </action>
+    
+ </package>
+</struts>

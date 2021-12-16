@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+<struts>
+ <package name="merchantMng" extends="default">
+  <action name="createMerchant">
+   <result name="success">/resources/jsp/merchant/createNewMerchant.jsp
+   </result>
+  </action>
+   <action name="getMerchantCategory" class="com.socialindia.merchantMgmt.GetMerchantCategoryList">
+    <result name="success">resources/jsp/merchant/getMerchantCategory.jsp</result>
+    <result name="input">resources/jsp/merchant/getMerchantCategory.jsp</result>
+  </action>
+   <action name="getMerchantCategoryform" class="com.socialindia.merchantMgmt.GetMerchantCategoryform">
+    <result name="success">resources/jsp/merchant/getMerchantCategoryform.jsp</result>
+    <result name="input">resources/jsp/merchant/getMerchantCategoryform.jsp</result>
+  </action>
+  
+   <!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+   <action name="mrhntcrtsts" class="com.socialindia.merchantMgmt.Merchantmgmtalertmsg">
+  		<result name="success">resources/jsp/merchant/merchantMgmtTbl.jsp</result>
+  		<result name="input">resources/jsp/merchant/merchantMgmtTbl.jsp</result>
+  </action>
+    <!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+    
+  <action name="addNewMerchant" class="com.socialindia.merchantMgmt.AddNewMerchant">
+  <!--  <result name="success">resources/jsp/merchant/merchantMgmtTbl.jsp</result> 
+  <result name="input">resources/jsp/merchant/merchantMgmtTbl.jsp</result> -->
+   <result name="success" type="redirectAction">mrhntcrtsts</result> 
+   <result name="input" type="redirectAction">mrhntcrtsts</result>
+  </action>
+  
+  <action name="merchantmgmtTbldata" class="com.socialindia.merchantMgmt.MerchantmgmtDataTbl">
+  <result name="success">resources/jsp/merchant/merchantMgmtTbl.jsp</result>
+  <result name="input">resources/jsp/merchant/merchantMgmtTbl.jsp</result>
+  </action>
+  <action name="viewMerchantDetail" class="com.socialindia.merchantMgmt.GetmerchantDetail">
+  <result name="success">resources/jsp/merchant/merchantMgmtViewDetail.jsp</result>
+  <result name="input">resources/jsp/merchant/merchantMgmtTbl.jsp</result>
+  </action>
+    <action name="editMerchant" class="com.socialindia.merchantMgmt.EditmerchantDetail">
+  <result name="success">resources/jsp/merchant/merchantMgmtTbl.jsp</result>
+  <result name="input">resources/jsp/merchant/merchantMgmtTbl.jsp</result>
+  </action>
+   <action name="editMerchantDetail" class="com.socialindia.merchantMgmt.GetmerchantDetail">
+  <result name="success">resources/jsp/merchant/merchantEdit.jsp</result>
+  <result name="input">resources/jsp/merchant/merchantMgmtTbl.jsp</result>
+  </action>
+  <action name="deleteMerchantDetail" class="com.socialindia.merchantMgmt.DeleteMerchantDetail">
+  <result name="success">resources/jsp/merchant/merchantMgmtTbl.jsp</result>
+  <result name="input">resources/jsp/merchant/merchantMgmtTbl.jsp</result>
+  </action>
+  
+  <action name="AddOfferForm" class="com.socialindia.merchantMgmt.AddOfferFormAction">
+  <result name="success">resources/jsp/merchant/merchantOffertTbl.jsp</result>
+  <result name="input">resources/jsp/merchant/merchantOffertTbl.jsp</result>
+  </action>
+  
+   <action name="merchantOfferTbldata" class="com.socialindia.merchantMgmt.MerchantOfferDataTbl">
+  <result name="success">resources/jsp/merchant/merchantOffertTbl.jsp</result>
+  <result name="input">resources/jsp/merchant/merchantOffertTbl.jsp</result>
+  </action>
+  <action name="createMerchantoffer" class="com.socialindia.merchantMgmt.AddOfferFormAction">
+  <result name="success">resources/jsp/merchant/merchantNewOffertForm.jsp</result>
+  <result name="input">resources/jsp/merchant/merchantNewOffertForm.jsp</result>
+  </action>
+  
+   <!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+   <action name="mrhntoffcrtsts" class="com.socialindia.merchantMgmt.Merchantofferalermsg">
+  		<result name="success">resources/jsp/merchant/merchantOffertTbl.jsp</result>
+  		<result name="input">resources/jsp/merchant/merchantOffertTbl.jsp</result>
+  </action>
+    <!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+    
+   <action name="addNewMerchantOffer" class="com.socialindia.merchantMgmt.AddNewMerchantOffer">
+  	<result name="success" type="redirectAction">mrhntoffcrtsts</result>
+  	<result name="input" type="redirectAction">mrhntoffcrtsts</result>
+  	<result name="failed" >resources/jsp/merchant/merchantNewOffertForm.jsp</result>
+  	<!-- <result name="success">resources/jsp/merchant/merchantOffertTbl.jsp</result>
+  		 <result name="input">resources/jsp/merchant/merchantOffertTbl.jsp</result>
+  	 -->
+  </action>
+    
+  <action name="editMerchantUtilDetail" class="com.socialindia.merchantMgmt.GetmerchantUtilDetail">
+  <result name="success">resources/jsp/merchant/merchantOfferEdit.jsp</result>
+  <result name="input">resources/jsp/merchant/merchantOffertTbl.jsp</result>
+  </action>
+  <action name="editNewMerchantOffer" class="com.socialindia.merchantMgmt.EditNewMerchantOffer">
+  <result name="success">resources/jsp/merchant/merchantOffertTbl.jsp</result>
+  <result name="input">resources/jsp/merchant/merchantOffertTbl.jsp</result>
+  <result name="failed" >resources/jsp/merchant/merchantNewOffertForm.jsp</result>
+  </action>
+   <action name="deleteMerchantUtilDetail" class="com.socialindia.merchantMgmt.DeleteMerchantUtilDetail">
+  <result name="success">resources/jsp/merchant/merchantOffertTbl.jsp</result>
+  <result name="input">resources/jsp/merchant/merchantOffertTbl.jsp</result>
+  </action>
+      <action name="getIssuevalcmp" class="com.socialindia.issuemgmtbl.IssueCmp">	
+    <result name="success">resources/jsp/issue/issuecheckval.jsp</result>
+    <result name="input">resources/jsp/issue/issuecheckval.jsp</result>
+  </action>
+  
+ </package>
+</struts>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+	<package name="login" namespace="/" extends="struts-default">
+		<action name="postlogin" class="com.socialindia.login.LoginAction">
+			<result name="success">resources/jsp/redirect.jsp</result>
+			<result name="changepassword" >resources/jsp/redirect2chpswd.jsp</result>
+			<result name="input">resources/jsp/index.jsp</result>
+			<result name="error">resources/jsp/error.jsp</result>
+		</action>
+
+
+		<action name="forgetPassword" class="com.pack.password.service.forgetPassword">
+			<result name="success">resources/jsp/forgetmail.jsp</result>
+			<result name="input">resources/jsp/forgetmail.jsp</result>
+			<result name="error">resources/jsp/error.jsp</result>
+		</action>
+		
+		<action name="loginCheckShowSociety" class="com.socialindia.login.loginCheckShowSociety">
+			<result name="success">resources/jsp/common/getSocietyList.jsp</result>
+			<result name="input">resources/jsp/index.jsp</result>
+			<result name="error">resources/jsp/error.jsp</result>
+		</action>
+		
+	</package>
+</struts>

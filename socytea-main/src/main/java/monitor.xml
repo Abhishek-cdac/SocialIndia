@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="monitorMgmt" extends="default">
+     <action name="ipAccessMgmt" class="com.socialindia.monitorMgmt.MonitorMgmt">
+         <result type="json"></result>
+ 	</action>
+ 	<!-- <action name="contentmonitoringMgmt" class="com.socialindia.monitorMgmt.ContentmonitoringDTable">
+         <result type="json"></result>
+ 	</action> -->
+ 	<action name="contentmonitoringMgmt" class="com.socialindia.monitorMgmt.ContentmonitoringMgmtDTable">
+         <result type="json"></result>
+ 	</action>
+ 	<!-- <action name="imagemonitoringMgmt" class="com.socialindia.monitorMgmt.ImagemonitoringDTable">
+         <result type="json"></result>
+ 	</action> -->
+ 	<action name="imagemonitoringMgmt" class="com.socialindia.monitorMgmt.ImagemonitoringMgmtDTbl">
+         <result type="json"></result>
+ 	</action>
+ 	<action name="SignonfailureDatatable" class="com.socialindia.monitorMgmt.SingonFailureDTable">
+         <result type="json"></result>
+ 	</action>
+ 	<action name="GetJavaHeapMemory" class="com.socialindia.monitorMgmt.MonitorMgmtServices" method="GetJavaHeapMemoryaction">
+    <result name="success">resources/jsp/monitormgmt/getjavaHeapMemory.jsp</result>
+    <result name="input">resources/jsp/uam/getjavaHeapMemory.jsp</result>
+  </action>
+ 	<action name="deleteactionfeedtable" class="com.socialindia.monitorMgmt.ContentmonitoringServices"
+   method="toBlockContent">	
+    <result name="success">resources/jsp/monitormgmt/contentmonitoring.jsp</result>
+    <result name="input">resources/jsp/monitormgmt/contentmonitoring.jsp</result>
+    <result name="error">resources/jsp/monitormgmt/contentmonitoring.jsp</result>
+  </action>
+  <action name="activeactionfeedtable" class="com.socialindia.monitorMgmt.ContentmonitoringServices"
+   method="activeContents">	
+    <result name="success">resources/jsp/monitormgmt/contentmonitoring.jsp</result>
+    <result name="input">resources/jsp/monitormgmt/contentmonitoring.jsp</result>
+    <result name="error">resources/jsp/monitormgmt/contentmonitoring.jsp</result>
+  </action>
+   <action name="activeactionuser" class="com.socialindia.monitorMgmt.ContentmonitoringServices"
+   method="toactiviateUser">	
+    <result name="success">resources/jsp/monitormgmt/contentmonitoring.jsp</result>
+    <result name="input">resources/jsp/monitormgmt/contentmonitoring.jsp</result>
+    <result name="error">resources/jsp/monitormgmt/contentmonitoring.jsp</result>
+  </action>
+  <action name="deactivateusrmonitor" class="com.socialindia.monitorMgmt.ContentmonitoringServices" method="deactiveUser">	
+    <result name="success">resources/jsp/monitormgmt/contentmonitoring.jsp</result>
+    <result name="input">resources/jsp/monitormgmt/contentmonitoring.jsp</result>
+    <result name="error">resources/jsp/monitormgmt/contentmonitoring.jsp</result>
+  </action>
+  <action name="deleteimagemonitoringaction" class="com.socialindia.monitorMgmt.ImagemonitoringServices"
+   method="toBlockImage">	
+    <result name="success">resources/jsp/monitormgmt/imagemonitoring.jsp</result>
+    <result name="input">resources/jsp/monitormgmt/imagemonitoring.jsp</result>
+    <result name="error">resources/jsp/monitormgmt/imagemonitoring.jsp</result>
+  </action>
+  <action name="activeimagemonitoringaction" class="com.socialindia.monitorMgmt.ImagemonitoringServices"
+   method="activeImage">	
+    <result name="success">resources/jsp/monitormgmt/imagemonitoring.jsp</result>
+    <result name="input">resources/jsp/monitormgmt/imagemonitoring.jsp</result>
+    <result name="error">resources/jsp/monitormgmt/imagemonitoring.jsp</result>
+  </action>
+   <action name="deletesingonfailuretbl" class="com.socialindia.monitorMgmt.SignonFailureServices"
+   method="toDeletesignonfailure">	
+    <result name="success">resources/jsp/monitormgmt/signonfailureReportTbl.jsp</result>
+    <result name="input">resources/jsp/monitormgmt/signonfailureReportTbl.jsp</result>
+    <result name="error">resources/jsp/monitormgmt/signonfailureReportTbl.jsp</result>
+  </action>
+   </package>
+</struts>

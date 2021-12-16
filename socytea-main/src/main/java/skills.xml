@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="skillmgmt" extends="default">
+ 
+  <action name="skillmgmttbl" class="com.socialindia.skillsmgmt.SkillMgmt">
+    <result type="json"></result>
+  </action>
+  
+  <action name="newskills">
+  <result>resources/jsp/skill/newskills.jsp</result>
+  </action>
+  
+  	<!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  	<action name="skillmgtctssts" class="com.socialindia.skillsmgmt.SkillInsertAlertMsg">    
+    	<result name="success">resources/jsp/skill/skillmgmt.jsp</result>
+  	</action>
+  	<!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+   
+   <action name="skillCreation" class="com.socialindia.skillsmgmt.SkillAction">	
+    <result name="success" type="redirectAction">skillmgtctssts</result>
+    <result name="input" type="redirectAction">skillmgtctssts</result>
+    <result name="error" type="redirectAction">skillmgtctssts</result>
+    <!--  <result name="success">resources/jsp/skill/skillmgmt.jsp</result>
+    <result name="input">resources/jsp/skill/skillmgmt.jsp</result>
+    <result name="error">resources/jsp/skill/skillmgmt.jsp</result> -->
+  </action> 
+  
+  
+  <action name="editskillaction" class="com.socialindia.skillsmgmt.SkillAction" method="editSkillAction">	
+    <result name="success">resources/jsp/skill/modifyskill.jsp</result>
+    <result name="input">resources/jsp/skill/modifyskill.jsp</result>
+    <result name="error">resources/jsp/skill/modifyskill.jsp</result>
+  </action> 
+    <action name="skillUpdate" class="com.socialindia.skillsmgmt.SkillAction" method="modifySkillAction">	
+    <result name="success">resources/jsp/skill/skillmgmt.jsp</result>
+    <result name="input">resources/jsp/skill/skillmgmt.jsp</result>
+    <result name="error">resources/jsp/skill/skillmgmt.jsp</result>
+  </action> 
+  
+   <action name="deactiveskill" class="com.socialindia.skillsmgmt.SkillAction" method="activeandDeactiveskill">	
+    <result name="success">resources/jsp/skill/skillmgmt.jsp</result>
+    <result name="input">resources/jsp/skill/skillmgmt.jsp</result>
+    <result name="error">resources/jsp/skill/skillmgmt.jsp</result>
+  </action> 
+   <action name="getdeactiveskill" class="com.socialindia.skillsmgmt.SkillAction" method="activeandDeactiveskill">	
+    <result name="success">resources/jsp/skill/skillmgmt.jsp</result>
+    <result name="input">resources/jsp/skill/skillmgmt.jsp</result>
+    <result name="error">resources/jsp/skill/skillmgmt.jsp</result>
+  </action> 
+  
+  
+ </package>
+</struts>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="idcardmgmt" extends="default">
+
+  <action name="idcardmanagedatatable" class="com.socialindia.idcardmaster.IdCardMasterDTable">
+    <result type="json"></result>
+  </action>
+  
+  <!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  <action name="crtidcrtsts" class="com.socialindia.idcardmaster.IdcardMasteralertMsg">    
+     <result name="success">resources/jsp/idcardmgmt/idcardmgmt.jsp</result>        
+  </action>
+  <!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+  
+   <action name="createidcardtype" class="com.socialindia.idcardmaster.IdcardServices" method="IdcardCreateFun">	
+    	<result name="success" type="redirectAction">crtidcrtsts</result>
+    	<result name="input" type="redirectAction">crtidcrtsts</result>
+    	<result name="error" type="redirectAction">crtidcrtsts</result>
+	   <!--  <result name="success">resources/jsp/idcardmgmt/idcardmgmt.jsp</result> 
+	    	 <result name="input">resources/jsp/idcardmgmt/idcardmgmt.jsp</result>
+	    	 <result name="error">resources/jsp/idcardmgmt/idcardmgmt.jsp</result>-->
+  </action> 
+   <action name="deleteaction" class="com.socialindia.idcardmaster.IdcardServices" method="deleteActionfun">	
+	    <result name="success">resources/jsp/idcardmgmt/idcardmgmt.jsp</result>
+	    <result name="input">resources/jsp/idcardmgmt/idcardmgmt.jsp</result>
+	    <result name="error">resources/jsp/idcardmgmt/idcardmgmt.jsp</result>
+  </action> 
+   <action name="activeaction" class="com.socialindia.idcardmaster.IdcardServices" method="activeActionfun">	
+	    <result name="success">resources/jsp/idcardmgmt/idcardmgmt.jsp</result>
+	    <result name="input">resources/jsp/idcardmgmt/idcardmgmt.jsp</result>
+	    <result name="error">resources/jsp/idcardmgmt/idcardmgmt.jsp</result>
+  </action> 
+ </package>
+</struts>

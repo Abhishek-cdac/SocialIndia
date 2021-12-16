@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="usermgmt" extends="default">
+
+  <action name="addmerchantUserdatatable" class="com.socialindia.uam.userMasterTable">
+    <result type="json"></result>
+  </action>
+  
+ <action name="groupmanagedatatable" class="com.socialindia.uam.GroupManageDTable">
+    <result type="json"></result>
+  </action>
+  
+  <action name="menurightsadmin" class="com.socialindia.uam.GroupAction"
+   method="getAssignedRights">
+   <result name="success">resources/jsp/uam/ajaxgroupmanage.jsp</result>
+  </action>
+  
+   <!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  <action name="grpmgmtcrtsts" class="com.socialindia.uam.Groupcrtalrtmsg">
+      <result name="success">resources/jsp/uam/groupmanage.jsp</result>
+  </action>
+  <!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+  
+  <action name="creategroup" class="com.socialindia.uam.GroupAction"  method="creategroup">	
+  <!-- <result name="success">resources/jsp/uam/groupmanage.jsp</result>
+    <result name="input">resources/jsp/uam/groupmanage.jsp</result>
+    <result name="error">resources/jsp/uam/groupmanage.jsp</result>-->
+    <result name="success" type="redirectAction">grpmgmtcrtsts</result>
+    <result name="input" type="redirectAction">grpmgmtcrtsts</result>
+    <result name="error" type="redirectAction">grpmgmtcrtsts</result>
+  </action>
+
+	 <action name="deletegroupaction" class="com.socialindia.uam.GroupAction"
+   method="deleteGroupAction">
+    <result name="success">resources/jsp/uam/groupmanage.jsp</result>
+    <result name="input">resources/jsp/uam/groupmanage.jsp</result>
+    <result name="error">resources/jsp/uam/groupmanage.jsp</result>
+  </action>
+  
+  <action name="editGroup" class="com.socialindia.uam.GroupAction"
+   method="editGroup">
+    <result name="success">resources/jsp/uam/groupmanage.jsp</result>
+    <result name="input">resources/jsp/uam/groupmanage.jsp</result>
+    <result name="error">resources/jsp/uam/groupmanage.jsp</result>
+  </action>
+  
+   <action name="uamusercreateform" class="com.socialindia.uam.userCreation">
+    <result name="success">resources/jsp/uam/usercreation.jsp</result>
+    <result name="input">resources/jsp/uam/usercreation.jsp</result>
+  </action>
+ 
+  <!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  <action name="usrmgmtceartsts" class="com.socialindia.uam.Usrmgmtcrtalertmsg">
+     <result name="success">resources/jsp/uam/usermanage.jsp</result>
+  </action>
+  <!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+
+
+   <action name="usercreationForm" class="com.socialindia.uam.userCreation" method="creationForm">
+    <!-- <result name="success">resources/jsp/uam/usermanage.jsp</result>-->
+    <result name="success" type="redirectAction">usrmgmtceartsts</result>
+    <result name="input">resources/jsp/uam/usercreation.jsp</result>
+  </action>
+  
+   <action name="deleteuseraction" class="com.socialindia.uam.userCreation"
+   method="deleteUserActionFunction">
+    <result name="success">resources/jsp/uam/usermanage.jsp</result>
+    <result name="input">resources/jsp/uam/usermanage.jsp</result>
+    <result name="error">resources/jsp/uam/usermanage.jsp</result>
+  </action>
+  
+   <action name="edituserform" class="com.socialindia.uam.userCreation" method="editUser">
+    <result name="success">resources/jsp/uam/usermodify.jsp</result>
+    <result name="input">resources/jsp/uam/usermodify.jsp</result>
+  </action>
+  
+  <action name="edituserformAction" class="com.socialindia.uam.userCreation"
+   method="edituserformFunction">
+    <result name="success">resources/jsp/uam/usermanage.jsp</result>
+     <result name="input">resources/jsp/uam/usermodify.jsp</result>
+  </action>
+  
+  
+  <action name="createRights" class="com.socialindia.uam.createRights">
+    <result name="success">resources/jsp/uam/rightsmanage.jsp</result>
+    <result name="error">resources/jsp/uam/rightsmanage.jsp</result>
+    <result name="input">resources/jsp/uam/rightsmanage.jsp</result>
+  </action>
+  
+   <action name="townshipgetsociety" class="com.socialindia.uam.townshipgetsociety">
+    <result name="success">resources/jsp/uam/getsocietyvalue.jsp</result>
+    <result name="successauto">resources/jsp/uam/getsocietyvalue_auto.jsp</result>
+    <result name="error">resources/jsp/uam/rightsmanage.jsp</result>
+    <result name="input">resources/jsp/uam/rightsmanage.jsp</result>
+  </action>
+  <action name="Homeform" class="com.socialindia.uam.userCreation">
+    <result name="success">resources/jsp/dashboard.jsp</result>
+    <result name="input">resources/jsp/dashboard.jsp</result>
+  </action>
+  <action name="loginform" class="com.socialindia.uam.userCreation">
+    <result name="success">resources/jsp/dashboard.jsp</result>
+    <result name="input">resources/jsp/dashboard.jsp</result>
+  </action>
+  <action name="groupType" class="com.socialindia.generalmgnt.getCategoryCodeMethod" method="groupType">
+    <result name="success">resources/jsp/uam/getGroupval.jsp</result>
+    <result name="input">resources/jsp/uam/getGroupval.jsp</result>
+  </action>
+  <action name="groupTypeUpdate" class="com.socialindia.uam.userCreation" method="groupTypeUpdate">
+      <result name="success">resources/jsp/uam/usermanage.jsp</result>
+  </action>
+  
+  <action name="groupType" class="com.socialindia.generalmgnt.getCategoryCodeMethod" method="groupType">
+    <result name="success">resources/jsp/uam/getGroupval.jsp</result>
+    <result name="input">resources/jsp/uam/getGroupval.jsp</result>
+  </action>
+
+  <action name="uamsiusercreateform" class="com.socialindia.uam.userCreation">
+     <result name="success">resources/jsp/uam/sicreation.jsp</result>
+  </action>
+     <action name="usersicreation" class="com.socialindia.uam.userCreation" method="siUserformFunction">
+   	 <!-- <result name="success">resources/jsp/uam/usermanage.jsp</result>-->
+   	 <result name="success" type="redirectAction">usrmgmtceartsts</result>
+     <result name="input">resources/jsp/uam/sicreation.jsp</result>
+  </action> 
+  
+ </package>
+</struts>

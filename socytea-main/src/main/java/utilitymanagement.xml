@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC  "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="utititymgmt" extends="default">
+
+ 
+
+  <action name="utilitynewdocument">
+    <result name="success">${getText("Text.utility.documentcreate")}</result>
+  </action>
+   <action name="getdocumenttype" class="com.socialindia.utilitymgmt.NewDocumentForm">
+    <result name="success">resources/jsp/utilitymgmt/getdocumenttype.jsp</result>
+    <result name="input">resources/jsp/utilitymgmt/getdocumenttype.jsp</result>
+  </action>
+   <action name="getpdfgenerate" class="com.socialindia.utilitymgmt.NewDocumentForm" method="getpdfgenerate">
+    <result name="success">resources/jsp/utilitymgmt/getdocumenttype.jsp</result>
+    <result name="input">resources/jsp/utilitymgmt/getdocumenttype.jsp</result>
+  </action>
+  
+  <action name="getuserdetail" class="com.socialindia.utilitymgmt.NewDocumentForm" method="getUserDetail">
+  <result name="success">resources/jsp/utilitymgmt/getuserdetail.jsp</result>
+    <result name="input">resources/jsp/utilitymgmt/getuserdetail.jsp</result>
+  </action>
+ 
+ <!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  	<action name="gndocupctrsts" class="com.socialindia.utilitymgmt.DocmgmtAlertMsg">    
+    	<result name="success">resources/jsp/utilitymgmt/documentview.jsp</result>
+  	</action>
+  	<!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+ 
+ 
+  <action name="documentsuccess" class="com.socialindia.utilitymgmt.Generaldocumentadd">
+    <result name="success" type="redirectAction">gndocupctrsts</result>
+    <result name="input" type="redirectAction">gndocupctrsts</result>
+  	<!-- <result name="success">resources/jsp/utilitymgmt/documentview.jsp</result>
+    <result name="input">resources/jsp/utilitymgmt/documentview.jsp</result>-->
+  </action>
+  
+  
+  <action name="maintanencedocumentformsubmit" class="com.socialindia.utilitymgmt.NewMaintnenceDocFormCreate">
+   <result name="success">resources/jsp/utilitymgmt/documentview.jsp</result>
+    <result name="input">resources/jsp/utilitymgmt/documentview.jsp</result>
+  </action>
+  <action name="getDocumentViewValue" class="com.socialindia.utilitymgmt.GetDocumentListValues">
+   <result name="success">resources/jsp/utilitymgmt/docViewlistDetail.jsp</result>
+    <result name="input">resources/jsp/utilitymgmt/docViewlistDetail.jsp</result>
+  </action>
+   <action name="documentDelete" class="com.socialindia.utilitymgmt.DocumentModification">
+   <result name="success">resources/jsp/utilitymgmt/getStatus.jsp</result>
+    <result name="input">resources/jsp/utilitymgmt/getStatus.jsp</result>
+  </action>
+    <action name="maintanencedocumentexcelsubmit" class="com.socialindia.utilitymgmt.NewMaintnenceDocExcelCreate">
+   <result name="success">resources/jsp/utilitymgmt/documentview.jsp</result>
+    <result name="input">resources/jsp/utilitymgmt/documentview.jsp</result>
+  </action>
+    <action name="maintanencedocumentimagesubmit" class="com.socialindia.utilitymgmt.NewMaintnenceDocImageCreate">
+   <result name="success">resources/jsp/utilitymgmt/newdocumentform.jsp</result>
+    <result name="input">resources/jsp/utilitymgmt/newdocumentform.jsp</result>
+  </action>
+  <action name="getDocumentEditValue" class="com.socialindia.utilitymgmt.GetEditDocumentValue">
+   <result name="success">resources/jsp/utilitymgmt/editDocument.jsp</result>
+    <result name="input">resources/jsp/utilitymgmt/editDocument.jsp</result>
+  </action>
+  <action name="editdocumentaction" class="com.socialindia.utilitymgmt.EditGeneralDocument">
+   <result name="success">resources/jsp/utilitymgmt/documentview.jsp</result>
+    <result name="input">resources/jsp/utilitymgmt/documentview.jsp</result>
+  </action>
+    <action name="maintanencedocumentformedit" class="com.socialindia.utilitymgmt.NewMaintnenceDocFormEdit">
+   <result name="success">resources/jsp/utilitymgmt/documentview.jsp</result>
+    <result name="input">resources/jsp/utilitymgmt/documentview.jsp</result>
+  </action>
+   <action name="maintenanceImageformupdateedit" class="com.socialindia.utilitymgmt.ImageMaintnenceDocFormEdit">
+   <result name="success">resources/jsp/utilitymgmt/documentview.jsp</result>
+    <result name="input">resources/jsp/utilitymgmt/documentview.jsp</result>
+  </action>
+  <action name="getViewDocumentValue" class="com.socialindia.utilitymgmt.GetViewDocumentValue">
+   <result name="success">resources/jsp/utilitymgmt/viewDocument.jsp</result>
+    <result name="input">resources/jsp/utilitymgmt/viewDocument.jsp</result>
+  </action>
+    <action name="downloadfiles" class="com.socialindia.utilitymgmt.DownloadAction">
+	<result name="success" type="stream">
+	  <param name="contentType">application/octet-stream</param>
+	  <param name="inputName">fileInputStream</param>
+	  <param name="contentDisposition">attachment;filename="${filem}"</param>
+	  <param name="bufferSize">1024</param>
+	</result>
+	<result name="input">resources/jsp/utilitymgmt/documentview.jsp</result>
+   </action>
+     <action name="addnewShareimgmaintenanceNames" class="com.socialindia.utilitymgmt.AddnewShareimgmaintenanceNames">
+   <result name="success">resources/jsp/utilitymgmt/documentview.jsp</result>
+    <result name="input">resources/jsp/utilitymgmt/documentview.jsp</result>
+  </action>
+  
+  <action name="addAdditionalImagesharenames" class="com.socialindia.utilitymgmt.AddnewShareimgmaintenanceNames">
+   <result name="success">resources/jsp/utilitymgmt/documentview.jsp</result>
+    <result name="input">resources/jsp/utilitymgmt/documentview.jsp</result>
+  </action>
+  <action name="addAdditionalFormsharename" class="com.socialindia.utilitymgmt.AddnewShareFormmaintenanceNames">
+   <result name="success">resources/jsp/utilitymgmt/documentview.jsp</result>
+    <result name="input">resources/jsp/utilitymgmt/documentview.jsp</result>
+  </action>
+    <action name="addAdditionalGeneralsharename" class="com.socialindia.utilitymgmt.AddAdditionalGeneralsharename">
+   <result name="success">resources/jsp/utilitymgmt/documentview.jsp</result>
+    <result name="input">resources/jsp/utilitymgmt/documentview.jsp</result>
+  </action>
+   <action name="bookingmanagedatatable" class="com.socialindia.utilitymgmt.BookingMasterDTable">
+    <result type="json"></result>
+  </action>
+   <action name="bookingmstview" class="com.socialindia.utilitymgmt.Viewbookingaction">
+   <result name="success">resources/jsp/utilitymgmt/bookingview.jsp</result>
+    <result name="input">resources/jsp/utilitymgmt/bookingview.jsp</result>
+  </action>
+  
+  <action name="bookingapprovalaction" class="com.socialindia.utilitymgmt.Viewbookingaction"
+   method="approvalActionfun">	
+    <result name="success">resources/jsp/utilitymgmt/bookingmgmt.jsp</result>
+    <result name="input">resources/jsp/utilitymgmt/bookingmgmt.jsp</result>
+    <result name="error">resources/jsp/utilitymgmt/bookingmgmt.jsp</result>
+  </action> 
+   <action name="bookingdeclineaction" class="com.socialindia.utilitymgmt.Viewbookingaction"
+   method="declineActionfun">	
+    <result name="success">resources/jsp/utilitymgmt/bookingmgmt.jsp</result>
+    <result name="input">resources/jsp/utilitymgmt/bookingmgmt.jsp</result>
+    <result name="error">resources/jsp/utilitymgmt/bookingmgmt.jsp</result>
+  </action>
+  
+   <action name="maintnxlxdwnld">
+   <result>resources/jsp/utilitymgmt/samplexlsmaintenbill.jsp</result>
+  </action>
+  
+   <action name="getPDFGenerateBill" class="com.socialindia.utilitymgmt.CheckpdfGenerate">
+   <result name="success">resources/jsp/utilitymgmt/getCheck.jsp</result>
+    <result name="input">resources/jsp/utilitymgmt/getCheck.jsp</result>
+  </action>
+   
+ </package>
+</struts>

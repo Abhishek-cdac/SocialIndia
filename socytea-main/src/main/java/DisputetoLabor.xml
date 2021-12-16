@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="DisputemgmtTolabor" extends="default">
+
+ <action name="disputeToLaborTbldata" class="com.socialindia.disputemgmtToLabor.DisputemgmtToLaborTbl">
+    <result type="json"></result>
+  </action>
+  <!--  <action name="Laborcomplaintview" class="com.socialindia.disputemgmtToLabor.TolaborServices" method="modifyServices">
+  <result name="success">resources/jsp/disputelabor/tolaborview.jsp</result>
+    <result name="input">resources/jsp/disputelabor/tolaborview.jsp</result>
+  </action>  -->
+  <action name="Labordisputeview" class="com.socialindia.disputemgmtToLabor.TolaborServices" method="modifyServiceslabornew">
+  <result name="success">resources/jsp/disputelabor/tolaborview.jsp</result>
+    <result name="input">resources/jsp/disputelabor/tolaborview.jsp</result>
+  </action>
+  
+   <action name="deletetolaborcmpltaction" class="com.socialindia.disputemgmtToLabor.TolaborServices" method="deleteCmpltAction">
+  <result name="success">resources/jsp/disputelabor/disputetolabormgmt.jsp</result>
+    <result name="input">resources/jsp/disputelabor/disputetolabormgmt.jsp</result>
+  </action>
+   <action name="closetolaborcmpltaction" class="com.socialindia.disputemgmtToLabor.TolaborServices" method="closeCmpltAction">
+  <result name="success">resources/jsp/disputelabor/disputetolabormgmt.jsp</result>
+    <result name="input">resources/jsp/disputelabor/disputetolabormgmt.jsp</result>
+  </action>
+   <action name="sendmailtolaborcmpltaction" class="com.socialindia.disputemgmtToLabor.TolaborServices" method="sendemailCmpltAction">
+  <result name="success">resources/jsp/disputelabor/disputetolabormgmt.jsp</result>
+    <result name="input">resources/jsp/disputelabor/disputetolabormgmt.jsp</result>
+  </action>
+   <action name="sendsmstolaborcmpltaction" class="com.socialindia.disputemgmtToLabor.TolaborServices" method="sendSMSCmpltAction">
+  <result name="success">resources/jsp/disputelabor/disputetolabormgmt.jsp</result>
+    <result name="input">resources/jsp/disputelabor/disputetolabormgmt.jsp</result>
+    </action>
+    <action name="tolaborcmpltcreationaction" class="com.socialindia.disputemgmtToLabor.TolaborServices">
+    <result name="success">resources/jsp/disputelabor/cmpltcreation.jsp</result>
+  </action>
+  <action name="tolaborcmpltcreationactionform" class="com.socialindia.disputemgmtToLabor.TolaborServices" method="ComplaintCreateFun">
+  <result name="success">resources/jsp/disputelabor/disputetolabormgmt.jsp</result>
+    <result name="input">resources/jsp/disputelabor/cmpltcreation.jsp</result>
+     <result name="error">resources/jsp/disputelabor/cmpltcreation.jsp</result>
+  </action>
+ </package>
+</struts>

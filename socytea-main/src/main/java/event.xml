@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+   
+ <struts>
+ <package name="event" extends="default">
+  <action name="eventMgmtform" class="com.socialindia.event.EventMgmtTbl">
+    <result type="json"></result>
+  </action>
+  
+   <action name="createEvent" class="com.socialindia.event.EventServices">
+    <result name="success">resources/jsp/event/eventCreation.jsp</result>
+  </action>
+  
+   <action name="modifyEventAction" class="com.socialindia.event.EventServices" method="modifyServices">
+    <result name="success">resources/jsp/event/eventModify.jsp</result>
+     <result name="input">resources/jsp/event/eventModify.jsp</result>
+  </action>
+  <action name="viewEventAction" class="com.socialindia.event.EventServices" method="viewServices">
+ 	<result name="success">resources/jsp/event/eventView.jsp</result>
+     <result name="input">resources/jsp/event/eventView.jsp</result>
+  </action>
+  <action name="getuserfbdetail" class="com.socialindia.event.EventFbautocomp">
+  <result name="success">resources/jsp/event/getuserfbdetails.jsp</result>
+    <result name="input">resources/jsp/event/getuserfbdetails.jsp</result>
+  </action>
+  
+   <!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  <action name="eventmgmtcrtsts" class="com.socialindia.event.Eventcrtalertmsg">    
+     <result name="success">resources/jsp/event/eventMgmt.jsp</result>   	
+  </action>
+  <!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+  
+  <action name="eventcreationform" class="com.socialindia.event.EventServices" method="eventCreateFun">
+   <result name="success" type="redirectAction">eventmgmtcrtsts</result>
+   <result name="input" type="redirectAction">eventmgmtcrtsts</result>
+   <!-- <result name="success">resources/jsp/event/eventMgmt.jsp</result>
+   <result name="input">resources/jsp/event/eventMgmt.jsp</result> -->
+  </action>
+  
+  <action name="eventmodifyform" class="com.socialindia.event.EventServices" method="toeventmodifyform">
+   <result name="success">resources/jsp/event/eventMgmt.jsp</result>
+  	   <!--<result name="success" type="chain">
+  	   		<param name="actionName">eventdashboard</param>
+  	   		<param name="alertList">${alertList}</param>
+  	   </result> -->
+    <result name="input">resources/jsp/event/eventMgmt.jsp</result>
+  </action>
+   <action name="inviteeventaction" class="com.socialindia.event.EventServices" method="inviteEventAction">
+  	<result name="success">resources/jsp/event/inviteshare.jsp</result>
+    <result name="input">resources/jsp/event/inviteshare.jsp</result>
+  </action>
+  <action name="deleteEvent" class="com.socialindia.event.EventServices" method="deleteEventAction">
+  <result name="success">resources/jsp/event/eventMgmt.jsp</result>
+    <result name="input">resources/jsp/event/eventMgmt.jsp</result>
+  </action>
+  
+ 	<action name="eventdashboard">
+    <result name="success">resources/jsp/event/eventMgmt.jsp</result> 
+   <!--<result name="success" type="chain">eventMgmt</result>  -->
+  </action> 
+  
+   <action name="getfunctiondataonload" class="com.socialindia.event.Functiondataload">
+     <result name="success">resources/jsp/event/functiondata.jsp</result>
+   </action>
+   
+    <action name="getfunctiontemplatedataonload" class="com.socialindia.event.Functiondataload" method="getFuntionTempAuto">
+     <result name="success">resources/jsp/event/functiontemplate.jsp</result>
+   </action>
+   
+   <action name="getfunctionfacilityload" class="com.socialindia.event.Functiondataload" method="getFacilityTempAuto">
+     <result name="success">resources/jsp/event/facilitydata.jsp</result>
+   </action>
+  
+  </package>
+</struts>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="staffmgmt" extends="default">
+
+ <action name="addStaffUserdatatable" class="com.socialindia.generalmgnt.StaffMasterTable">
+    <result type="json"></result>
+  </action>
+  <action name="createstaffform" class="com.socialindia.generalmgnt.getCategoryCodeMethod" method="getCategoryDetail">
+    <result name="success">resources/jsp/generalmgmt/createStaff.jsp</result>
+    <result name="input">resources/jsp/generalmgmt/createStaff.jsp</result>
+  </action>
+   
+   <!-- category autocompleted -->
+   <action name="categorytype" class="com.socialindia.generalmgnt.getCategoryCodeMethod" method="getCategoryDetail">
+    <result name="success">resources/jsp/generalmgmt/getCategory.jsp</result>
+    <result name="input">resources/jsp/generalmgmt/getCategory.jsp</result>
+  </action>
+  
+   <action name="agencyGetPstlcodevalue" class="com.socialindia.generalmgnt.getPstlCodeMethod" method="getPostalcodeDetail">  
+    <result name="success">resources/jsp/generalmgmt/getpstlcodevalue.jsp</result>
+    <result name="input">resources/jsp/generalmgmt/createStaff.jsp</result>
+  </action> 
+  
+   <!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+   <action name="staffctrsts" class="com.socialindia.generalmgnt.StaffMgmtalertmsg">
+    	<result name="success">resources/jsp/generalmgmt/staffmanagement.jsp</result>    	
+   </action>
+   <!--Refresh / reload avoid to recall or reinsert [Alert Purpose End]-->
+  
+ <action name="createdstaff" class="com.socialindia.generalmgnt.staffcreation" method="creationForm">
+ 			<interceptor-ref name="fileUpload">
+				<param name="maximumSize">102097152</param>
+				<param name="allowedTypes">
+					image/png,image/gif,image/jpeg,image/pjpeg
+				</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>   			
+   			<!--<result name="success">resources/jsp/generalmgmt/staffmanagement.jsp</result>-->
+   			<result name="success" type="redirectAction">staffctrsts</result>
+   			<result name="exists" type="redirectAction">staffctrsts</result>
+    		<result name="input">resources/jsp/generalmgmt/createStaff.jsp</result>
+  </action>
+  
+  <action name="countryGetStatevalue" class="com.socialindia.generalmgnt.getStateCodeMethod" method="getStateDetail">
+   <result name="success">resources/jsp/generalmgmt/getstatevalue.jsp
+   </result>
+   <result name="input">resources/jsp/generalmgmt/createStaff.jsp</result>
+  </action>
+  <action name="agencyGetCityvalue" class="com.socialindia.generalmgnt.getCityCodeMethod"
+   method="getCityDetail">
+   <result name="success">resources/jsp/generalmgmt/getcityvalue.jsp
+   </result>
+   <result name="input">resources/jsp/generalmgmt/createStaff.jsp</result>
+  </action>
+  
+  <action name="editstaffform" class="com.socialindia.generalmgnt.staffcreation" method="editStaff">
+    <result name="success">resources/jsp/generalmgmt/editstaff.jsp</result>
+    <result name="input">resources/jsp/generalmgmt/staffmanagement.jsp</result>
+  </action>
+  
+  <action name="staffmanagementEditform" class="com.socialindia.generalmgnt.staffcreation" method="editstaffformFunction">
+    <result name="success">resources/jsp/generalmgmt/staffmanagement.jsp</result>
+    <result name="input">resources/jsp/generalmgmt/editstaff.jsp</result>
+    <result name="error">resources/jsp/generalmgmt/editstaff.jsp</result>
+    <result name="exists">resources/jsp/generalmgmt/staffmanagement.jsp</result>
+  </action>
+  <action name="deletestaff" class="com.socialindia.generalmgnt.staffcreation"
+   method="deleteStaffActionFunction">
+    <result name="success">resources/jsp/generalmgmt/staffmanagement.jsp</result>
+    <result name="input">resources/jsp/generalmgmt/staffmanagement.jsp</result>
+    <result name="error">resources/jsp/generalmgmt/staffmanagement.jsp</result>
+  </action>
+  <action name="viewstaffform" class="com.socialindia.generalmgnt.staffcreation"
+   method="viewStaffActionFunction">
+    <result name="success">resources/jsp/generalmgmt/staffview.jsp</result>
+    <result name="input">resources/jsp/generalmgmt/staffview.jsp</result>
+    <result name="error">resources/jsp/generalmgmt/staffmanagement.jsp</result>
+  </action>
+  <action name="successeditstaff" class="com.socialindia.generalmgnt.staffcreation">
+    <result name="success">resources/jsp/generalmgmt/staffmanagement.jsp</result>
+    <result name="input">resources/jsp/generalmgmt/staffmanagement.jsp</result>
+    <result name="error">resources/jsp/generalmgmt/staffmanagement.jsp</result>
+  </action>
+  <action name="salaryuserform" class="com.socialindia.generalmgnt.staffcreation" method="salaryStaffActionFunction">
+    <result name="success">resources/jsp/generalmgmt/staffsalary.jsp</result>
+    <result name="input">resources/jsp/generalmgmt/staffsalary.jsp</result>
+    <result name="error">resources/jsp/generalmgmt/staffmanagement.jsp</result>
+  </action>
+  <action name="SalaryCreateUpdateAction" class="com.socialindia.generalmgnt.staffcreation" method="StaffSalaryCreateUpdateAction">
+    <result name="success">resources/jsp/generalmgmt/staffmanagement.jsp</result>
+    <result name="input">resources/jsp/generalmgmt/staffsalary.jsp</result>
+    <result name="error">resources/jsp/generalmgmt/staffsalary.jsp</result>
+  </action>
+  <action name="workalertform" class="com.socialindia.generalmgnt.staffcreation" method="Staffworkalertform">
+    <result name="success">resources/jsp/generalmgmt/staffwork.jsp</result>
+    <result name="input">resources/jsp/generalmgmt/staffwork.jsp</result>
+    <result name="error">resources/jsp/generalmgmt/staffmanagement.jsp</result>
+  </action>
+  <action name="WorkalertAction" class="com.socialindia.generalmgnt.staffcreation" method="StaffWrkAlertCreateUpdateAction">
+    <result name="success">resources/jsp/generalmgmt/staffmanagement.jsp</result>
+    <result name="input">resources/jsp/generalmgmt/staffmanagement.jsp</result>
+    <result name="error">resources/jsp/generalmgmt/staffwork.jsp</result>
+  </action>
+  <action name="staffmanagement" class="com.socialindia.generalmgnt.staffcreation" >
+    <result name="success">resources/jsp/generalmgmt/staffmanagement.jsp</result>
+    <result name="input">resources/jsp/generalmgmt/staffmanagement.jsp</result>
+    <result name="error">resources/jsp/generalmgmt/staffwork.jsp</result>
+  </action>
+  <action name="getcompanylistvalue" class="com.socialindia.generalmgnt.getCategoryCodeMethod" method="getcompanylistdetail">
+    <result name="success">resources/jsp/generalmgmt/getcompanylist.jsp</result>
+    <result name="input">resources/jsp/generalmgmt/getcompanylist.jsp</result>
+  </action>
+  <action name="gettownshiplistvalue" class="com.socialindia.generalmgnt.GetTownshipList">
+    <result name="success">resources/jsp/generalmgmt/getTownshiplist.jsp</result>
+    <result name="input">resources/jsp/generalmgmt/getTownshiplist.jsp</result>
+  </action>
+  
+ </package>
+</struts>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="residentmgmt" extends="default">
+
+ <action name="residentmgmtdatatable" class="com.socialindia.residentmgmt.residentMgmtMasterTable">
+    <result type="json"></result>
+  </action>
+  <action name="createNewresidentform" class="com.socialindia.residentmgmt.ResidentMgmtAction">
+     <result name="success">resources/jsp/residentmgmt/residentadd.jsp</result>
+    <result name="input">resources/jsp/residentmgmt/residentadd.jsp</result>
+  </action>
+ 
+  <action name="getresidentform" class="com.socialindia.residentmgmt.ResidentMgmtAction" method="townshiplist">
+     	<result name="success">resources/jsp/committeeMgmt/gettownshipvalue.jsp</result>
+    	<result name="input">resources/jsp/committeeMgmt/gettownshipvalue.jsp</result>
+  </action>
+  
+  <!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  <action name="residentmgmtcrtsts" class="com.socialindia.residentmgmt.Residentmgmtalertmsg">
+    	<result name="success">resources/jsp/residentmgmt/residentmanagement.jsp</result>
+  </action>
+  <!--Refresh / reload avoid to recall or reinsert [Alert Purpose End]-->
+  
+   <action name="residentmgmtadd" class="com.socialindia.residentmgmt.ResidentMgmtAction" method="residentmgmtaddaction">
+     	<!-- <result name="success">resources/jsp/residentmgmt/residentmanagement.jsp</result> -->
+     	<result name="success" type="redirectAction">residentmgmtcrtsts</result>
+      	<result name="input">resources/jsp/residentmgmt/residentadd.jsp</result>
+    <result name="error">resources/jsp/residentmgmt/residentadd.jsp</result>
+  </action> 
+  
+   <action name="deleteresident" class="com.socialindia.residentmgmt.ResidentMgmtAction" method="deleteResidentActionFunction">
+     <result name="success">resources/jsp/residentmgmt/residentmanagement.jsp</result>
+      <result name="input">resources/jsp/residentmgmt/residentmanagement.jsp</result>
+    <result name="error">resources/jsp/residentmgmt/residentmanagement.jsp</result>
+  </action> 
+  
+  <action name="viewresidentform" class="com.socialindia.residentmgmt.ResidentMgmtAction" method="viewresidentActionFunction">
+     <result name="success">resources/jsp/residentmgmt/residentview.jsp</result>
+      <result name="input">resources/jsp/residentmgmt/residentview.jsp</result>
+    <result name="error">resources/jsp/residentmgmt/residentmanagement.jsp</result>
+  </action>
+  <action name="editresidentform" class="com.socialindia.residentmgmt.ResidentMgmtAction" method="viewresidentActionFunction">
+     <result name="success">resources/jsp/residentmgmt/resident_Edit.jsp</result>
+      <result name="input">resources/jsp/residentmgmt/resident_Edit.jsp</result>
+    <result name="error">resources/jsp/residentmgmt/residentmanagement.jsp</result>
+    </action>
+      <action name="residentEditSubmitaction" class="com.socialindia.residentmgmt.ResidentMgmtAction" method="updatedresidentActionFunction">
+     <result name="success">resources/jsp/residentmgmt/residentmanagement.jsp</result>
+      <result name="input">resources/jsp/residentmgmt/resident_Edit.jsp</result>
+    <result name="error">resources/jsp/residentmgmt/resident_Edit.jsp</result>
+  </action>
+   <action name="excelfileupload" class="com.socialindia.residentmgmt.XlsfileuploadAction" >
+     <result name="success">resources/jsp/residentmgmt/residentmanagement.jsp</result>
+      <result name="input">resources/jsp/residentmgmt/residentmanagement.jsp</result>
+    <result name="error">resources/jsp/residentmgmt/residentmanagement.jsp</result>
+  </action>
+   <action name="xlsxdownload">
+   <result>resources/jsp/residentmgmt/xlsxdownload.jsp</result>
+  </action>
+  
+  <action name="getwingsblocklist" class="com.socialindia.residentmgmt.GetWingsblockdataload">
+     <result name="success">resources/jsp/residentmgmt/wingsblockdata.jsp</result>
+   </action>
+  <action name="validatersiedentmob" class="com.socialindia.residentmgmt.ResidentMgmtAction" method="toValidateMobileno">
+     	<result name="NotExists">resources/jsp/committeeMgmt/getresidentmobvalidate.jsp</result>
+    	<result name="Exists">resources/jsp/committeeMgmt/getresidentmobvalidate.jsp</result>
+  </action>
+  
+  <action name="getTownshipDataRst" class="com.socialindia.societyMgmt.createSocietyAction" method="getTownshipData">
+     <result name="success">resources/jsp/committeeMgmt/townshipaddresdtlAjax.jsp</result>
+    <result name="input">resources/jsp/committeeMgmt/townshipaddresdtlAjax.jsp</result>
+  </action>
+ </package>
+</struts>

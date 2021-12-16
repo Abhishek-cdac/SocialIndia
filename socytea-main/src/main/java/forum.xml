@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC  "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+<struts>
+
+ <package name="forumMgmt" extends="default">
+   <action name="forumMgmt">
+   	<result name="success">${getText("Text.utility.forumMgmt")}</result>
+  </action>
+
+ <action name="forumMgmtTable" class="com.socialindia.forum.forumMgmtTable">
+   <result type="json"></result>
+  </action>
+ 
+  <action name="createforumform" class="com.socialindia.forum.createForum">
+     <result name="success">resources/jsp/forum/createForum.jsp</result>
+    <result name="input">resources/jsp/forum/forumMgmt.jsp</result>
+  </action>
+  
+  <!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  <action name="fourmcrtsts" class="com.socialindia.forum.Fourmmgmtaletmsg">    
+     <result name="success" >resources/jsp/forum/forumMgmt.jsp</result>    	
+  </action>
+  <!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+  
+  <action name="fourmCreateAction" class="com.socialindia.forum.fourmCreateAction">
+     <!-- <result name="success">resources/jsp/forum/forumMgmt.jsp</result>  <result name="success" type="chain">forumMgmt</result>-->
+        <result name="success" type="redirectAction">fourmcrtsts</result>
+    	<result name="input">resources/jsp/forum/createForum.jsp</result>
+  </action>
+  
+   <action name="deleteForum" class="com.socialindia.forum.createForum" method="deleteForum">
+     <result name="success">resources/jsp/forum/forumMgmt.jsp</result>
+    <result name="input">resources/jsp/forum/forumMgmt.jsp</result>
+  </action>
+  
+  <action name="forumPostComments" class="com.socialindia.forum.createForum" method="forumCreateComments">
+     <result name="success">resources/jsp/forum/forumpostcomments.jsp</result>
+    <result name="input">resources/jsp/forum/forumMgmt.jsp</result>
+  </action>
+  
+    <action name="forumViewAction" class="com.socialindia.forum.forumViewAction">
+     <result name="success">resources/jsp/forum/forumViewIt.jsp</result>
+    <result name="input">resources/jsp/forum/forumMgmt.jsp</result>
+  </action>
+  
+  <action name="postCommentAction" class="com.socialindia.forum.postCommentAction">
+     <result name="success">resources/jsp/forum/forumMgmt.jsp</result>
+    <result name="input">resources/jsp/forum/forumMgmt.jsp</result>
+  </action>
+  
+  <action name="forumEditAction" class="com.socialindia.forum.forumEditAction">
+     <result name="success">resources/jsp/forum/editForum.jsp</result>
+    <result name="input">resources/jsp/forum/forumMgmt.jsp</result>
+  </action>
+  
+  <action name="fourmUpdateAction" class="com.socialindia.forum.fourmUpdateAction">
+     <result name="success">resources/jsp/forum/forumMgmt.jsp</result>
+    <result name="input">resources/jsp/forum/editForum.jsp</result>
+  </action>
+  
+ </package>
+</struts>

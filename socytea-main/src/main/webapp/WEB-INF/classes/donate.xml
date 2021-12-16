@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC  "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+<struts>
+
+ <package name="donate" extends="default">
+  
+<action name="donatemgmt" class="com.socialindia.compaign.Donate">
+	<result type="json"></result>
+</action>
+<action name="createdonateform" class="com.socialindia.compaign.Donateservices">
+	<result name="success">resources/jsp/donate/createdonate.jsp</result>
+    <result name="input">resources/jsp/donate/createdonate.jsp</result>
+</action>
+
+<!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+<action name="donatemgmtcrtsts" class="com.socialindia.compaign.Donatecrtalrtmsg">    
+    <result name="success">resources/jsp/donate/donatemgmt.jsp</result> 	
+  </action>
+<!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+
+<action name="createdonateaction" class="com.socialindia.compaign.Donateservices" method="createDonation">
+	<result name="success" type="redirectAction">donatemgmtcrtsts</result>
+   <result name="input" type="redirectAction">donatemgmtcrtsts</result>
+	<!-- <result name="success">resources/jsp/donate/donatemgmt.jsp</result>
+    <result name="input">resources/jsp/donate/donatemgmt.jsp</result>  -->
+</action>
+<action name="editDonate" class="com.socialindia.compaign.Donateservices" method="editDonation">
+	<result name="success">resources/jsp/donate/modifydonation.jsp</result>
+    <result name="input">resources/jsp/donate/modifydonation.jsp</result>
+</action>
+<action name="modifydonateaction" class="com.socialindia.compaign.Donateservices" method="modifyDonateAction">
+	<result name="success">resources/jsp/donate/donatemgmt.jsp</result>
+    <result name="input">resources/jsp/donate/donatemgmt.jsp</result>
+</action>
+<action name="deletedonate" class="com.socialindia.compaign.Donateservices" method="deletedonateAction">
+	<result name="success">resources/jsp/donate/donatemgmt.jsp</result>
+    <result name="input">resources/jsp/donate/donatemgmt.jsp</result>
+</action>
+<action name="viewDonate" class="com.socialindia.compaign.Donateservices" method="editDonation">
+	<result name="success">resources/jsp/donate/viewdonate.jsp</result>
+    <result name="input">resources/jsp/donate/viewdonate.jsp</result>
+</action>
+
+
+ </package>
+</struts>

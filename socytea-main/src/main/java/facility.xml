@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+<package name="facilitypkgg" extends="default">
+<action name="facilitypkgg">
+   	<result name="success">${getText("Text.configmegmt.facilitymgmt")}</result>
+  </action>
+<action name="facilitymgmttbl" class="com.socilaindia.facilityMgmt.FacilityMgmt">
+  <result type="json"></result>
+</action>
+
+<action name="createfacility" class="com.socilaindia.facilityMgmt.Facilityservices">
+  <result name="success">resources/jsp/facility/createfacility.jsp</result>
+    <result name="input">resources/jsp/facility/createfacility.jsp</result>
+</action>
+
+	<!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  	<action name="facilitymgtctssts" class="com.socilaindia.facilityMgmt.FacilityAlertMsg">    
+    	<result name="success">resources/jsp/facility/facilitymgmt.jsp</result>
+  	</action>
+  	<!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+
+<action name="newfacility" class="com.socilaindia.facilityMgmt.Facilityservices" method="createFacility">
+  	<result name="success" type="redirectAction">facilitymgtctssts</result>
+    <result name="input" type="redirectAction">facilitymgtctssts</result>
+    <!-- <result name="success">resources/jsp/facility/facilitymgmt.jsp</result>
+    <result name="input">resources/jsp/facility/facilitymgmt.jsp</result> -->
+</action>
+<action name="editfacility" class="com.socilaindia.facilityMgmt.Facilityservices" method="editFacilitymethod">
+  <result name="success">resources/jsp/facility/modifyFacility.jsp</result>
+    <result name="input">resources/jsp/facility/modifyFacility.jsp</result>
+</action>
+<action name="updatefacility" class="com.socilaindia.facilityMgmt.Facilityservices" method="updateFacilitymethod">
+  <result name="success">resources/jsp/facility/facilitymgmt.jsp</result>
+    <result name="input">resources/jsp/facility/facilitymgmt.jsp</result>
+</action>
+<action name="deactivefacility" class="com.socilaindia.facilityMgmt.Facilityservices" method="deActivefacility">
+  <result name="success">resources/jsp/facility/facilitymgmt.jsp</result>
+    <result name="input">resources/jsp/facility/facilitymgmt.jsp</result>
+</action>
+
+ </package>
+ </struts>

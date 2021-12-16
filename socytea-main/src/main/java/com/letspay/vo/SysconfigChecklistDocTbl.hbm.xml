@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping >
+<class name="com.letspay.vo.SysconfigChecklistDocTblVo" table="checklist_docs_tbl"> 
+<id name="docid" column="DOC_ID" type="integer">
+<generator class="native"></generator>
+</id>
+<property name="namedoc" column="DOC_NAME" type="string" length="50"></property>
+<property name="allowedtype" column="ALLOWED_FILE_TYPES" type="string" length="20"></property>
+<property name="statusflg" column="STATUS_FLAG" type="integer" length="11"></property>
+<property name="entryby" column="ENTRY_BY" type="integer" length="11"></property>
+<property name="entrydate" column="ENTRY_DATETIME" type="timestamp"></property>
+<property name="modifydate" column="MODY_DATETIME" type="timestamp"></property>
+
+</class>
+</hibernate-mapping>

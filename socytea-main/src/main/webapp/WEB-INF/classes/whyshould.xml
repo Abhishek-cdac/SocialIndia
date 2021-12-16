@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="whyshouldmgmt" extends="default">
+ 
+  <action name="whyshouldmgmttbl" class="com.socialindia.whyshouldmgmt.Whyshouldmgmt">
+    <result type="json"></result>
+  </action>
+  <action name="createwhyshould">
+ 	 <result>resources/jsp/whyshould/createwhyshould.jsp</result>
+  </action>
+	
+	<!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  	<action name="whyshldmgtctssts" class="com.socialindia.whyshouldmgmt.WhyshldAlertMsg">    
+    	<result name="success">resources/jsp/whyshould/whyshouldmgmt.jsp</result>
+  	</action>
+  	<!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+	
+	
+	<action name="whyshoudcreate" class="com.socialindia.whyshouldmgmt.whyshoudAction">
+   		<result name="success" type="redirectAction">whyshldmgtctssts</result>
+    	<result name="input" type="redirectAction">whyshldmgtctssts</result>
+    	<!-- <result name="success">resources/jsp/whyshould/whyshouldmgmt.jsp</result>
+    	<result name="input">resources/jsp/whyshould/whyshouldmgmt.jsp</result> -->
+  	</action>
+  <action name="editwhyshould" class="com.socialindia.whyshouldmgmt.whyshoudAction" method="editwhyshouldMethod">
+   <result name="success">resources/jsp/whyshould/editwhyshould.jsp</result>
+    <result name="input">resources/jsp/whyshould/editwhyshould.jsp</result>
+  </action>
+  <action name="whyshoudmodify" class="com.socialindia.whyshouldmgmt.whyshoudAction" method="modifywhyshouldMethod">
+   <result name="success">resources/jsp/whyshould/whyshouldmgmt.jspp</result>
+    <result name="input">resources/jsp/whyshould/whyshouldmgmt.jsp</result>
+  </action>
+  
+   <action name="whyshoudmodify" class="com.socialindia.whyshouldmgmt.whyshoudAction" method="modifywhyshouldMethod">
+   <result name="success">resources/jsp/whyshould/whyshouldmgmt.jsp</result>
+    <result name="input">resources/jsp/whyshould/whyshouldmgmt.jsp</result>
+  </action> 
+  
+    <action name="deactivewhy" class="com.socialindia.whyshouldmgmt.whyshoudAction" method="deactiveWhyshould">
+   <result name="success">resources/jsp/whyshould/whyshouldmgmt.jsp</result>
+    <result name="input">resources/jsp/whyshould/whyshouldmgmt.jsp</result>
+  </action>
+  
+ </package>
+</struts>

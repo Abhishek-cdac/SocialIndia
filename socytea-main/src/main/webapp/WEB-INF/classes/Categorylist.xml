@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="category" extends="default">
+
+  <action name="categorymanagedatatable" class="com.socialindia.categorymaster.CategoryMasterDTable">
+    <result type="json"></result>
+  </action>
+ 
+   <action name="createcategorytype" class="com.socialindia.categorymaster.CategoryServices">	
+    <result name="success">resources/jsp/categorymgmt/categoryadd.jsp</result>
+    <result name="input">resources/jsp/categorymgmt/categoryadd.jsp</result>
+    <result name="error">resources/jsp/categorymgmt/categoryadd.jsp</result>
+  </action> 
+  
+   	<!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  	<action name="categcrtstss" class="com.socialindia.categorymaster.CategoryAlertMsg">    
+      <result name="success">resources/jsp/categorymgmt/categorymgmt.jsp</result>   
+  	</action>
+  	<!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+  
+   	<action name="categorymgmtadd" class="com.socialindia.categorymaster.CategoryServices"  method="CategoryCreateFun" >	
+   	<!--  <result name="success">resources/jsp/categorymgmt/categorymgmt.jsp</result>
+    <result name="input">resources/jsp/categorymgmt/categorymgmt.jsp</result> -->
+    <result name="success" type="redirectAction">categcrtstss</result>
+    <result name="input" type="redirectAction">categcrtstss</result>
+   
+    <result name="error">resources/jsp/categorymgmt/categoryadd.jsp</result>
+  </action>
+   <action name="deleteactioncategory" class="com.socialindia.categorymaster.CategoryServices"
+   method="deleteActionfun">	
+    <result name="success">resources/jsp/categorymgmt/categorymgmt.jsp</result>
+    <result name="input">resources/jsp/categorymgmt/categorymgmt.jsp</result>
+    <result name="error">resources/jsp/categorymgmt/categorymgmt.jsp</result>
+  </action> 
+   <action name="activeactioncategory" class="com.socialindia.categorymaster.CategoryServices"
+   method="activeActionfun">	
+    <result name="success">resources/jsp/categorymgmt/categorymgmt.jsp</result>
+    <result name="input">resources/jsp/categorymgmt/categorymgmt.jsp</result>
+    <result name="error">resources/jsp/categorymgmt/categorymgmt.jsp</result>
+  </action> 
+   <action name="categorymstview" class="com.socialindia.categorymaster.CategoryServices"
+   method="viewActionfun">	
+    <result name="success">resources/jsp/categorymgmt/categoryedit.jsp</result>
+    <result name="input">resources/jsp/categorymgmt/categoryedit.jsp</result>
+    <result name="error">resources/jsp/categorymgmt/categorymgmt.jsp</result>
+  </action> 
+  <action name="categoryEditSubmitaction" class="com.socialindia.categorymaster.CategoryServices"  method="CategoryUpdateFun" >	
+    <result name="success">resources/jsp/categorymgmt/categorymgmt.jsp</result>
+    <result name="input">resources/jsp/categorymgmt/categorymgmt.jsp</result>
+    <result name="error">resources/jsp/categorymgmt/categoryedit.jsp</result>
+  </action>
+  
+ </package>
+</struts>

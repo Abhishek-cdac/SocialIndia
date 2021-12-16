@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="tendermgmt" extends="default">
+
+ <action name="Tendermgmtdatatable" class="com.socialindia.tendermgmt.TenderMgmtTbl">
+    <result type="json"></result>
+  </action>
+   <action name="createTender" class="com.socialindia.tendermgmt.TenderServices">
+    <result name="success">resources/jsp/tendermgmt/tenderCreation.jsp</result>
+  </action>
+  
+  <!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  <action name="tendermgmtctssts" class="com.socialindia.tendermgmt.Tenderctralertmsg">
+    <result name="success">resources/jsp/tendermgmt/tenderMgmt.jsp</result>
+  </action>
+  <!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+      
+  <action name="tenderCreateAction" class="com.socialindia.tendermgmt.TenderServices" method="tenderCreateFun">
+   	<interceptor-ref name="fileUpload"> <param name="maximumSize">5000000</param> </interceptor-ref>
+	<interceptor-ref name="defaultStack"></interceptor-ref>
+    <!-- <result name="success">resources/jsp/tendermgmt/tenderMgmt.jsp</result>-->
+    <result name="success" type="redirectAction">tendermgmtctssts</result>
+    <result name="input" type="redirectAction">
+    	<param name="actionName">createTender</param>
+    	<param name="msg">notvalid</param>
+    </result>
+    <result name="error">resources/jsp/tendermgmt/tenderCreation.jsp</result>
+    <!-- <result name="input">resources/jsp/tendermgmt/tenderMgmt.jsp</result> -->
+  </action>
+  
+  
+  <action name="deletetender" class="com.socialindia.tendermgmt.TenderServices" method="deleteTenderAction">
+  <result name="success">resources/jsp/tendermgmt/tenderMgmt.jsp</result>
+    <result name="input">resources/jsp/tendermgmt/tenderMgmt.jsp</result>
+  </action>
+ <action name="viewtenderform" class="com.socialindia.tendermgmt.TenderServices" method="modifyServices">
+  <result name="success">resources/jsp/tendermgmt/tenderView.jsp</result>
+    <result name="input">resources/jsp/tendermgmt/tenderView.jsp</result>
+  </action>
+  <action name="downloadfilestender" class="com.socialindia.utilitymgmt.DownloadAction">
+	<result name="success" type="stream">
+	  <param name="contentType">application/octet-stream</param>
+	  <param name="inputName">fileInputStream</param>
+	  <param name="contentDisposition">attachment;filename="${filem}"</param>
+	  <param name="bufferSize">1024</param>
+	</result>
+	<result name="input">resources/jsp/tendermgmt/tenderView.jsp</result>
+   </action>
+   <action name="edittenderform" class="com.socialindia.tendermgmt.TenderServices" method="modifyServices">
+  <result name="success">resources/jsp/tendermgmt/tenderModify.jsp</result>
+    <result name="input">resources/jsp/tendermgmt/tenderModify.jsp</result>
+  </action>
+    <action name="tenderUpdateAction" class="com.socialindia.tendermgmt.TenderServices" method="totendermodifyform">
+  <result name="success">resources/jsp/tendermgmt/tenderMgmt.jsp</result>
+    <result name="input">resources/jsp/tendermgmt/tenderMgmt.jsp</result>
+     <result name="input">resources/jsp/tendermgmt/tenderModify.jsp</result>
+  </action>
+ </package>
+</struts>

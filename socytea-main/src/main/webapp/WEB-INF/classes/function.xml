@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="functionlist" extends="default">
+
+  <action name="functionmanagedatatable" class="com.socialindia.function.FunctionMgmtTbl">
+    <result type="json"></result>
+  </action>
+   
+   
+   <action name="createfuntion" class="com.socialindia.function.Functionservices">
+     <result name="success">resources/jsp/function/createfunction.jsp</result>
+     <result name="input">resources/jsp/function/createfunction.jsp</result>
+  </action>
+  
+  	<!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  	<action name="functionmstrctrsts" class="com.socialindia.function.FunctionAlertMsg">    
+    	<result name="success">resources/jsp/function/function.jsp</result>
+  	</action>
+  	<!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+  
+  
+  <action name="createfunc" class="com.socialindia.function.Functionservices" method="createFunction">
+     <result name="success" type="redirectAction">functionmstrctrsts</result>
+     <result name="input" type="redirectAction">functionmstrctrsts</result>
+     <!--  <result name="success">resources/jsp/function/function.jsp</result>
+     <result name="input">resources/jsp/function/function.jsp</result> -->
+  </action>
+  
+  <action name="editfunc" class="com.socialindia.function.Functionservices" method="editFunction">
+     <result name="success">resources/jsp/function/modifyfunction.jsp</result>
+     <result name="input">resources/jsp/function/modifyfunction.jsp</result>
+  </action>
+   <action name="deactivefunction" class="com.socialindia.function.Functionservices" method="deActiveFunction">
+     <result name="success">resources/jsp/function/function.jsp</result>
+     <result name="input">resources/jsp/function/function.jsp</result>
+  </action>
+  
+   <action name="updateAction" class="com.socialindia.function.Functionservices" method="updateActionmethod">
+     <result name="success">resources/jsp/function/function.jsp</result>
+     <result name="input">resources/jsp/function/function.jsp</result>
+  </action>
+  
+   
+ </package>
+</struts>
