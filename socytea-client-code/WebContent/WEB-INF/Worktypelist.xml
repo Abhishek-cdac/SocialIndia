@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="worktypelist" extends="default">
+
+  <action name="worktypemanagedatatable" class="com.socialindia.worktypelistmaster.WorktypeMasterDTable">
+    <result type="json"></result>
+  </action>
+  
+    <!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  	<action name="worktypcrtsts" class="com.socialindia.worktypelistmaster.WrktypAlertMsg">    
+    	<result name="success">resources/jsp/worktypelist/worktype.jsp</result> 
+  	</action>
+  	<!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+  
+   <action name="createworktypetype" class="com.socialindia.worktypelistmaster.WorktypeServices"  method="worktypeCreateFun">	
+    <result name="success" type="redirectAction">worktypcrtsts</result>
+    <result name="input" type="redirectAction">worktypcrtsts</result>
+    <result name="error" type="redirectAction">worktypcrtsts</result>
+    <!-- <result name="success">resources/jsp/worktypelist/worktype.jsp</result>
+    <result name="input">resources/jsp/worktypelist/worktype.jsp</result>
+    <result name="error">resources/jsp/worktypelist/worktype.jsp</result> -->
+  </action> 
+   <action name="deleteactionworktype" class="com.socialindia.worktypelistmaster.WorktypeServices"
+   method="deleteActionfun">	
+    <result name="success">resources/jsp/worktypelist/worktype.jsp</result>
+    <result name="input">resources/jsp/worktypelist/worktype.jsp</result>
+    <result name="error">resources/jsp/worktypelist/worktype.jsp</result>
+  </action> 
+   <action name="activeactionworktype" class="com.socialindia.worktypelistmaster.WorktypeServices"
+   method="activeActionfun">	
+    <result name="success">resources/jsp/worktypelist/worktype.jsp</result>
+    <result name="input">resources/jsp/worktypelist/worktype.jsp</result>
+    <result name="error">resources/jsp/worktypelist/worktype.jsp</result>
+  </action> 
+ </package>
+</struts>

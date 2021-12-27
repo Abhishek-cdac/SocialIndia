@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="issuemgmt" extends="default">
+
+  <action name="issuemgmtbl" class="com.socialindia.issuemgmtbl.IssuemgmTbl">
+    <result type="json"></result>
+  </action>
+  
+  	<!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  	<action name="issuelistctssts" class="com.socialindia.issuemgmtbl.IssueListAlertMsg">    
+    	<result name="success">resources/jsp/issue/issuemstrtbl.jsp</result>
+  	</action>
+  	<!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+  
+    <action name="createissue" class="com.socialindia.issuemgmtbl.Issueservices">	
+    <result name="success" type="redirectAction">issuelistctssts</result>
+    <result name="input" type="redirectAction">issuelistctssts</result>
+    <!-- <result name="success">resources/jsp/issue/issuemstrtbl.jsp</result>
+    <result name="input">resources/jsp/issue/issuemstrtbl.jsp</result> -->
+  </action>
+  <action name="modifylisttxt" class="com.socialindia.issuemgmtbl.Issueservices" method="modifyListtxt">	
+    <result name="success">resources/jsp/issue/issuemstrtbl.jsp</result>
+    <result name="input">resources/jsp/issue/issuemstrtbl.jsp</result>
+  </action>
+    <action name="getIssuevalue" class="com.socialindia.issuemgmtbl.IssuemgmTbl">	
+    <result name="success">resources/jsp/issue/issuecheckval.jsp</result>
+    <result name="input">resources/jsp/issue/issuecheckval.jsp</result>
+  </action>
+  
+  
+  
+ </package>
+</struts>

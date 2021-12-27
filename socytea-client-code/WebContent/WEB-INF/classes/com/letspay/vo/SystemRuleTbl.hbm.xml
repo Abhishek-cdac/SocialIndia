@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.letspay.vo.SystemRuleTblVo" table="system_rule_tbl">
+    <id name="sysruleId" column="SYSRULE_ID" type="integer">
+    <generator class="native"></generator>
+    </id>
+    <property name="sysruleCode" column="SYSRULE_CODE" type="string" length="6"></property>
+    <property name="sysruleDesc" column="SYSRULE_DESC" type="string" length="50"></property>
+    <property name="condition" column="CONDITION" type="string" length="100"></property>
+    <property name="action" column="ACTION" type="string" length="100"></property>
+    <property name="statusFlag" column="STATUS_FLAG" type="integer" ></property>
+    <property name="entryBy" column="ENTRY_BY" type="integer" ></property>
+    <property name="entryDateTime" column="ENTRY_DATETIME" type="timestamp"></property>
+    </class>
+</hibernate-mapping>

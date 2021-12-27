@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="labourmgmt" extends="default">
+
+ <action name="Labourmgmtdatatable" class="com.socialindia.labourmgmt.LabourMgmtMasterTable">
+    <result type="json"></result>
+  </action>
+  
+  <action name="createlabourform" class="com.socialindia.labourmgmt.createlabourfrmaction">
+     <result name="success">resources/jsp/labourmgmtservices/labouraddmembers.jsp</result>
+    <result name="input">resources/jsp/labourmgmtservices/labouraddmembers.jsp</result>
+  </action>
+  
+  
+   <action name="getcountryvalue" class="com.socialindia.generalmgnt.getCountrycodeMethod">
+     <result name="success">resources/jsp/generalmgmt/getcountryvalue.jsp</result>
+    <result name="input">resources/jsp/generalmgmt/getcountryvalue.jsp</result>
+  </action>
+  <action name="getidcardvalue" class="com.socialindia.labourmgmt.createlabourfrmaction">
+     <result name="success">resources/jsp/generalmgmt/getidcardvalue.jsp</result>
+    <result name="input">resources/jsp/generalmgmt/getidcardvalue.jsp</result>
+  </action>
+  <action name="getCategoryvalue" class="com.socialindia.labourmgmt.skillsaction">
+     <result name="success">resources/jsp/labourmgmtservices/getskillsval.jsp</result>
+    <result name="input">resources/jsp/labourmgmtservices/getskillsval.jsp</result>
+  </action>
+  <action name="getSkillsvalue" class="com.socialindia.labourmgmt.skillsaction"  method="GetskillsMethod">
+     <result name="success">resources/jsp/labourmgmtservices/getskillsval.jsp</result>
+    <result name="input">resources/jsp/labourmgmtservices/getskillsval.jsp</result>
+  </action>
+  
+  <!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  <action name="labormgmgcrtsts" class="com.socialindia.labourmgmt.Labormgmtalertmsg" >
+     <result name="success">resources/jsp/labourmgmtservices/labourmgmt.jsp</result>   
+  </action>
+   <!--Refresh / reload avoid to recall or reinsert [Alert Purpose End]-->
+  
+  <action name="labourmgmtadd" class="com.socialindia.labourmgmt.labourmgmtadd" >
+   <!--  <result name="success">resources/jsp/labourmgmtservices/labourmgmt.jsp</result>
+     	 <result name="input">resources/jsp/labourmgmtservices/labourmgmt.jsp</result>
+    -->  
+     <result name="success" type="redirectAction">labormgmgcrtsts</result>
+     	 <result name="input" type="redirectAction">labormgmgcrtsts</result>
+     <result name="error">resources/jsp/labourmgmtservices/labouraddmembers.jsp</result>
+  </action>
+  
+  <action name="deletelabor" class="com.socialindia.labourmgmt.labourmgmtadd" method="deletelaborActionFunction" >
+     <result name="success">resources/jsp/labourmgmtservices/labourmgmt.jsp</result>
+    <result name="input">resources/jsp/labourmgmtservices/labourmgmt.jsp</result>
+     <result name="error">resources/jsp/labourmgmtservices/labourmgmt.jsp</result>
+  </action>
+   <action name="viewlaborform" class="com.socialindia.labourmgmt.labourmgmtadd" method="viewlaborActionFunction" >
+     <result name="success">resources/jsp/labourmgmtservices/labourview.jsp</result>
+    <result name="input">resources/jsp/labourmgmtservices/labourview.jsp</result>
+     <result name="error">resources/jsp/labourmgmtservices/labourmgmt.jsp</result>
+  </action>
+   <action name="editlaborform" class="com.socialindia.labourmgmt.labourmgmtadd" method="viewlaborActionFunction" >
+     <result name="success">resources/jsp/labourmgmtservices/labour_Edit.jsp</result>
+    <result name="input">resources/jsp/labourmgmtservices/labour_Edit.jsp</result>
+     <result name="error">resources/jsp/labourmgmtservices/labourmgmt.jsp</result>
+  </action>
+   <action name="labourEditSubmitaction" class="com.socialindia.labourmgmt.labourmgmtadd" method="labormgmtUpdateaction" >
+     <result name="success">resources/jsp/labourmgmtservices/labourmgmt.jsp</result>
+    <result name="input">resources/jsp/labourmgmtservices/labourmgmt.jsp</result>
+     <result name="error">resources/jsp/labourmgmtservices/labour_Edit.jsp</result>
+  </action>
+  <action name="labourfeedbackform" class="com.socialindia.labourmgmt.labourmgmtadd"  method="labourfeedbackaction">
+     <result name="success">resources/jsp/labourmgmtservices/labourfeedback.jsp</result>
+    <result name="input">resources/jsp/labourmgmtservices/labourfeedback.jsp</result>
+     <result name="error">resources/jsp/labourmgmtservices/labourmgmt.jsp</result>
+  </action>
+  <action name="getFeedbacklabor" class="com.socialindia.labourmgmt.labourmgmtadd" method="labourfeedbackaction">
+     <result name="success">resources/jsp/labourmgmtservices/FeedbackLabor.jsp</result>
+    <result name="input">resources/jsp/labourmgmtservices/FeedbackLabor.jsp</result>
+  </action>
+  
+  
+   <action name="wrktyprajaxlst" class="com.socialindia.labourmgmt.skillsaction" method="getWrktypelst">  
+    <result name="success">resources/jsp/labourmgmtservices/getworktypelst.jsp</result>
+    <result name="input">resources/jsp/labourmgmtservices/getworktypelst.jsp</result>
+  </action> 
+  
+ </package>
+</struts>

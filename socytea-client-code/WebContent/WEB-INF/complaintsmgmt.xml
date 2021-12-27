@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"  "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="complaintsmgmt" extends="default">
+
+<action name="complaintsmgmt">
+   	<result name="success">${getText("Text.utility.complaintsmgmt")}</result>
+  </action>
+
+ <action name="Complaintsmgmtdatatable" class="com.socialindia.complaintsmgmt.complaintsmgmtMasterTable">
+    <result type="json"></result>
+  </action>
+  <action name="createComplaint" class="com.socialindia.complaintsmgmt.ComplaintsmgmtAction"  >
+     <result name="success">resources/jsp/complaintsmgmt/complaintsaddmembers.jsp</result>
+    <result name="input">resources/jsp/complaintsmgmt/complaintsaddmembers.jsp</result>
+     <result name="error">resources/jsp/complaintsmgmt/complaintsmgmt.jsp</result>
+  </action> 
+  
+  <action name="crtactionn" class="com.socialindia.complaintsmgmt.ComplaintsmgmtActionAlert"  >
+   <result name="success">resources/jsp/complaintsmgmt/complaintsmgmt.jsp</result>
+  </action>
+  <action name="complaintsubmitaction" class="com.socialindia.complaintsmgmt.ComplaintsmgmtAction" method="createComplaintActionFunction" >
+     <result name="error">resources/jsp/complaintsmgmt/complaintsaddmembers.jsp</result>
+    <!--  <result name="input">resources/jsp/complaintsmgmt/complaintsmgmt.jsp</result>
+     <result name="success">resources/jsp/complaintsmgmt/complaintsmgmt.jsp</result>  -->
+      <result name="success" type="redirectAction">crtactionn</result>
+       <result name="input" type="redirectAction">crtactionn</result>
+  </action>
+   
+  <action name="viewcomplaintform" class="com.socialindia.complaintsmgmt.ComplaintsmgmtAction" method="viewcomplaintActionFunction" >
+     <result name="success">resources/jsp/complaintsmgmt/complaintview.jsp</result>
+    <result name="input">resources/jsp/complaintsmgmt/complaintview.jsp</result>
+     <result name="error">resources/jsp/complaintsmgmt/complaintsmgmt.jsp</result>
+  </action>
+   <action name="deletecomplaint" class="com.socialindia.complaintsmgmt.ComplaintsmgmtAction" method="deletecomplaintActionFunction" >
+     <result name="success">resources/jsp/complaintsmgmt/complaintsmgmt.jsp</result>
+    <result name="input">resources/jsp/complaintsmgmt/complaintsmgmt.jsp</result>
+     <result name="error">resources/jsp/complaintsmgmt/complaintsmgmt.jsp</result>
+  </action>
+  <action name="Labor_MercEmailFunction" class="com.socialindia.complaintsmgmt.labor_merchantEmailSend"> 
+     <result name="success">resources/jsp/complaintsmgmt/labor_mercDataCheck.jsp</result>
+    <result name="input">resources/jsp/complaintsmgmt/complaintsmgmt.jsp</result>
+  </action>
+  <action name="Labor_MercSMSFunction" class="com.socialindia.complaintsmgmt.labor_merchantSMSSend"> 
+     <result name="success">resources/jsp/complaintsmgmt/labor_mercDataCheck.jsp</result>
+    <result name="input">resources/jsp/complaintsmgmt/complaintsmgmt.jsp</result>
+  </action>
+  <action name="Reasonaction" class="com.socialindia.complaintsmgmt.ComplaintsmgmtAction" method="deactivecomplaintActionFunction"> 
+     <result name="success">resources/jsp/complaintsmgmt/complaintsmgmt.jsp</result>
+    <result name="input">resources/jsp/complaintsmgmt/complaintsmgmt.jsp</result>
+  </action>
+  <action name="getlabordetail" class="com.socialindia.complaintsmgmt.ComplaintsmgmtAction" method="getLaborDetail">
+  <result name="success">resources/jsp/complaintsmgmt/getlabordetail.jsp</result>
+    <result name="input">resources/jsp/complaintsmgmt/getlabordetail.jsp</result>
+  </action>
+  <action name="invitecmpltaction" class="com.socialindia.complaintsmgmt.ComplaintsmgmtAction" method="inviteCmpltAction">
+  	<result name="success">resources/jsp/complaintsmgmt/inviteshare.jsp</result>
+    <result name="input">resources/jsp/complaintsmgmt/inviteshare.jsp</result>
+  </action>
+  <action name="Reasonactionpage" class="com.socialindia.complaintsmgmt.ComplaintsmgmtAction" method="Closereasonpage">
+  	<result name="success">resources/jsp/complaintsmgmt/closereasoncmplt.jsp</result>
+    <result name="input">resources/jsp/complaintsmgmt/closereasoncmplt.jsp</result>
+  </action>
+  
+ </package>
+</struts>

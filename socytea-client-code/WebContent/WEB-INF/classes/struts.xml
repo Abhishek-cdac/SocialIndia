@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"  "../lib/struts-2.3.dtd" >
+
+<struts>
+ <constant name="struts.multipart.maxSize" value="20000000" />
+ <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+ <constant name="struts.devMode" value="false" />
+ <constant name="struts.custom.i18n.resources" value="ApplicationResources" />
+
+
+ <constant name="struts.devMode" value="false" />
+ <package name="default" extends="jasperreports-default,struts-default,json-default">
+  <result-types>
+   <!-- <result-type name="jasper" class="org.apache.struts2.views.jasperreports.JasperReportsResult"></result-type> -->
+   <result-type name="json" class="org.apache.struts2.json.JSONResult" />
+  </result-types>
+   <interceptors>   
+   <interceptor name="SessionCheck" class="com.letspay.utils.SessionInterceptor" /> 
+   		<interceptor-stack name="SessionCheckStack"> 
+   				<interceptor-ref name="SessionCheck"/> 
+   				<interceptor-ref name="defaultStack" />
+   		</interceptor-stack> 
+   	</interceptors> 
+   <default-interceptor-ref name="SessionCheckStack"></default-interceptor-ref>  
+   
+   <global-results> 
+   		<result name="notLoggedIn">resources/jsp/sessionExpires.jsp</result> 
+   		<result name="notLoggedIn" type="redirectAction">sessionExpires</result> 
+   </global-results> 
+
+ </package>
+ <package name="loginprocess" extends="struts-default" namespace="/">
+  <action name="loginprocess" class="com.socialindia.login.DefaultRedirectAction">
+   <result name="success">resources/jsp/index.jsp</result>
+   <result name="error">error.jsp</result>
+  </action>
+  <action name="samplemap" class="">
+   <result name="success">resources/js/googlemap/sample.jsp</result>
+   <result name="error">resources/js/googlemap/sample.jsp</result>
+  </action>
+  
+  <action name="getProductOrderDetail" class="com.socialindia.common.Mrchperlogin">
+<result name="success">resources/jsp/perlogin/preloginorderform.jsp</result>
+<result name="input">resources/jsp/perlogin/preloginorderform.jsp</result>
+</action>
+<action name="mrchprdtorderaction" class="com.socialindia.common.Mrchperlogin" method="updatedMrchprdtordertblaction">
+<result name="success">resources/jsp/perlogin/preloginorderform.jsp</result>
+<result name="input">resources/jsp/perlogin/preloginorderform.jsp</result>
+</action>
+ <action name="declineorderaction" class="com.socialindia.common.Mrchperlogin" method="declineordertblaction">
+		<result name="success">resources/jsp/perlogin/preloginorderform.jsp</result>
+		<result name="input">resources/jsp/perlogin/preloginorderform.jsp</result>
+</action>
+  <action name="societyprelog" class="com.socialindia.common.Societyprelog">
+    <result name="success">resources/jsp/perlogin/societyprelogin.jsp</result>
+     <result name="error">resources/jsp/perlogin/societyprelogin.jsp</result>
+      <result name="input">resources/jsp/perlogin/societyprelogin.jsp</result>
+  </action>
+  
+  <action name="imgg" class="">
+   	<result name="success">resources/templogo/</result>   
+  </action>
+  
+ </package>
+ 	<include file="facility.xml"/>
+ 	<include file="signup.xml" />
+	<include file="menuManagement.xml" />
+	<include file="socialmedia.xml" />
+	<include file="userManagement.xml" />
+	<include file="login.xml"></include>
+	<include file="generalManagement.xml" />
+	<include file="Labourmanagement.xml" />
+	<include file="townShipMgmt.xml"></include>
+	<include file="societyMgmt.xml"></include>
+	<include file="committeeMgmt.xml"></include>
+	<include file="companymanagement.xml"></include>
+	<include file="residentmanagement.xml"></include>
+	<include file="monitor.xml"></include>
+	<include file="utilitymanagement.xml"></include>
+	<include file="event.xml"></include>
+	<include file="forum.xml"></include>
+	<include file="complaintsmgmt.xml"></include>
+	<include file="merchantManagement.xml" />
+	<include file="TenderManagement.xml" />
+	<include file="material.xml" />
+	<include file="feedback.xml"></include>
+	<include file="Expencesmanagement.xml" />
+	<include file="common.xml" />
+	<include file="eNews.xml" />
+	<include file="idcardmaster.xml" />
+	<include file="Categorylist.xml" />
+	<include file="stafflistcategory.xml" />
+	<include file="Committeerole.xml" />
+	<include file="Documentconfiglist.xml" />
+	<include file="reports.xml" />
+	<include file="Education.xml" />
+	<include file="Worktypelist.xml" />
+	<include file="Merchantcategorylist.xml" />
+	<include file="emailConfigration.xml" />
+	<include file="smsconfigration.xml" />
+	<include file="NotificationMgmt.xml" />
+	<include file="DisputetoMerchant.xml" />
+	<include file="DisputetoLabor.xml" />
+	<include file="DisputetoAdmin.xml" />
+	<include file="bloodgroup.xml" />
+	<include file="title.xml" />
+	<include file="knownus.xml" />
+	<include file="emailtemplate.xml" />
+	<include file="function.xml" />
+	<include file="responsecode.xml" />
+	<include file="issueconfig.xml" />
+	<include file="whyshould.xml" />
+	<include file="skills.xml"/>
+	<include file="gatepass.xml"/>
+	<include file="DocumentBill.xml"/>
+	<include file="reconcile.xml"/>
+	<include file="flashnews.xml"/>
+	<include file="donate.xml"/>
+	
+</struts>

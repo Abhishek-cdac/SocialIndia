@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="DisputemgmtToadmin" extends="default">
+
+ <action name="disputeToAdminTbldata" class="com.socialindia.disputemgmtToAdmin.DisputemgmtToAdminTbl">
+    <result type="json"></result>
+  </action>
+   <action name="Admincomplaintview" class="com.socialindia.disputemgmtToAdmin.ToadminServices" method="modifyServices">
+  <result name="success">resources/jsp/disputeadmin/toadminview.jsp</result>
+    <result name="input">resources/jsp/disputeadmin/toadminview.jsp</result>
+  </action>
+  <action name="rootusercreatecomplaint" class="com.socialindia.disputemgmtToAdmin.ToadminServices">
+    <result name="success">resources/jsp/disputeadmin/cmpltcreation.jsp</result>
+  </action>
+  <action name="rootusercmpltcreationaction" class="com.socialindia.disputemgmtToAdmin.ToadminServices" method="ComplaintCreateFun">
+  <result name="success">resources/jsp/disputeadmin/disputetoadminmgmt.jsp</result>
+    <result name="input">resources/jsp/disputeadmin/cmpltcreation.jsp</result>
+     <result name="error">resources/jsp/disputeadmin/cmpltcreation.jsp</result>
+  </action>
+   <action name="deletecmpltaction" class="com.socialindia.disputemgmtToAdmin.ToadminServices" method="deleteCmpltAction">
+  <result name="success">resources/jsp/disputeadmin/disputetoadminmgmt.jsp</result>
+    <result name="input">resources/jsp/disputeadmin/disputetoadminmgmt.jsp</result>
+  </action>
+   <action name="closecmpltaction" class="com.socialindia.disputemgmtToAdmin.ToadminServices" method="closeCmpltAction">
+  <result name="success">resources/jsp/disputeadmin/disputetoadminmgmt.jsp</result>
+    <result name="input">resources/jsp/disputeadmin/disputetoadminmgmt.jsp</result>
+  </action>
+   <action name="sendmailcmpltaction" class="com.socialindia.disputemgmtToAdmin.ToadminServices" method="sendemailCmpltAction">
+  <result name="success">resources/jsp/disputeadmin/disputetoadminmgmt.jsp</result>
+    <result name="input">resources/jsp/disputeadmin/disputetoadminmgmt.jsp</result>
+  </action>
+   <action name="sendsmscmpltaction" class="com.socialindia.disputemgmtToAdmin.ToadminServices" method="sendSMSCmpltAction">
+  <result name="success">resources/jsp/disputeadmin/disputetoadminmgmt.jsp</result>
+    <result name="input">resources/jsp/disputeadmin/disputetoadminmgmt.jsp</result>
+  </action>
+   
+ </package>
+</struts>

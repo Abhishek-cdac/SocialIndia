@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="eNewsmgmt" extends="default">
+
+ <action name="eNewsmgmtdatatable" class="com.socialindia.eNewsmgmt.eNewsMgmtTbl">
+    <result type="json"></result>
+  </action>
+  <action name="createeNews" class="com.socialindia.eNewsmgmt.eNewsServices">
+    <result name="success">resources/jsp/enewsmgmt/eNewsadd.jsp</result>
+  </action>
+  
+  <!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  <action name="enewsctssts" class="com.socialindia.eNewsmgmt.Enewscrtalertmsg">
+     <result name="success">resources/jsp/enewsmgmt/enewsmanagement.jsp</result>
+  </action>
+  <!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+  
+  
+  <action name="eNewssubmitaction" class="com.socialindia.eNewsmgmt.eNewsServices" method="eNewsCreateFun">
+ 	<interceptor-ref name="fileUpload">
+    <param name="maximumSize">5000000</param>
+	</interceptor-ref>
+	<interceptor-ref name="defaultStack"></interceptor-ref>
+    <!-- <result name="success">resources/jsp/enewsmgmt/enewsmanagement.jsp</result> -->
+    <result name="success" type="redirectAction">enewsctssts</result>
+    
+    <result name="input" type="redirectAction">
+    	<param name="actionName">createeNews</param>
+    	<param name="msg">notvalid</param>
+    </result>
+    <result name="error">resources/jsp/enewsmgmt/eNewsadd.jsp</result>
+  </action>
+  <action name="deleteEnews" class="com.socialindia.eNewsmgmt.eNewsServices" method="deleteEnewAction">
+  <result name="success">resources/jsp/enewsmgmt/enewsmanagement.jsp</result>
+    <result name="input">resources/jsp/enewsmgmt/enewsmanagement.jsp</result>
+  </action>
+ <action name="viewEnewsform" class="com.socialindia.eNewsmgmt.eNewsServices" method="modifyServices">
+  <result name="success">resources/jsp/enewsmgmt/eNewsView.jsp</result>
+    <result name="input">resources/jsp/enewsmgmt/eNewsView.jsp</result>
+  </action>
+   
+   <action name="editenewform" class="com.socialindia.eNewsmgmt.eNewsServices" method="modifyServices">
+  <result name="success">resources/jsp/enewsmgmt/eNewsModify.jsp</result>
+    <result name="input">resources/jsp/enewsmgmt/eNewsModify.jsp</result>
+  </action>
+  
+   <action name="eNewsupdateaction" class="com.socialindia.eNewsmgmt.eNewsServices" method="toeNewsmodifyform">
+ <interceptor-ref name="fileUpload">
+    <param name="maximumSize">5000000</param>
+</interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+    <result name="success">resources/jsp/enewsmgmt/enewsmanagement.jsp</result>
+    <result name="input" type="redirectAction">
+    <param name="actionName">editenewform</param>
+    <param name="msg">notvalid</param>
+    </result>
+     <result name="error">resources/jsp/enewsmgmt/eNewsModify.jsp</result>
+  </action> 
+ </package>
+</struts>

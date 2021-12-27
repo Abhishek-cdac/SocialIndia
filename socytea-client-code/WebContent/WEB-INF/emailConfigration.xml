@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="emailconfig" extends="default">
+
+ <action name="emailconfupdate" class="com.socialindia.emailconfig.Emailconfigmgmt" method="emailUpdate">
+ <result name="success">resources/jsp/emailconfig/ajax.jsp</result>
+    <result name="input">resources/jsp/emailconfig/ajax.jsp</result>
+  </action>
+   <action name="emailEnginStart" class="com.socialindia.emailconfig.Emailconfigmgmt" method="emailEnginStart">
+ <result name="success">resources/jsp/emailconfig/ajax.jsp</result>
+    <result name="input">resources/jsp/emailconfig/ajax.jsp</result>
+  </action>
+    <action name="emailEnginStop" class="com.socialindia.emailconfig.Emailconfigmgmt" method="emailEnginStop">
+ 	<result name="success">resources/jsp/emailconfig/ajax.jsp</result>
+    <result name="input">resources/jsp/emailconfig/ajax.jsp</result>
+  </action>
+  
+ </package>
+</struts>

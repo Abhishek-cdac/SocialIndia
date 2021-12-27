@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.letspay.login.persistense.UserMasterTblVo" table="usr_reg_tbl">
+	<id name="userId" column="USR_ID" type="integer">
+	<generator class="native"></generator>
+	</id>
+	<property name="userName" column="USERNAME" type="string" length="50"></property>
+	<property name="password" column="PASSWD" type="string" length="100"></property>
+	<property name="oldPassword" column="OLD_PASSWD" type="string" length="100"></property>
+	<property name="mobileNo" column="MOBILE_NO" type="string" length="25"></property>
+	<property name="isdCodeid" column="ISD_CODE_ID" type="integer" ></property>
+	<property name="emailId" column="EMAIL_ID" type="string" length="100"></property>
+	<!-- <property name="isMerchant" column="IS_MERCHANT" type="integer" ></property> -->
+	<property name="merchantKey" column="MERCHANT_KEY" type="string" length="100"></property>
+	<property name="statusFlag" column="ACT_STS" type="integer" ></property>
+	<property name="loginDatetime" type="timestamp"><column name="LOGIN_DATETIME" not-null="false" default="null" /></property>
+	<property name="entryDatetime" column="ENTRY_DATETIME" type="timestamp"></property>
+	<property name="modifyDatetime" column="MODY_DATETIME" type="timestamp"></property>
+	<property name="entryBy" column="ENTRY_BY" type="integer"></property>
+	
+	<property name="ivrBnISONLINEFLG" column="ONLINE_STATUS" type="integer" ></property>
+	<property name="loggedOut" column="LOGGED_OUT" type="integer" ></property>
+	<property name="numOfLogins" column="NUM_OF_LOGINS" type="integer" ></property>
+	<property name="resetDatetime" column="RESET_DATETIME" type="timestamp"></property>
+	<property name="currentLogins" column="CURRENT_LOGINS" type="integer" ></property>
+	
+	<!-- <many-to-one name="entryBy" column="ENTRY_BY" class="com.pack.vo.UserMasterTblVo" lazy="false"></many-to-one> -->
+	<many-to-one name="groupId" column="GROUP_ID" class="com.letspay.uam.persistense.GroupMasterTblVo" lazy="false"></many-to-one>
+	</class>
+</hibernate-mapping>

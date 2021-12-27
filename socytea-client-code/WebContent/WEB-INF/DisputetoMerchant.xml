@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="DisputemgmtTomerchant" extends="default">
+
+ <action name="disputeToMerchantTbldata" class="com.socialindia.disputemgmtToMerchant.DisputemgmtTomerchantTbl">
+    <result type="json"></result>
+  </action>
+   <action name="Merchantcomplaintview" class="com.socialindia.disputemgmtToMerchant.TomerchantServices" method="modifyServices">
+  <result name="success">resources/jsp/disputemerchant/tomerchantview.jsp</result>
+    <result name="input">resources/jsp/disputemerchant/tomerchantview.jsp</result>
+  </action>
+   <action name="deletetomerchantcmpltaction" class="com.socialindia.disputemgmtToMerchant.TomerchantServices" method="deleteCmpltAction">
+  <result name="success">resources/jsp/disputemerchant/disputetomerchantmgmt.jsp</result>
+    <result name="input">resources/jsp/disputemerchant/disputetomerchantmgmt.jsp</result>
+  </action>
+   <action name="closetomerchantcmpltaction" class="com.socialindia.disputemgmtToMerchant.TomerchantServices" method="closeCmpltAction">
+  <result name="success">resources/jsp/disputemerchant/disputetomerchantmgmt.jsp</result>
+    <result name="input">resources/jsp/disputemerchant/disputetomerchantmgmt.jsp</result>
+  </action>
+   <action name="sendmailtomerchantcmpltaction" class="com.socialindia.disputemgmtToMerchant.TomerchantServices" method="sendemailCmpltAction">
+  <result name="success">resources/jsp/disputemerchant/disputetomerchantmgmt.jsp</result>
+    <result name="input">resources/jsp/disputemerchant/disputetomerchantmgmt.jsp</result>
+  </action>
+   <action name="sendsmstomerchantcmpltaction" class="com.socialindia.disputemgmtToMerchant.TomerchantServices" method="sendSMSCmpltAction">
+  <result name="success">resources/jsp/disputemerchant/disputetomerchantmgmt.jsp</result>
+    <result name="input">resources/jsp/disputemerchant/disputetomerchantmgmt.jsp</result>
+    </action>
+    <action name="tomerchantcmpltcreationaction" class="com.socialindia.disputemgmtToMerchant.TomerchantServices">
+    <result name="success">resources/jsp/disputemerchant/cmpltcreation.jsp</result>
+  </action>
+  <action name="tomerchantcmpltcreationactionform" class="com.socialindia.disputemgmtToMerchant.TomerchantServices" method="ComplaintCreateFun">
+  <result name="success">resources/jsp/disputemerchant/disputetomerchantmgmt.jsp</result>
+    <result name="input">resources/jsp/disputemerchant/cmpltcreation.jsp</result>
+     <result name="error">resources/jsp/disputemerchant/cmpltcreation.jsp</result>
+  </action>
+ </package>
+</struts>

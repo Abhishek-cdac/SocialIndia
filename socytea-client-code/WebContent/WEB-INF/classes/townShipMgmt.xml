@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="townShipMgmt" extends="default">
+
+ <action name="townShipMgmtTable" class="com.socialindia.townShipMgmt.townShipMgmtTable">
+    <result type="json"></result>
+  </action>
+  
+  <action name="createtownshipform" class="com.socialindia.townShipMgmt.createTownShip">
+     <result name="success">resources/jsp/townshipmgmt/createTownShip.jsp</result>
+    <result name="input">resources/jsp/townshipmgmt/createTownShip.jsp</result>
+  </action>
+  
+   <action name="townmgmtcrtsts" class="com.socialindia.townShipMgmt.Townshipcreatealert">
+     <result name="success">resources/jsp/townshipmgmt/townShipMgmt.jsp</result>    
+  </action>
+  
+  <action name="townshipCreateAction" class="com.socialindia.townShipMgmt.townshipCreateAction">
+     <!-- <result name="success">resources/jsp/townshipmgmt/townShipMgmt.jsp</result> -->
+    <result name="input">resources/jsp/townshipmgmt/createTownShip.jsp</result>
+    <result name="success" type="redirectAction">townmgmtcrtsts</result>
+  </action>
+  
+   <action name="viewtownshipform" class="com.socialindia.townShipMgmt.townshipViewAction">
+     <result name="success">resources/jsp/townshipmgmt/townview.jsp</result>
+    <result name="input">resources/jsp/townshipmgmt/townShipMgmt.jsp</result>
+  </action>
+  
+   <action name="edittownshipform" class="com.socialindia.townShipMgmt.townshipViewAction" method="edittownshipform"> 
+     <result name="success">resources/jsp/townshipmgmt/townShipEdit.jsp</result>
+    <result name="input">resources/jsp/townshipmgmt/townShipMgmt.jsp</result>
+  </action>
+  
+  <action name="townshipEditUpdate" class="com.socialindia.townShipMgmt.townshipViewAction" method="townshipEditUpdate"> 
+     <result name="success">resources/jsp/townshipmgmt/townShipMgmt.jsp</result>
+    <result name="input">resources/jsp/townshipmgmt/townShipEdit.jsp</result>
+  </action>
+  
+   <action name="generateNewTownshipKey" class="com.socialindia.townShipMgmt.generateNewTownshipKey"> 
+     <result name="success">resources/jsp/townshipmgmt/townshipActivationKey.jsp</result>
+    <result name="input">resources/jsp/townshipmgmt/townShipMgmt.jsp</result>
+  </action>
+ </package>
+</struts>

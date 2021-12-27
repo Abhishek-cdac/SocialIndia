@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+   "../lib/struts-2.3.dtd">
+
+<struts>
+
+<package name="socialmediaprocess" extends="default">
+
+<action name="socialmediaform" class="com.socialindia.socialmedia.SocialAction" method="socialuserReg">
+ <result name="success">resources/jsp/dashboard.jsp</result>
+ <result name="error">resources/jsp/index.jsp</result>
+ <result name="input">resources/jsp/index.jsp</result> 
+  <result name="forcepassword">resources/jsp/prelogin/forcePassword.jsp</result>
+  <result name="activation">resources/jsp/prelogin/customerActivation.jsp</result>
+</action>
+
+  <action name="smnewcustomerform" class="com.socialindia.socialmedia.SocialAction" method="socialuserVerify">
+  <result name="success">resources/jsp/index.jsp</result>
+  <result name="success">resources/jsp/index.jsp</result> 
+  <result name="error">resources/jsp/index.jsp</result>
+  <result name="input">resources/jsp/index.jsp</result>
+ </action> 
+ 
+ <action name="socialregform" >
+  <result>resources/jsp/socialmedia/commonsocialmediaform.jsp</result>
+ </action> 
+ 
+ <action name="twitterTokenRequest" class="com.socialindia.socialmedia.TwitterTokenRequest">
+  <result name="success">resources/jsp/socialmedia/tweetredirect.jsp</result>
+   <result name="input">resources/jsp/socialmedia/tweetredirect.jsp</result> 
+  <result name="error">resources/jsp/index.jsp</result>
+<!--   <result name="input">resources/jsp/index.jsp</result>  -->
+ </action>
+ 
+ <action name="twitterlogin" class="com.socialindia.socialmedia.Twitterlogin">
+  <result name="success" type="redirect">${authUrl}</result>
+ </action>
+ 
+  <action name="twtuserdetail" class="com.socialindia.socialmedia.Gettweetval">
+  <result name="SUCCESS">resources/jsp/dashboard.jsp</result>
+  <result name="input">resources/jsp/socialmedia/twitteruserdetails.jsp</result>
+  <result name="error">resources/jsp/index.jsp</result>
+  <result name="forcepassword">resources/jsp/prelogin/forcePassword.jsp</result>
+  <result name="activation">resources/jsp/prelogin/customerActivation.jsp</result>
+
+ </action>  
+ 
+  <action name="checksocialuserIdexist" class="com.socialindia.socialmedia.SocialAction" method="socialuserExist" >
+ <result name="success">resources/jsp/fbcheckempty.jsp</result>
+  <result name="error">resources/jsp/index.jsp</result>
+  <result name="input">resources/jsp/fbcheckempty.jsp</result>
+ </action> 
+ 
+ <action name="existsocialusersignin" class="com.socialindia.socialmedia.SocialAction" method="socialUsersignin" >
+  <result name="success">resources/jsp/dashboard.jsp</result>
+  <result name="error">resources/jsp/index.jsp</result>
+  <result name="input">resources/jsp/index.jsp</result>
+  <result name="forcepassword">resources/jsp/prelogin/forcePassword.jsp</result>
+  <result name="activation">resources/jsp/prelogin/customerActivation.jsp</result>
+ </action> 
+ 
+ </package>
+ 
+ </struts>

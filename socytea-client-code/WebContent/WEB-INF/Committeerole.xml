@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="committeerolelist" extends="default">
+
+  <action name="committeerolemanagedatatable" class="com.socialindia.committeerolemaster.CommitteeroleMasterDTable">
+    <result type="json"></result>
+  </action>
+  
+  <!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  	<action name="cmtrlcrtsts" class="com.socialindia.committeerolemaster.CommitteeRoleAlertMsg">    
+    <result name="success">resources/jsp/committeerolelist/committeerolelist.jsp</result>   
+  	</action>
+  	<!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+  
+   <action name="createcommitteeroletype" class="com.socialindia.committeerolemaster.CommitteeroleServices" method="CommitteeroleCreateFun">	
+    <result name="success" type="redirectAction">cmtrlcrtsts</result>
+    <result name="input" type="redirectAction">cmtrlcrtsts</result>
+    <result name="error" type="redirectAction">cmtrlcrtsts</result>
+    <!--  <result name="success">resources/jsp/committeerolelist/committeerolelist.jsp</result>
+    <result name="input">resources/jsp/committeerolelist/committeerolelist.jsp</result>
+    <result name="error">resources/jsp/committeerolelist/committeerolelist.jsp</result> -->
+  </action> 
+   <action name="deleteactioncommitteerole" class="com.socialindia.committeerolemaster.CommitteeroleServices"
+   method="deleteActionfun">	
+    <result name="success">resources/jsp/committeerolelist/committeerolelist.jsp</result>
+    <result name="input">resources/jsp/committeerolelist/committeerolelist.jsp</result>
+    <result name="error">resources/jsp/committeerolelist/committeerolelist.jsp</result>
+  </action> 
+   <action name="activeactioncommitteerole" class="com.socialindia.committeerolemaster.CommitteeroleServices"
+   method="activeActionfun">	
+    <result name="success">resources/jsp/committeerolelist/committeerolelist.jsp</result>
+    <result name="input">resources/jsp/committeerolelist/committeerolelist.jsp</result>
+    <result name="error">resources/jsp/committeerolelist/committeerolelist.jsp</result>
+  </action> 
+ </package>
+</struts>

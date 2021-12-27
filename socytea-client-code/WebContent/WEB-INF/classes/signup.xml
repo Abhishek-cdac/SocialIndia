@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+	<package name="loginpage" namespace="/" extends="struts-default">
+
+		<action name="signupaction" class="com.socialindia.signup.signUpAction"
+			method="signupmethod">
+			<result name="success">resources/jsp/signup.jsp</result>
+			<result name="error">resources/jsp/error.jsp</result>
+			<result name="input">resources/jsp/error.jsp</result>
+		</action>
+
+		<action name="sessionExpires" class="com.letspay.utils.LogOut" method="sessionExpired">
+			<result name="success">resources/jsp/SessionExpired.jsp</result>
+			<result name="notLoggedIn">resources/jsp/SessionExpired.jsp</result>
+		</action>
+
+		<action name="doLogOut" class="com.letspay.utils.LogOut"
+			method="doLogout">
+			<result name="success">resources/jsp/index.jsp</result>
+		</action>
+
+
+
+		<action name="signinpageverify" class="com.socialindia.signup.signUpAction">
+			<result name="success">resources/jsp/signUpVerify.jsp</result>
+			<result name="dashboard">resources/jsp/dashboard.jsp</result>
+			<result name="input">resources/jsp/signup.jsp</result>
+		</action>
+
+		<action name="posthome" class="com.socialindia.signup.signUpAction"
+			method="verifyActiveKey">
+			<result name="success">resources/jsp/dashboard.jsp</result>
+			<result name="keyerror">resources/jsp/signUpVerify.jsp</result>
+			<result name="input">resources/jsp/signup.jsp</result>
+		</action>
+
+		<action name="adminprofile" class="com.socialindia.signup.signUpAction"
+			method="profile">
+			<result name="success">resources/jsp/profile.jsp</result>
+			<result name="input">resources/jsp/dashboard.jsp</result>
+		</action>
+
+		<action name="posthomepage" class="com.socialindia.signup.signUpAction" method="profileCancel">
+			<result name="success">resources/jsp/dashboard.jsp</result>
+			<result name="input">resources/jsp/profile.jsp</result>
+		</action>
+
+		<action name="socchgpswd" class="com.socialindia.signup.signUpAction" method="changePassword">
+			<result name="success">resources/jsp/changepassword.jsp</result>
+			<result name="input">resources/jsp/dashboard.jsp</result>
+		</action>
+
+		<!-- <action name="changePasswordAction" class="com.pack.password.service.forgetPassword" method="changePasswordAction"> -->
+		<action name="socpswdhm" class="com.pack.password.service.forgetPassword" method="changePasswordAction">
+			<!-- <result name="success">resources/jsp/index.jsp</result> -->
+			<result name="success" type="chain">Homeform</result>
+			<result name="input">resources/jsp/changepassword.jsp</result>
+		</action>
+
+		<action name="profileUpdate" class="com.socialindia.signup.profileUpdate">
+			<interceptor-ref name="fileUpload">
+				<param name="maximumSize">5000000</param>
+				<param name="allowedTypes"> image/png,image/gif,image/jpeg,image/pjpeg,image/jpg </param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+			<result name="success">resources/jsp/dashboard.jsp</result>
+			<result name="input">resources/jsp/profile.jsp</result>
+		</action>
+		<action name="userProfile" class="com.socialindia.signup.userProfileView">
+			<result name="success">resources/jsp/userprofile.jsp</result>
+			<result name="input">resources/jsp/dashboard.jsp</result>
+		</action>
+		<action name="userProfileUpdate" class="com.socialindia.signup.userProfileViewUpdate">
+			<result name="success">resources/jsp/dashboard.jsp</result>
+			<result name="input">resources/jsp/userprofile.jsp</result>
+		</action>
+		<action name="getdashboardChartData" class="com.socialindia.signup.GetdashboardChartData">
+			<result name="success">resources/jsp/ajaxchartData.jsp</result>
+			<result name="input">resources/jsp/ajaxchartData.jsp</result>
+		</action>
+	</package>
+</struts>

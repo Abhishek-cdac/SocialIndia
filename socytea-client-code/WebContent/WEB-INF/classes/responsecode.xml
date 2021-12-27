@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"  "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="responselist" extends="default">
+
+  <action name="responsemanagedatatable" class="com.socialindia.responsecodelistmaster.responsecodeMasterDTable">
+    <result type="json"></result>
+  </action>
+  
+   <action name="createresponsecodepage" class="com.socialindia.responsecodelistmaster.responsecodeServices">	
+    <result name="success">resources/jsp/config/responsecodeadd.jsp</result>
+    <result name="input">resources/jsp/config/responsecodeadd.jsp</result>
+    <result name="error">resources/jsp/config/responsecodeadd.jsp</result>
+  </action>
+  
+  <!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  	<action name="rspcodecrtssts" class="com.socialindia.responsecodelistmaster.ResponseCodeAlertMsg">    
+    	<result name="success">resources/jsp/config/responsecode.jsp</result>
+  	</action>
+  	<!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+  
+   <action name="createresponse" class="com.socialindia.responsecodelistmaster.responsecodeServices" method="responseCreateFun">	
+    <result name="success" type="redirectAction">rspcodecrtssts</result>
+    <result name="input" type="redirectAction">rspcodecrtssts</result>
+    <result name="error" type="redirectAction">rspcodecrtssts</result>
+    <!-- <result name="success">resources/jsp/config/responsecode.jsp</result>
+    <result name="input">resources/jsp/config/responsecode.jsp</result>
+    <result name="error">resources/jsp/config/responsecode.jsp</result> -->
+  </action> 
+   <action name="deleteactionresponse" class="com.socialindia.responsecodelistmaster.responsecodeServices"
+   method="deleteActionfun">	
+    <result name="success">resources/jsp/config/responsecode.jsp</result>
+    <result name="input">resources/jsp/config/responsecode.jsp</result>
+    <result name="error">resources/jsp/config/responsecode.jsp</result>
+  </action> 
+   <action name="activeactionresponse" class="com.socialindia.responsecodelistmaster.responsecodeServices"
+   method="activeActionfun">	
+    <result name="success">resources/jsp/config/responsecode.jsp</result>
+    <result name="input">resources/jsp/config/responsecode.jsp</result>
+    <result name="error">resources/jsp/config/responsecode.jsp</result>
+  </action> 
+  
+  <action name="editResponseMsg" class="com.socialindia.responsecodelistmaster.responsecodeServices"
+   method="editResponseMsgfun">
+    <result name="success">resources/jsp/config/responsecode.jsp</result>
+    <result name="input">resources/jsp/config/responsecode.jsp</result>
+    <result name="error">resources/jsp/config/responsecode.jsp</result>
+  </action>
+ </package>
+</struts>

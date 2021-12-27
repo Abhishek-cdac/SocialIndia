@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+<package name="reconcilepkgg" extends="default">
+
+	<action name="excelpaygeteupload" class="com.socialindia.reconcile.PaygateExcel">
+		<result name="success">resources/jsp/reconcile/paygatereconmgmt.jsp
+		</result>
+		<result name="input">resources/jsp/reconcile/paygatereconmgmt.jsp
+		</result>
+	</action>
+	<action name="cyberplatefileupload" class="com.socialindia.reconcile.PaygateExcel" method="cyberPlateupload">
+		<result name="success">resources/jsp/reconcile/cyberplatreconmgmt.jsp
+		</result>
+		<result name="input">resources/jsp/reconcile/cyberplatreconmgmt.jsp
+		</result>
+	</action>
+
+	<action name="cyberplatemgmttbl" class="com.socialindia.reconcile.CyberPlatMgmt">
+		<result type="json"></result>
+	</action>
+	<action name="paygatemgmttbl" class="com.socialindia.reconcile.PaygateMgmt">
+		<result type="json"></result>
+	</action>
+	<action name="deletepaygate" class="com.socialindia.reconcile.PaygateExcel" method="cyberandpaygateDelete">
+		<result name="success">resources/jsp/reconcile/paygatereconmgmt.jsp
+		</result>
+		<result name="input">resources/jsp/reconcile/paygatereconmgmt.jsp
+		</result>
+	</action>
+	<action name="deletepaycyberplate" class="com.socialindia.reconcile.PaygateExcel"
+		method="cyberandpaygateDelete">
+		<result name="success">resources/jsp/reconcile/cyberplatreconmgmt.jsp
+		</result>
+		<result name="input">resources/jsp/reconcile/cyberplatreconmgmt.jsp
+		</result>
+	</action>
+	<action name="downloadcyberfiles" class="com.socialindia.utilitymgmt.DownloadAction">
+		<result name="success" type="stream">
+			<param name="contentType">application/octet-stream</param>
+			<param name="inputName">fileInputStream</param>
+			<param name="contentDisposition">attachment;filename="${filem}"</param>
+			<param name="bufferSize">1024</param>
+		</result>
+		<result name="input">resources/jsp/reconcile/cyberplatreconmgmt.jsp
+		</result>
+	</action>
+	<action name="downloadpaygatefiles" class="com.socialindia.utilitymgmt.DownloadAction">
+		<result name="success" type="stream">
+			<param name="contentType">application/octet-stream</param>
+			<param name="inputName">fileInputStream</param>
+			<param name="contentDisposition">attachment;filename="${filem}"</param>
+			<param name="bufferSize">1024</param>
+		</result>
+		<result name="input">resources/jsp/reconcile/paygatereconmgmt.jsp
+		</result>
+	</action>
+
+	<action name="reconicileMgmttbl" class="com.socialindia.reconcile.ReconicileMgmt">
+		<result type="json"></result>
+	</action>
+	<action name="extractfile" class="com.socialindia.reconcile.ExtractFile">
+		<result name="success">resources/jsp/reconcile/reconretval.jsp
+		</result>
+		<result name="input">resources/jsp/reconcile/reconretval.jsp
+		</result>
+	</action>
+
+ </package>
+ </struts>

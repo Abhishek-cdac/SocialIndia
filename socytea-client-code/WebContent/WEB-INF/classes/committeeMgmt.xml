@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+
+<struts>
+
+ <package name="committeeMgmt" extends="default">
+
+  
+   <action name="committeemgmt">
+   <result name="success">${getText("Text.general.committeeMgmt")}
+   </result>
+  </action>
+
+ <action name="committeeMgmtTable" class="com.socialindia.committeeMgmt.committeeMgmtTable">
+    <result type="json"></result>
+  </action>
+
+ <action name="createCommittee" class="com.socialindia.committeeMgmt.createCommittee">
+     <result name="success">resources/jsp/committeeMgmt/createCommittee.jsp</result>
+    <result name="input">resources/jsp/committeeMgmt/createCommittee.jsp</result>
+  </action>
+  
+  <!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  <action name="committeecrtsts" class="com.socialindia.committeeMgmt.Committeemgmtalertmsg">
+     <result name="success">resources/jsp/committeeMgmt/committeeMgmt.jsp</result>
+  </action>
+  <!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+  
+  <action name="committeeCreation" class="com.socialindia.committeeMgmt.committeeCreation">
+    <!--  <result name="success">resources/jsp/committeeMgmt/committeeMgmt.jsp</result> -->
+    <result name="success" type="redirectAction">committeecrtsts</result>
+    <result name="input">resources/jsp/committeeMgmt/createCommittee.jsp</result>
+  </action>
+  
+  <action name="committeeViewAction" class="com.socialindia.committeeMgmt.committeeViewAction">
+     <result name="success">resources/jsp/committeeMgmt/committeeeView.jsp</result>
+    <result name="input">resources/jsp/committeeMgmt/committeeMgmt.jsp</result>
+  </action>
+
+ <action name="committeeEditAction" class="com.socialindia.committeeMgmt.committeeEditAction">
+     <result name="success">resources/jsp/committeeMgmt/committeeEdit.jsp</result>
+    <result name="input">resources/jsp/committeeMgmt/committeeMgmt.jsp</result>
+  </action>
+  
+   <action name="getCommitteeOnload" class="com.socialindia.committeeMgmt.getCommitteeOnload">
+     <result name="success">resources/jsp/committeeMgmt/committeeOnload.jsp</result>
+  </action>
+  
+   <action name="committeeUpdateAction" class="com.socialindia.committeeMgmt.committeeUpdateAction">
+     <result name="success">resources/jsp/committeeMgmt/committeeMgmt.jsp</result>
+       <result name="input">resources/jsp/committeeMgmt/committeeEdit.jsp</result>
+  </action>
+ </package>
+</struts>

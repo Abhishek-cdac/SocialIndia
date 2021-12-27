@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+
+<struts>
+
+ <package name="societyMgmt" extends="default">
+
+  
+  <action name="_societymgmt_">
+   <result name="success">${getText("Text.general.societyMgmt")}
+   </result>
+  </action>
+
+ <action name="societyMgmtTable" class="com.socialindia.societyMgmt.societyMgmtTable">
+    <result type="json"></result>
+  </action>
+
+<action name="createsocietyform" class="com.socialindia.societyMgmt.createSocietyAction">
+     <result name="success">resources/jsp/societymgmt/createSociety.jsp</result>
+    <result name="input">resources/jsp/societymgmt/societyMgmtTable.jsp</result>
+  </action>
+  
+   <action name="gettownshipOnload" class="com.socialindia.societyMgmt.createSocietyAction">
+     <result name="success">resources/jsp/societymgmt/townshipOnload.jsp</result>
+  </action>
+  
+  <action name="getTownshipData" class="com.socialindia.societyMgmt.createSocietyAction" method="getTownshipData">
+     <result name="success">resources/jsp/societymgmt/townshipViewAjaxData.jsp</result>
+    <result name="input">resources/jsp/societymgmt/createSociety.jsp</result>
+  </action>
+ 
+  <!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  <action name="societymgmtcrtsts" class="com.socialindia.societyMgmt.Socyteymgmtalertmsg">
+     <result name="success">resources/jsp/societymgmt/societyMgmtTable.jsp</result>   
+  </action>
+  <!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+  
+   <action name="societyCreateAction" class="com.socialindia.societyMgmt.societyCreateAction">
+    <!-- <result name="success">resources/jsp/societymgmt/societyMgmtTable.jsp</result> -->
+    <result name="success" type="redirectAction">societymgmtcrtsts</result>
+    <result name="input">resources/jsp/societymgmt/createSociety.jsp</result>
+  </action>
+  
+    <action name="societyViewAction" class="com.socialindia.societyMgmt.societyViewAction">
+     <result name="success">resources/jsp/societymgmt/societyview.jsp</result>
+    <result name="input">resources/jsp/societymgmt/societyMgmtTable.jsp</result>
+  </action>
+  
+  <action name="societyEditAction" class="com.socialindia.societyMgmt.societyEditAction">
+     <result name="success">resources/jsp/societymgmt/societyEdit.jsp</result>
+    <result name="input">resources/jsp/societymgmt/societyMgmtTable.jsp</result>
+  </action>
+  
+  <action name="societyUpdateAction" class="com.socialindia.societyMgmt.societyUpdateAction">
+     <result name="success">resources/jsp/societymgmt/societyMgmtTable.jsp</result>
+    <result name="input">resources/jsp/societymgmt/societyEdit.jsp</result>
+  </action>
+  
+  <action name="societyDeleteAction" class="com.socialindia.societyMgmt.societyEditAction" method="delete">
+     <result name="success">resources/jsp/societymgmt/societyMgmtTable.jsp</result>
+    <result name="input">resources/jsp/societymgmt/societyMgmtTable.jsp</result>
+  </action>
+  
+   <action name="generateNewSocietyKey" class="com.socialindia.societyMgmt.generateNewSocietyKey"> 
+     <result name="success">resources/jsp/townshipmgmt/townshipActivationKey.jsp</result>
+    <result name="input">resources/jsp/societymgmt/societyMgmtTable.jsp</result>
+  </action>
+  
+  <action name="printSocietyData" class="com.socialindia.society.reports.printSocietyData"> 
+     <result name="success">resources/jsp/societymgmt/societyPrintData.jsp</result>
+    <result name="input">resources/jsp/societymgmt/societyMgmtTable.jsp</result>
+  </action>
+  
+   <action name="societyEmailFunction" class="com.socialindia.societyMgmt.societyEmailSend"> 
+     <result name="success">resources/jsp/societymgmt/societyDataCheck.jsp</result>
+    <result name="input">resources/jsp/societymgmt/societyMgmtTable.jsp</result>
+  </action>
+  
+   
+  
+ </package>
+</struts>

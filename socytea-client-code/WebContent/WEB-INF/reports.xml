@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+
+<struts>
+
+ <package name="reports" extends="default">
+  <action name="merchantmgmtReportTbldata" class="com.socialindia.reportmgmt.MerchantmgmtreportDataTbl">
+  <result name="success">resources/jsp/reports/merchantReportTbl.jsp</result>
+  <result name="input">resources/jsp/reports/merchantReportTbl.jsp</result>
+  </action>
+   <action name="StaffUserReportdatatable" class="com.socialindia.reportmgmt.StaffMasterReportTbl">
+  <result name="success">resources/jsp/reports/merchantReportTbl.jsp</result>
+  <result name="input">resources/jsp/reports/merchantReportTbl.jsp</result>
+  </action>
+   <action name="residentmgmtReportTbldata" class="com.socialindia.reportmgmt.ResidentMgmtReportDataTbl">
+  <result name="success">resources/jsp/reports/residentReportTbl.jsp</result>
+  <result name="input">resources/jsp/reports/residentReportTbl.jsp</result>
+  </action>
+   <action name="labourmgmtReportTbldata" class="com.socialindia.reportmgmt.LabourMgmtReportDataTbl">
+  <result name="success">resources/jsp/reports/labourMgmtReportTbl.jsp</result>
+  <result name="input">resources/jsp/reports/labourMgmtReportTbl.jsp</result>
+  </action>
+<action name="townshipmgmtReportTbldata" class="com.socialindia.reportmgmt.TownshipMgmtReportDataTbl">
+  <result name="success">resources/jsp/reports/residentReportTbl.jsp</result>
+  <result name="input">resources/jsp/reports/residentReportTbl.jsp</result>
+  </action>
+  <action name="societymgmtReportTbldata" class="com.socialindia.reportmgmt.SocietyMgmtReportDataTbl">
+  <result name="success">resources/jsp/reports/residentReportTbl.jsp</result>
+  <result name="input">resources/jsp/reports/residentReportTbl.jsp</result>
+  </action>
+   <action name="auditTrialReportTbldata" class="com.socialindia.reportmgmt.AuditTrialReportDataTbl">
+  <result name="success">resources/jsp/reports/auditTrialReportTbl.jsp</result>
+  <result name="input">resources/jsp/reports/auditTrialReportTbl.jsp</result>
+  </action>
+  <action name="committeemgmtReportTbldata" class="com.socialindia.reportmgmt.CommitteeMgmtReportDataTbl">
+  <result name="success">resources/jsp/reports/residentReportTbl.jsp</result>
+  <result name="input">resources/jsp/reports/residentReportTbl.jsp</result>
+  </action>
+   <action name="uploadfailedReportTbldata" class="com.socialindia.reportmgmt.UploadfailedReportDataTbl">
+  <result name="success">resources/jsp/reports/uploadexcelfailed.jsp</result>
+  <result name="input">resources/jsp/reports/uploadexcelfailed.jsp</result>
+  </action>
+  <action name="reportissueTbldata" class="com.socialindia.reportmgmt.ReportissuesDataTbl">
+  <result name="success">resources/jsp/reports/reportissue.jsp</result>
+  <result name="input">resources/jsp/reports/reportissue.jsp</result>
+  </action> 
+  <action name="solvereportissueaction" class="com.socialindia.reportmgmt.SolvereportissueDataTbl">
+  <result name="success">resources/jsp/reports/reportissue.jsp</result>
+  <result name="input">resources/jsp/reports/reportissue.jsp</result>
+  </action>
+  <action name="reportissuemstview" class="com.socialindia.reportmgmt.SolvereportissueDataTbl" method="ViewReportissue">
+  <result name="success">resources/jsp/reports/reportissueview.jsp</result>
+  <result name="input">resources/jsp/reports/reportissueview.jsp</result>
+  </action>
+  <action name="maintenancebillReportTbl" class="com.socialindia.reportmgmt.MaintenancebillReportTbl">
+  <result name="success">resources/jsp/reports/maintenancebillReport.jsp</result>
+  <result name="input">resources/jsp/reports/maintenancebillReport.jsp</result>
+  </action>
+  
+ </package>
+</struts>

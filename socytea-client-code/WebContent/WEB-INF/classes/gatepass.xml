@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+ <struts>
+ <package name="issuegate" extends="default">
+  <action name="issuegatepassmgmttbl" class="com.socialindia.gatepass.IssuegatepassMgmtTbl">
+    <result type="json"></result>
+  </action>
+
+    <action name="creategatepassform" class="com.socialindia.gatepass.GatepassServices">
+    <result name="success">resources/jsp/gatekeeper/gatepasscreation.jsp</result>
+  </action>
+  
+  <!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  	<action name="gatepassisustss" class="com.socialindia.issuemgmtbl.IssueListAlertMsg">    
+    	<result name="success">resources/jsp/gatekeeper/Issuegatepassmgmttbl.jsp</result>
+  	</action>
+  	<!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+  
+  <action name="gatepasscreation" class="com.socialindia.gatepass.GatepassServices" method="gatepassCreateFun">
+   	<!-- <result name="success">resources/jsp/gatekeeper/Issuegatepassmgmttbl.jsp</result> -->
+   	<result name="success" type="redirectAction">gatepassisustss</result>
+    <result name="input">resources/jsp/gatekeeper/gatepasscreation.jsp</result>
+  </action>
+  
+  
+  <action name="reusegatepassaction" class="com.socialindia.gatepass.GatepassServices" method="ReuseServices">
+   <result name="success">resources/jsp/gatekeeper/gatepassreuse.jsp</result>
+    <result name="input">resources/jsp/gatekeeper/gatepassreuse.jsp</result>
+  </action>
+  
+  <!-- 
+   	<action name="gatepassresuecreation" class="com.socialindia.gatepass.GatepassServices" method="gatepassCreateFun">
+   	<result name="success">resources/jsp/gatekeeper/Issuegatepassmgmttbl.jsp</result>
+    <result name="input">resources/jsp/gatekeeper/gatepassreuse.jsp</result>
+  	</action>
+   -->
+   
+   <action name="deletegatepass" class="com.socialindia.gatepass.GatepassServices" method="deleteGatepassAction">
+  	<!-- <result name="success">resources/jsp/gatekeeper/Issuegatepassmgmttbl.jsp</result>
+    <result name="input">resources/jsp/gatekeeper/Issuegatepassmgmttbl.jsp</result> -->
+    	<result name="success" type="redirectAction">gatepassisustss</result>
+    	<result name="input" type="redirectAction">gatepassisustss</result>
+  </action>
+
+<action name="viewGatepassAction" class="com.socialindia.gatepass.GatepassServices" method="ReuseServices">
+ 	<result name="success">resources/jsp/gatekeeper/gatepassView.jsp</result>
+     <result name="input">resources/jsp/gatekeeper/Issuegatepassmgmttbl.jsp</result>
+  </action>
+  <action name="issuegatepasshistorymgmttbl" class="com.socialindia.gatepass.IssuegatepassHistoryMgmtTbl">
+    <result type="json"></result>
+  </action>
+  <action name="viewGatepasshistoryAction" class="com.socialindia.gatepass.GatepassServices" method="ReuseServices">
+ 	<result name="success">resources/jsp/gatekeeper/gatepasshistoryView.jsp</result>
+     <result name="input">resources/jsp/gatekeeper/Issuegatepasshistorytbl.jsp</result>
+  </action>
+   <action name="gatepassprintData" class="com.socialindia.gatepass.GatepassServices" method="ReuseServices"> 
+     <result name="success">resources/jsp/gatekeeper/gatepassPrintData.jsp</result>
+     <result name="input">resources/jsp/gatekeeper/Issuegatepassmgmttbl.jsp</result>
+  </action>
+
+  <!--
+
+  <action name="getuserfbdetail" class="com.socialindia.event.EventFbautocomp">
+  <result name="success">resources/jsp/event/getuserfbdetails.jsp</result>
+    <result name="input">resources/jsp/event/getuserfbdetails.jsp</result>
+  </action>
+
+  <action name="eventmodifyform" class="com.socialindia.event.EventServices" method="toeventmodifyform">
+   <result name="success">resources/jsp/event/eventMgmt.jsp</result>
+  	   <result name="success" type="chain">
+  	   		<param name="actionName">eventdashboard</param>
+  	   		<param name="alertList">${alertList}</param>
+  	   </result>
+    <result name="input">resources/jsp/event/eventMgmt.jsp</result>
+  </action>
+   <action name="inviteeventaction" class="com.socialindia.event.EventServices" method="inviteEventAction">
+  	<result name="success">resources/jsp/event/inviteshare.jsp</result>
+    <result name="input">resources/jsp/event/inviteshare.jsp</result>
+  </action>
+
+ 	<action name="eventdashboard">
+    <result name="success">resources/jsp/event/eventMgmt.jsp</result>
+   <result name="success" type="chain">eventMgmt</result>
+  </action>
+
+   <action name="getfunctiondataonload" class="com.socialindia.event.Functiondataload">
+     <result name="success">resources/jsp/event/functiondata.jsp</result>
+   </action>
+
+    <action name="getfunctiontemplatedataonload" class="com.socialindia.event.Functiondataload" method="getFuntionTempAuto">
+     <result name="success">resources/jsp/event/functiontemplate.jsp</result>
+   </action>
+
+   <action name="getfunctionfacilityload" class="com.socialindia.event.Functiondataload" method="getFacilityTempAuto">
+     <result name="success">resources/jsp/event/facilitydata.jsp</result>
+   </action> -->
+
+  </package>
+</struts>

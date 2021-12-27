@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC  "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+<struts>
+
+ <package name="flashnews" extends="default">
+  
+<action name="flashnewsmgmt" class="com.socialindia.flashnews.FlashNewsMgmt">
+	<result type="json"></result>
+</action>
+
+	<action name="newflashnew" class="com.socialindia.flashnews.FlashNews">
+		<result name="success">resources/jsp/flashnews/newflashnews.jsp</result>
+		<result name="input">resources/jsp/flashnews/newflashnews.jsp</result>
+	</action>
+	
+	<!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+	<action name="flashnwscrtsts" class="com.socialindia.flashnews.Flashnewscrtalrtmsg">    
+    	<result name="success">resources/jsp/flashnews/flashnewmgmt.jsp</result> 	
+  	</action>
+	<!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+	
+	<action name="createflashnewsmgmt" class="com.socialindia.flashnews.FlashNews" method="createFlashNews">
+		<result name="success" type="redirectAction">flashnwscrtsts</result>
+   		<result name="input" type="redirectAction">flashnwscrtsts</result>
+		<!-- <result name="success">resources/jsp/flashnews/flashnewmgmt.jsp</result>
+		<result name="input">resources/jsp/flashnews/flashnewmgmt.jsp</result> -->
+	</action>
+	<action name="viewflashnews" class="com.socialindia.flashnews.FlashNews" method="viewFlashNews">
+		<result name="success">resources/jsp/flashnews/flashnewview.jsp</result>
+		<result name="input">resources/jsp/flashnews/flashnewview.jsp</result>
+	</action>
+	<action name="modifyflashnews" class="com.socialindia.flashnews.FlashNews" method="viewFlashNews">
+		<result name="success">resources/jsp/flashnews/modifyFlashnews.jsp</result>
+		<result name="input">resources/jsp/flashnews/modifyFlashnews.jsp</result>
+	</action>
+		<action name="updateflashnews" class="com.socialindia.flashnews.FlashNews" method="updateFlashNews">
+		<result name="success">resources/jsp/flashnews/flashnewmgmt.jsp</result>
+		<result name="input">resources/jsp/flashnews/flashnewmgmt.jsp</result>
+	</action>
+		<action name="deleteflashnew" class="com.socialindia.flashnews.FlashNews" method="deleteFlashNews">
+		<result name="success">resources/jsp/flashnews/flashnewmgmt.jsp</result>
+		<result name="input">resources/jsp/flashnews/flashnewmgmt.jsp</result>
+	</action>
+	
+
+ </package>
+</struts>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="merchantcateglist" extends="default">
+
+  <action name="merchantCategorymanagedatatable" class="com.socialindia.merchantcateglistmaster.merchantCategoryMasterDTable">
+    <result type="json"></result>
+  </action>
+  <action name="createmrchcategorytype" class="com.socialindia.merchantcateglistmaster.merchantCategoryServices">	
+    <result name="success">resources/jsp/merchantcateglist/mrchcategoryadd.jsp</result>
+    <result name="input">resources/jsp/merchantcateglist/mrchcategoryadd.jsp</result>
+    <result name="error">resources/jsp/merchantcateglist/mrchcategoryadd.jsp</result>
+  </action> 
+  
+  <!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  	<action name="mchcatecrtsts" class="com.socialindia.merchantcateglistmaster.MerchantCategAlertMsg">    
+    	<result name="success">resources/jsp/merchantcateglist/merchantcateg.jsp</result>
+  	</action>
+  	<!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+  
+   <action name="createmerchantCategorytype" class="com.socialindia.merchantcateglistmaster.merchantCategoryServices" method="merchantcategCreateFun">	
+    <result name="success" type="redirectAction">mchcatecrtsts</result>
+    <result name="input" type="redirectAction">mchcatecrtsts</result>
+    <result name="error" type="redirectAction">mchcatecrtsts</result>
+    <!-- <result name="success">resources/jsp/merchantcateglist/merchantcateg.jsp</result>
+    <result name="input">resources/jsp/merchantcateglist/merchantcateg.jsp</result>
+    <result name="error">resources/jsp/merchantcateglist/merchantcateg.jsp</result> -->
+  </action> 
+   <action name="deleteactionmerchantCategory" class="com.socialindia.merchantcateglistmaster.merchantCategoryServices"
+   method="deleteActionfun">	
+    <result name="success">resources/jsp/merchantcateglist/merchantcateg.jsp</result>
+    <result name="input">resources/jsp/merchantcateglist/merchantcateg.jsp</result>
+    <result name="error">resources/jsp/merchantcateglist/merchantcateg.jsp</result>
+  </action> 
+   <action name="activeactionmerchantCategory" class="com.socialindia.merchantcateglistmaster.merchantCategoryServices"
+   method="activeActionfun">	
+    <result name="success">resources/jsp/merchantcateglist/merchantcateg.jsp</result>
+    <result name="input">resources/jsp/merchantcateglist/merchantcateg.jsp</result>
+    <result name="error">resources/jsp/merchantcateglist/merchantcateg.jsp</result>
+  </action> 
+   <action name="mrchcategorymstview" class="com.socialindia.merchantcateglistmaster.merchantCategoryServices"
+   method="viewActionfun">	
+    <result name="success">resources/jsp/merchantcateglist/mrchcategoryedit.jsp</result>
+    <result name="input">resources/jsp/merchantcateglist/mrchcategoryedit.jsp</result>
+    <result name="error">resources/jsp/merchantcateglist/merchantcateg.jsp</result>
+  </action> 
+  <action name="mrchcategoryeditSubmitaction" class="com.socialindia.merchantcateglistmaster.merchantCategoryServices"  method="CategoryUpdateFun" >	
+    <result name="success">resources/jsp/merchantcateglist/merchantcateg.jsp</result>
+    <result name="input">resources/jsp/merchantcateglist/merchantcateg.jsp</result>
+    <result name="error">resources/jsp/merchantcateglist/mrchcategoryedit.jsp</result>
+  </action>
+ </package>
+</struts>

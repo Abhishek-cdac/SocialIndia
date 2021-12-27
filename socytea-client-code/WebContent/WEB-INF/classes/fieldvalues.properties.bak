@@ -1,0 +1,1568 @@
+Text.project.title=Socytea
+Text.usercreation.userid=User ID
+Text.entryDate=Entry Date
+Text.modifyDate=Modify Date
+Text.table.sno=S.No.
+Text.accesschannel=Access Channel
+
+Text.biometrictbl.id=ID
+Text.biometrictbl.societyid=Society ID
+Text.biometrictbl.hostname=Host Name
+Text.biometrictbl.portnumber=Port Number
+Text.biometrictbl.databasename=Database Name
+Text.biometrictbl.databaseusername=Database User Name
+Text.biometrictbl.databasepassword=Database Password
+
+Text.biometricusrtbl.id=ID
+Text.biometricusrtbl.societyid=Society ID
+Text.biometricusrtbl.residentid=Resident Id
+Text.biometricusrtbl.residentname=Resident Name
+Text.biometricusrtbl.mobileno=Mobile No
+Text.biometricusrtbl.email=Email
+Text.biometricusrtbl.recordstatus=Record Status
+Text.biometricusrtbl.location=Location
+Text.biometricusrtbl.issendpushnotification=Send Push Notification
+Text.biometricusrtbl.devicelogid=Device Log Id
+Text.biometricusrtbl.deviceid=Device Id
+Text.biometricusrtbl.userid=UserId
+Text.biometricusrtbl.logdate=Log Date
+Text.biometricusrtbl.statuscode=Status Code
+Text.biometricusrtbl.duration=Duration
+Text.biometricusrtbl.verificationmode=Verification Mode
+
+
+#Button
+Text.button.next=Next
+Text.button.previous=Previous
+Text.button.submit=Submit
+
+
+
+
+
+#Text.button.downloadtemplate=DownloadTemplate
+
+
+
+
+Text.button.modify=Modify
+Text.button.skip=Skip
+Text.button.close=Cancel
+Text.button.save=Save
+Text.button.savechanges=Save Changes
+Text.button.back=Back
+Text.button.gotoback=Go Back
+Text.button.update = Update
+Text.button.Preview=Preview
+
+#Login page
+Text.login.loginid=Mobile No. / Contact No. / Email
+Text.login.password=Password
+Text.login.signin=Sign in!
+Text.login.signup=Sign up!
+Text.login.signup.cancel=Cancel
+Text.login.requestpassword=Request Password?
+Text.login.forgotpassword=Forgot Password?
+Text.login.requestfornewpassword=Request For New Password
+forget.password.email.send= Password successfully send to your email and sms please check
+password.changed.success=Password successfully changed
+forget.password.email.already.exist=Email / Mobile No. not exist
+old.password.wrong=The Old password is wrong
+Text.login.mobandemailfield= Mobile No. / Email is required
+Text.forget.mobandemailfield= Mobile No. / Email is required
+
+#Customer registration
+Text.customerreg.firstname=First Name
+Text.customerreg.lastname=Last Name
+Text.customerreg.dob=Date Of Birth
+Text.customerreg.age=Age
+Text.customerreg.gender=Gender
+Text.customerreg.emailid=Email
+Text.customerreg.activation.key= Activation Key
+Text.customerreg.password=Password
+Text.customerreg.country=Country
+Text.customerreg.isd=ISD
+Text.customerreg.mobileno=Mobile No.
+Text.customerreg.contactaddress=Contact Address
+Text.customerreg.state=State
+Text.customerreg.secretquestion=Secret Question
+Text.customerreg.city=City
+Text.customerreg.secretanswer=Secret Answer
+Text.customerreg.pincode=Pincode
+Text.customerreg.cardnum=Card No
+Text.customerreg.cardname=Card Name
+Text.customerreg.expirymonth=Expire Month
+Text.customerreg.expiryyear=Year
+Text.customerreg.cvv=CVV
+Text.customerreg.success.msg=User id and password successfully send to email please check
+change.password.user.id=Old Password
+change.password.new.user.id= New Password
+change.password.new.retype.id= Re-Type Password
+Error.idcardType.number=The Id Card Type is required
+Error.idcardTypeno.number=The Id Card No is required
+Error.customerreg.ISDno.mobileno=The ISD No is required
+
+Breadcrumb.si.usercreation=Create SI User
+Text.customerreg.key.error=Activation Key Wrong
+
+Error.customerreg.societykey=The society key is required
+Error.customerreg.societykey.length=The society key value between 3 to 20 characters
+Error.customerreg.username=The user name is required and cannot be empty
+Error.customerreg.firstname=The first name is required and cannot be empty
+Error.customerreg.active.key=The active key is required and cannot be empty
+Error.customerreg.active.key.length=The active key value between 3 to 20 characters
+Error.customerreg.lastname=The last name is required and cannot be empty
+Error.customerreg.emailid=The email is required
+Error.customerreg.password=The password is required and cannot be empty
+Error.customerreg.countryid=The country is required
+Error.customerreg.isd=The isd no. is required
+Error.customerreg.mobileno=The mobile no. is required
+Error.customerreg.contactaddrs=The contact address is required
+Error.customerreg.stateid=The state is required
+Error.customerreg.secretquestion=The secret question is required
+Error.customerreg.cityid=The city is required
+Error.customerreg.secretanswer=The secret answer is required
+Error.customerreg.pincode=The pin code is required
+Error.customerreg.cardnum=The card number is required
+Error.customerreg.cardname=The card name is required and cannot be empty
+Error.customerreg.expirymonth=The expiry month is required
+Error.customerreg.expiryyear=The expiry year is required
+Error.customerreg.cvv=The CVV number is required
+
+Error.customerreg.username.length=The user name value between 5 to 20 characters
+Error.customerreg.firstname.length=The first name value between 5 to 20 characters
+Error.customerreg.lastname.length=The last name value between 1 to 20 characters
+Error.customerreg.emailid.length=The email value between 8 to 70 characters
+Error.customerreg.mobileno.length=The mobile no. is required
+Error.customerreg.isdcode.length=The ISD code value between 2 to 4 digits
+Error.customerreg.contactaddrs.length=The contact address value between 5 to 450 characters
+Error.customerreg.secretquestion.length=The secret question value between 3 to 40 characters
+Error.customerreg.secretanswer.length=The secret answer value between 3 to 40 characters
+Error.customerreg.pincode.length=The pincode value between 3 to 11 characters
+Error.customerreg.cardnum.length=The card number value between 9 to 19 characters
+Error.customerreg.cardname.length=The card name value between 5 to 20 characters
+Error.customerreg.isdcode.validate=The isd code can only number
+Error.customerreg.usernamename.validate=The user name can consist of alphabetical and number
+Error.customerreg.firstname.validate=The first name can only consist of alphabetical
+Error.customerreg.lastname.validate=The last name can only consist of alphabetical
+Error.customerreg.emailid.validate=The input is not a valid email address
+Error.customerreg.password.validate=The password is not valid
+Error.customerreg.mobileno.validate=The mobile number can only number
+Error.customerreg.pincode.validate=The pin code can only consist of number
+Error.customerreg.cardnum.validate=The card number can only consist of number
+Error.customerreg.cardname.validate=The card name can only consist of alphabetical
+Error.customerreg.cvv.validate=The value is not a valid CVV
+create.customerreg.error=Customer creation error occurred. Please try again
+create.customerreg.success=Customer created successfully
+
+#Merchant Management
+Text.Merchant=Merchant
+Text.Title.MerchantManage=Merchant Manage
+Text.Title.MerchantAdd=Add Merchant
+Text.Merchant.Action=Merchant Action
+Text.Merchant.Management=Merchant Management
+Error.merchant.valid.email=The input is not a valid email address
+Text.merchantdetail.Management=Merchant Detail
+Breadcrumb.util.merchantmgmt=Merchant Management
+Text.Form.MerchantName=Merchant Name
+Text.Form.MerchantLogo=Merchant Logo
+Text.Form.ContactName=Contact Name
+Text.Form.DomainName=Domain Name
+Text.Form.IsdCde=ISD
+Text.Form.IsdCode=ISD
+Text.Form.MobileNo=Mobile No. / Contact No.
+Text.Form.StdCode=STD Code
+Text.Form.Landline=Land Line No.
+Text.Form.EmailId=Email
+Text.Form.ContactAddress=Contact Address
+Text.Form.CountryId=Country Id
+Text.Form.StateId=State Id
+Text.Form.CityId=City Id
+Text.Form.PinCode=PIN Code
+Text.Form.SecretQues=Secret Question
+Text.Form.SecretAns=Secret Answer
+Text.Form.SocietyId = Society Id
+Text.Form.TownshipId = Township Id
+
+#User Registration
+Text.merchantreg.adduser=Add User
+
+#User Creation (Add)
+Text.adduser.username=User Name
+Text.adduser.password=Password
+Text.adduser.group=Group
+Text.adduser.emailid=Email
+Text.adduser.mobnumber=Mobile No. / Contact No.
+Text.adduser.fname=First Name
+Text.adduser.lname=Last Name
+Text.adduser.dob=DOB
+Text.adduser.town.ship.id=Township Name
+Text.adduser.society.id=Society Name
+
+#Group manage
+Text.merchantreg.addgroup=New Group
+Text.merchantreg.createnewgroup=Create New Group
+Text.merchantreg.editgroup=Edit Group
+error.grpname.exists = Already group name exists
+success.grpname.create = Group created successfully
+error.grpname.unhandle = Error while creating in group
+Text.Form.NoOfUsers=No. Of Users
+
+#change password
+Text.changepassword.oldpassword=Old Password
+Text.changepassword.newpassword=New Password
+Text.changepassword.retypepassword=Re-type Password
+Text.mpin.header=MPIN Change
+Text.mpin.oldmpin=Old MPIN
+Text.mpin.newmpin=New MPIN
+Text.mpin.retypempin=Re-type MPIN
+
+#Breadcrumb
+Breadcrumb.dashboard= Dashboard
+Breadcrumb.dashboardhome= Dashboard
+Dashboard = Dashboard
+Text.Home = Dashboard
+Breadcrumb.uam=UAM
+Breadcrumb.usermanage=User Management
+Breadcrumb.groupmanage=Group Management
+Breadcrumb.rightsmanage=Rights Management
+Breadcrumb.usercreation=Create User
+Breadcrumb.sicreation=Create SI User
+Breadcrumb.usermodify=User Modify
+Breadcrumb.agencymanage=Agency Manage
+Breadcrumb.agencyadduser=Agency Creation
+Breadcrumb.agencyedituser=Agency Modify
+Breadcrumb.manage=Manage
+Breadcrumb.biometric=Biometric
+Breadcrumb.add.material = Add Material
+Breadcrumb.material =  Material
+Breadcrumb.material.view =  Material Detail
+Breadcrumb.material.modify = Material Modify
+
+
+Breadcrumb.myaccount=My Accounts
+Breadcrumb.managebeneficiary=Manage Beneficiary
+Breadcrumb.fundtransfer=Fund Transfer
+Breadcrumb.billpayments=Bill Payments
+Breadcrumb.utilitypayments=Utility Payments
+Breadcrumb.transactions=Transactions
+Breadcrumb.statements=Statements
+Breadcrumb.changepassword=Change Password
+Breadcrumb.myprofile=My Profile
+Breadcrumb.offersreferral=Offers & Referrals
+Breadcrumb.support=Support
+Breadcrumb.manage.townshipmgmt=Township Management
+Breadcrumb.manage.societymgmt=Society Management
+Breadcrumb.manage.committeemgmt=Committee Management
+Breadcrumb.manage.restmgmt=Resident Management
+Breadcrumb.manage.residentdetails=Resident Detail
+Breadcrumb.manage.cmpymgmt=Company Management
+Breadcrumb.manage.staffmgmt=Staff Management
+Breadcrumb.biometric.biometricdata=Biometric Data
+
+Breadcrumb.biometric.createdatabase=Database Info
+
+Breadcrumb.manage.labormgmt=Labor Management
+Breadcrumb.manage.laborfeedbck=Labor Feedback
+Breadcrumb.manage.labordetail=Labor Detail
+Breadcrumb.manage.committee.detail= Committee Detail
+
+#Menu header
+Menuheader.uam.usermanage=User Management
+Menuheader.uam.groupmanage=Group Management
+Menuheader.uam.rightsmanage=Rights Management
+Menuheader.uam.usercreation=User Creation
+Menuheader.uam.usermodify=User Edit
+Menuheader.agency.agencymanage=Agency Manage
+Menuheader.agency.agencyadduser=Agency Creation
+Menuheader.agency.agencyedituser=Agency Edit
+
+Menuheader.myaccount.accountsummary=Account Summary
+Menuheader.myaccount.manageaccounts=Manage Accounts
+Menuheader.managebeneficiary.addbeneficiary=Add Beneficiary
+Menuheader.managebeneficiary.confirmbeneficiary=Confirm Beneficiary
+Menuheader.managebeneficiary.myregisteredbeneficiary=My Registered Beneficiary
+Menuheader.fundtransfer.cardtocard=Card To Card
+Menuheader.fundtransfer.cardtobank=Card To Bank
+Menuheader.fundtransfer.cardtowallet=Card To Wallet
+Menuheader.fundtransfer.cardtoagency=Card To Agency
+Menuheader.billpayments.registerbiller=Register Biller
+Menuheader.billpayments.myregisteredbiller=My Registered Biller
+Menuheader.billpayments.makepayment=Make Payment
+Menuheader.billpayments.listofbillers=List of Billers
+Menuheader.utilitypayments.recharge=Recharge
+Menuheader.utilitypayments.dthservice=DTH Service
+Menuheader.utilitypayments.tickets=Tickets
+Menuheader.transactions.cancellation=Cancellation
+Menuheader.transactions.disputetransactions=Dispute Transactions
+Menuheader.transactions.scheduledtransactions=Scheduled Transactions
+Menuheader.transactions.completedtransactions=Completed Transactions
+Menuheader.statements.detailstatements=Detail Statements
+Menuheader.statements.estatements=E-Statements
+Menuheader.changepassword.loginpassword=Login Password
+Menuheader.changepassword.mpinchange=MPIN Change
+Menuheader.myprofile.updateprofile=Update Profile
+Menuheader.myprofile.primaryaccount=Primary Account
+Menuheader.myprofile.personalizetxnlimits=Personalize Transaction Limits
+Menuheader.offersreferral.referral=Referral
+Menuheader.offersreferral.loyaltypoints=Loyalty Points
+Menuheader.offersreferral.forexdetails=Forex Details
+Menuheader.offersreferral.offers=Offers
+Menuheader.support.requestticket=Request Ticket
+Menuheader.support.contactus=Contact Us
+Menuheader.support.feedback=Feedback
+
+
+#Rights
+Error.rights.group=The Group Name is required
+Error.rights.set.success=Rights Assigned Successfully
+Error.rights.set.error= Please Select Group To Assign Rights
+
+#Common
+Error.password.minlength=The password length invalid
+Error.password.maxlength=The password length invalid
+Error.password.onecharacter=The password must contain at least one character
+Error.password.onedigit=The password must contain at least one digit
+Error.password.onespecialcharacter=The password must contain at least one special character
+Error.password.digitnotallow=The password not allow digit
+Error.password.characternotallow=The password not allow character
+Error.password.specialcharacternotallow=The password not allow special character
+Error.usercreate.password=The password is required and cannot be empty
+
+Error.isdnumber.format=The isd no. can only consist of number
+Error.mobnumber.format=The mobile no. can only consist of number
+Text.button.cancel= Cancel
+
+
+#Add User
+Error.usercreate.username=The user name is required and cannot be empty
+Error.usercreate.existusername = The user name is already exist
+Error.usercreate.groupname=The Group Name is required
+Error.usercreate.isdnumber=The isd no is required and cannot be empty
+Error.usercreate.mobnumber=The mobile no is required and cannot be empty
+Error.usercreate.emailid=The email is required and cannot be empty
+Error.usercreate.emailidformat=The input is not a valid email address
+
+#profile
+Menuheader.uam.profile= Profile
+Menuheader.uam.chagepwd= Change Password
+Menuheader.uam.profile.reg.no=Register Number
+Menuheader.uam.profile.address= Address
+Menuheader.uam.profile.country= Country
+Menuheader.uam.profile.state = State
+Menuheader.uam.profile.city = City
+Menuheader.uam.profile.pincode = Pincode
+Menuheader.uam.profile.Blood.group = Blood Group
+Error.profile.register.number=The user name is required and cannot be empty
+Error.profile.address=The address is required and cannot be empty
+Error.profile.country=The register number is required and cannot be empty
+Error.profile.pincode=The pincode is required and cannot be empty
+Error.profile.pincode.format=The pin code can only consist of number
+Error.profile.bloodgroup=The blood group is required and cannot be empty
+
+#signup
+Text.customerreg.idproof= ID Card Type
+Text.customerreg.idproofno= ID Card No.
+Error.customerreg.dob.invalid= The date is not a valid date
+Error.customerreg.numericage=The age can only consist of number
+Error.customerreg.dob=The select your date of birth
+Error.customerreg.gender=The select your gender
+Error.customerreg.group=The select your group
+Error.customerreg.idproof=The select your ID proof
+Error.customerreg.idproofno=The ID proof is required
+Error.customerreg.age=The age is required
+Error.password.length=The password value between 6 to 25 characters
+Error.customerreg.idproofno.length=The ID proof value between 4 to 15 characters
+Error.customerreg.numericagelength = The age value between 1 to 3 number
+Text.customerreg.group.type = Group Type
+Error.customerreg.societyId=The society name  is required
+Error.customerreg.townshipId=The township name is required
+Error.customerreg.committeerole=The committee role name is required
+
+#Biometric
+Text.hostname=Host Name
+Text.portnumber=Port Number
+Text.databasename=Database Name
+Text.databaseusername=Database User Name
+Text.password=Database Password
+
+#GST
+Text.gst=Social India GST Number
+Text.gstminamt=Minimum GST Amount apply for all society
+Text.gstamt=Minimum Amount apply for all society
+
+Text.id=S.No.
+Text.name=Name
+Text.title=Title
+Text.salary=Salary
+Text.work=Work
+Text.country=Country
+Text.emailid=Email
+Text.mobileno=Mobile No. / Contact No.
+Text.age=Age
+Text.gender=Gender
+Text.state=State
+Text.city=City
+Text.address=Address
+Text.action=Action
+
+Text.accesschannel=Access Channel
+Text.committerole=Committee Role
+
+
+Text.status=Status
+Text.describtion=Description
+Text.file=File
+
+Text.image =Image
+Text.Companyname=Company Name
+Text.filesize=Maximum upload size is 5MB
+Text.allowformat=Support format: jpg, jpeg, png, gif and bmp files
+Text.allowformatfiles=Support format: jpg, jpeg, png, gif,xls,txt,pdf,csv files
+Text.image.extensions=.Tiff,.Gif,.Bmp,.Png,.Webp,.Bpg,.jpg,.jpeg,.png,.bmp,.tiff,.gif
+
+#Biometric 
+Error.biometric.name = The Host name is required
+Error.biometric.portnumber = The Port Number is required
+Error.biometric.username = The Database UserName is required
+Error.biometric.password = The Password is required
+Error.biometric.databasename = The Database Name is required
+
+
+
+
+#staff management
+Text.create.staff = Create Staff
+Error.staffreg.name = The staff name is required
+Error.staffreg.isd = The register ISD code is required
+
+Error.staffreg.idcardtype = The register ISD code is required
+Error.staffreg.salary = The staff salary is required
+Error.staffreg.salarywages = The extra wages is required
+Error.staffreg.workstartdate = The work start date is required
+Error.staffreg.workenddate = The work end date is required
+Error.staffreg.workdetails = The work details is required
+Error.staffreg.weeklyoff = Select weekly off
+Error.staffreg.companyname = The company name is required
+Error.staffreg.exists = Staff mobile no. and company name already registered.
+Error.staffreg.catch = Staff not registered. Error.
+
+Error.changepassword.oldpassword=The old password is required and cannot be empty
+Error.changepassword.newpassword=The new password is required and cannot be empty
+Error.changepassword.retypepassword=The re-type password is required and cannot be empty
+Error.changepassword.passwordsame=The new password and its re-type Password must be the same
+Error.changepassword.newpasswordlength=The new password value between {0} to {1} characters
+Error.changepassword.retypepasswordlength=The re-type password value between 7 to 20 characters
+Error.changepassword.newpassword.length=The new  password value between 7 to 20 characters
+
+Error.customerreg.fromdate=From date is required
+Error.customerreg.todate=To date is required
+Error.customerreg.weeklyoff=Please select weekly off
+
+
+#profile
+
+uam.profile.no.of.member=No Of Members
+uam.profile.bloodtype= Blood Type
+uam.profile.gender= Gender
+uam.profile.lname = Last Name
+uam.profile.fname = First Name
+uam.profile.dob= DOB
+uam.profile.address1=Address1
+uam.profile.address2=Address2
+uam.profile.occupation=Occupation
+
+#changepassword
+Menuheader.uam.currentpwd=Current Password
+Menuheader.uam.newpwd=New Password
+Menuheader.uam.confnmpwd=Conform Password
+
+Error.profile.currentpwd=The current password is required
+Error.profile.newpwd=The new password is required
+Error.profile.conformpwd=The current password is required
+Error.profile.conformpwd.notsame=The password and its confirm are not the same
+Text.fname=First Name
+Text.lname=Last Name
+Text.numoflogins=Number Of Logins
+Text.username=User Name
+Text.title.complents=
+Text.adduser.groupname=Group Name
+Text.adduser.newuser=Create User
+Text.adduser.township=Create Township
+
+
+Text.adduser.townshipname=Township Name
+Text.adduser.townshipcreated=Township created
+Text.adduser.committeecreated=Committee created
+Text.adduser.committeeupdated=Updated successfully
+Text.town.Management=Township Management
+Text.committee.Management=Committee Management
+Text.edit.township=Township Modify
+Text.Update.Success=Updated successfully
+Text.delete.Success=Deleted successfully
+Text.society.Management=Society Management
+Text.dispute.Management=Dispute Management
+Text.createsociety=Create Society
+Text.modifysociety=Society Modify
+Text.select.society=Select Society
+
+
+#Text.adduser.createdatabase=Create Database
+
+Text.adduser.societyname=Society Name
+Text.adduser.societycreated=Society created
+Text.createcommittee.Management=Create Committee
+Text.modifycommittee.Management=Committee Modify
+success.create.committee = Committee created successfully
+error.create.committee = Committee not created. Error.
+
+success.update.committee = Committee updated successfully
+error.update.committee = Committee not updated. Error.
+
+Text.member.Management=Resident Management
+Text.createmember.Management=Create Resident
+Text.content.userdetail=Details
+Text.userdetail=User Details
+Text.login.forgetpassword=Forgot Password
+Text.monitor.Management=Monitoring
+Text.customerbase.Management=Customer Base
+Text.monitorimage.management=Image Monitoring
+Text.uploadimage=Upload Images
+Text.member.modify = Resident Modify
+Text.Staff.Modify=Staff Modify
+Text.staff.details= Staff Detail
+Text.contentmonitor=Content Monitoring
+Text.contentmonitor.command=Content
+Text.content.Management=Content Monitoring
+Text.abuse.Management=Abuse
+Text.merchantmody.Management=Merchant Modify
+Text.merchantcreated.Management=Merchant created
+Text.merchantupdated.Management=Merchant Updated
+Text.labour.Management=Labor Management
+Text.lbrcate.cateskills = Category - Skills
+Text.createlabour.Management=Create Labor
+Text.login.username=Username / Mobile No. / Email
+
+
+Text.Title.MerchantCreate=Create Merchant
+Text.Title.MerchantCountry=Country
+Text.Title.MerchantState=State
+Text.Title.MerchantCity=City
+Text.Merchantdelete.Success=Merchant deleted successfully
+Text.Merchantofferdelete.Success=Merchant offers deleted successfully
+Text.Title.MerchantEdit=Edit Merchant
+Error.email.valid=Please enter a valid email address
+Error.shopname.require=Shop name is required
+
+Breadcrumb.manage.merchantoff=Merchant Offers
+Text.Title.MrchantnewOffer=New Offer
+Text.Title.MrchantOfferImg=Offers
+Text.Title.MrchantPrice=Price
+Text.Title.MrchantActulPrice=Actual Price
+Text.Title.MrchantOfferPrice=Offer Price
+Text.Title.MrchantOffervalidfrom=Valid From
+Text.Title.MrchantOffervalidto=Valid To
+Text.Title.MrchantOfferName=Offer Name
+Text.Title.Mrchantcontactdtl=Contact Details
+Text.Title.Mrchantgotomrchat=Go to Merchant
+Text.Title.MerchantCreate.offer=Create Offer
+Text.Title.Merchantmodify.offer=Offer Modify
+Text.Title.BroucherName=Brochure Name
+
+Text.Utility.Management=Utility Management
+Text.document.Management=Documents
+Text.labourmodify.Management=Labor Modify
+Text.Report.Management=Reports
+Menuheader.uam.myprofile=My Profile
+Text.labor.category = Labor Category
+Text.labor.cost = Cost
+Text.labor.costper = Cost Per
+Text.labor.experience = Experience
+Text.rating = Rating
+
+# Township Mgmt
+Error.profile.township.name=The township name is required
+Error.customerreg.township.name.length=The township name is required
+Error.townshipmgmt.noof.society=The no of society is required
+Error.townshipmgmt.noof.society.length=The no of society value between 1 to 999 number
+Error.townshipmgmt.noof.society.validate=The no of society can only number
+
+Error.townshipmgmt.noof.flats=The no of flats is required
+Error.townshipmgmt.noof.flats.length=The no of flats value between 1 to 999 number
+Error.townshipmgmt.noof.flats.validate=The no of flats can only number
+Error.townshipmgmt.address.length=The address value between 5 to 100 number
+Error.townshipmgmt.builder.name=The builder name is required
+Error.townshipmgmt.builder.name.length=The builder name between 5 to 50 characters
+Error.townshipmgmt.imprint.name.length= The imprint name should be lessthan 30 characters
+
+#[Move 2 DB] success.township.create = Township created successfully.
+error.township.create = Township not created. Error.
+#[Move 2 DB] success.township.update = Township updated successfully.
+error.township.update = Township not updated. Error.
+
+# Society Mgmt
+Error.society.create.empty=The society name is required
+Error.society.create.name.length=The society name value between 5 to 50 characters
+Error.society.noof.member=The no of member is required
+Error.society.noof.member.length=The no of member value between 1 to 999 number
+Error.society.noof.member.validate=The no of member can only number
+Error.society.noof.blocks.wings=The no of blocks/wings is required
+Error.society.noof.blocks.wings.length=The no of blocks/wings value between 1 to 999 number
+Error.society.noof.blocks.wings.validate=The no of blocks/wings can only number
+Error.society.noof.register.no=The registration number is required
+Error.society.noof.register.no.length=The register value between 5 to 20 characters
+Error.society.noof.register.no.validate=The register can have number and characters
+Text.society.block=Block/Wings Name
+success.society.create = Society created successfully.
+error.society.create = Society not created. Error.
+success.society.update = Society updated successfully.
+error.society.update = Society not updated. Error.
+
+
+
+#Committee mgmt
+Error.committee.noof.blocks=The no of blocks/wings is required
+Error.committee.noof.blocks.length=The no of blocks/wings value between 1 to 999 number
+Error.committee.noof.blocks.validate=The no of blocks/wings can only number
+
+#Company management
+Error.customerreg.companyname=The company name is required
+Error.customerreg.companyregno=The company reg.no. is required
+Text.breadcrumb.companymenu=Company Management
+Text.company.maintext=Company Management
+Text.company.name=Company Name
+Text.createcompany.Management =Create Company
+Text.company.regno=Company Reg. No.
+Text.company.verifysts=Status
+Text.company.keysearch=Key For Search
+Text.breadcrumb.companydetails=Company Detail
+Text.breadcrumb.companymodify = Company Modify
+Text.cmpny.detail = Company Detail
+
+
+
+#company mgmt
+success.company.created=Company created successfully
+error.company.created=Company not created
+sucess.company.deleted=Company deleted successfully
+error.company.deleted=Company not deleted
+sucess.company.updated=Company updated successfully
+error.company.updated=Company not updated
+Error.companyreg.keyval=The key search is required
+
+#resident mgmt
+Text.resident.name=Resident Name
+Text.resident.dob=Date Of Birth
+Text.breadcrumb.resident=Resident Management
+Text.resident.idno=Id Number
+Text.resident.create=Create Resident
+Text.resident.Accessch=Access Channel
+Text.resident.NoofBlock/Wings=No. of Block/Wings
+Text.resident.noofflats=No. of Flats
+Text.resident.block=Block/Wings Name
+Text.resident.flatno=Flat Number
+Text.resident.occupation =Occupation
+Text.resident.occupationP_H=Enter Occupation
+Text.resident.familymember=Family Members
+Text.resident.bloodgrp=Blood Group
+Text.pincode =Pin code
+success.resident.created=Resident created successfully
+error.resident.created =Resident not created
+success.resident.deleted=Resident deleted successfully
+error.resident.deleted=Resident not deleted
+Text.breadcrumb.residentdetails=Resident Modify
+sucess.resident.updated=Resident updated successfully
+error.resident.updated=Resident not updated
+Text.resident.fileupload = File uploaded successfully, data will be appear shortly in resident table.
+Text.biometric.biometricdata = Biometric Data created Successfully.
+
+Text.commitee.fileupload = File uploaded successfully, data will be appear shortly in resident table.
+Text.cyberplat.fileupload = Cyberplat settlement file uploaded successfully.
+Text.paygate.fileupload = Paygate settlement file uploaded successfully.
+
+user.email.id.already.register=Email already exist with society
+user.mobile.no.already.register=Mobile No. / Contact No. already exist with society
+Text.block.detail = Block Detail
+Text.family.detail = Family Detail
+
+#iptracking
+user.monitoring.iptracking=IP Tracking
+user.monitoring.Headmenu.iptracking=Monitoring
+Text.ipaddress=IP Address
+Text.Accesscount.accessinfo=Access Count
+Text.Accesscount.accesslanguage=Language
+Text.Access.clientTime=Client Time
+Text.Access.GmtTime=GMT Time
+Text.Access.LastModify=Modify Time
+
+# Group Mgmt
+Text.grprights.selectgrp = Please Select Any One Group Name.
+Text.grprights.selectrights = Please Assign Rights To The Group.
+
+#Document MGMT
+Error.documenttype.required = Document type is required
+Error.documenttype.shrt.des.required = Short description is required
+Error.subject.required = Subject is required
+Error.document.subject.length=The subject value between 5 to 200 characters
+Document.created.success = Document created successfully
+Document.created.error=Error in creating document
+Document.created.maintenance.error=Error in creating maintenance document
+maintenance.subject=Maintenance Document
+Maintenance.Document.created.success=Document created successfully
+Maintenance.Document.created.error=Error in creating document
+Document.deleted.success=Document deleted successfully
+Maintenance.Document.update.success=Document updated successfully
+Maintenance.Document.update.error=Error in updating document
+Maintenance.Document.share.success=Document shared successfully
+Maintenance.Document.share.error=Error in sharing document
+Document.delete.error=Error in deleting document
+Error.documentfile.required=Document file is required
+Error.document.upload.size=You can only upload a maximum of 5 files
+max.doc.fileupload.size=5
+Maintenance.doc.crt.succes = Maintenance bill generated successfully
+Maintenance.doc.crt.error = Maintenance bill not generated. Error.
+Maintenance.doc.exlupload.success = Maintenance data uploaded successfully. Data Will be Extracted
+Maintenance.doc.exlupload.error = Maintenance data not uploaded. Error.
+Maintenance.img.exlupload.success = Maintenance bill image uploaded successfully
+Maintenance.img.exlupload.error = Maintenance bill image not uploaded. Error
+
+Error.file.not.found=File Not Found In Specified Path
+
+#Document MGMT- maintenance Form
+Error.maintenance.residentnames.require=Resident name is required
+Error.maintenance.billdate.require=Bill Date is required
+Error.maintenanceExcelfile.required=Please Upload A Excel File
+
+Text.complaintshtdesc=Short Description
+Text.desc=	Description
+Text.resident=Resident
+Text.DocType=Document Type
+Text.image.upload=Image File Upload
+Text.billdate=Bill Date
+Text.serviceCharges=Service Charges
+Text.municipalTax=Municipal Taxes
+Text.penalti.others=Penalties/Others
+Text.water.charges=Water Charges
+Text.nonoccupancy.charges=Non Occupancy Charge
+Text.federation.culture=Federation/Cultural
+Text.srink.fund=Sinking Fund
+Text.repair.fund=Repair Fund
+Text.insurance.charges=Insurance Charges
+Text.playZones=Play Zones
+Text.majorRepair.Fund=Major Repair Fund
+Text.interest=Interest
+Text.Document=Documents
+Error.residentname.require=The resident name is required
+Text.emailNotification=Email Notification
+Text.resident.members.others=Resident/Member/Others
+
+lable.ExcelFile.Upload=Excel File Upload
+
+Document.edit.data.error=Error In Editing Document
+Maintenance.Document.Shared.success=Maintenance Document Shared Successfully
+Maintenance.Document.Shared.error=Error While Sharing Maintenance Document
+
+
+
+
+
+#Event
+Text.utlity.startdate=Event Start Date
+Text.utlity.enddate=Event End Date
+Text.Utility.Management.event=Event
+Text.Utility.Management.eventimage=Event Image
+Text.Utility.Management.eventupload=Upload
+Text.Utility.Management.eventstartdate=Start Date
+Text.Utility.Management.eventenddate=End Date
+Text.Utility.Management.eventstarttime=Start Time
+Text.Utility.Management.eventendtime=End Time
+Text.Utility.Management.eventvideopath=Video Path
+Text.Utility.Management.eventshort=Short Description
+Text.Utility.Management.eventdesc=Description
+Text.Utility.Management.Details=Event Detail
+Text.Utility.Management.createevent=Create Event
+Text.Utility.Management.modifyevent= Event Modify
+Text.Utility.Management.location=Event Location
+Text.event.function.for = Event Function
+Text.Utility.Management.modifyeventResident=Resident
+Error.customerreg.eventtitle=The event title is required
+Error.customerreg.eventshdesc=The event short description is required
+Error.customerreg.eventstartname=The event start date is required
+Error.customerreg.eventendname=The event end date is required
+Error.customerreg.eventstarttime=The event start time is required
+Error.customerreg.eventendtime=The event end time is required
+Error.customerreg.eventfunction = The event function is required
+Text.Create.Event=Create Event
+Text.Create.New.Event=Create New Event
+Text.Utility.Management.eventemp= Event Template
+success.create.event = Event created successfully
+error.create.event = Event not created
+success.update.event = Event updated successfully
+error.update.event = Event not updated
+success.delete.event = Event deleted successfully
+error.delete.event = Event not deleted
+# forum
+Error.forum.create.empty = The topic name is required
+Error.forum.create.name.length=The topic name range between 5 to 400 characters
+Error.forum.date= The valid on date is required
+Error.forum.create.keysreach.empty=The key search is required
+Error.forum.create.keysreach.length=The key search is  range between 3 to 200 characters
+Error.forum.create.desc.empty=The description is required
+Error.forum.create.name.desc.length=The description range between 5 to 2000 characters
+Create.Forum =Create Topic
+Edit.Forum = Topic Modify
+Forum=Forum
+View.Forum=View Topic Discussion
+member.type=Member Type
+Text.Relation=Relation
+Text.Tenent=Tenant
+Text.profile.Access=Profile Access
+Text.Allow=Allow
+Text.Not.Allow=Not Allow
+Breadcrumb.manage.forummgmt=Forum Management
+
+
+#Complaints
+Text.complaint.Management=Complaints
+Text.complainttitle=Complaint Title
+Text.ticketid=Ticket ID
+Text.complaintto=Complaint To
+Text.complaint.deactive=Complaint closed successfully
+Text.complaint.deactive.error=Error in complaint close. Please try again
+Text.complaint.delete=Complaint deleted successfully
+Text.complaint.subject=Subject
+Text.complaint.delete.error=Error in complaint delete. Please try again
+Breadcrumb.manage.complaintmgmt=Complaints
+Breadcrumb.utility=Utility Management
+Breadcrumb.manage.cmpltdetail=Complaint Detail
+Error.complaint.closereason=The Close reason is required
+success.complaint.created=Complaint created successfully
+error.complaint.created=Complaint not created
+Text.close.complaint = Close Complaint
+
+#Tendermgmt
+Breadcrumb.util.tendertmgmt=Tender
+Text.tendername=Tender Name
+Text.tenderdate=Tender Date
+Text.postedby =Tender Posted By
+Breadcrumb.util.Management.createtender=Tender Create
+Breadcrumb.util.Management.detailtender=Tender Detail
+Text.tenderdail =Tender Details
+Error.customerreg.tenderdesc=The Tender detail is required.
+Error.customerreg.tendertitle=The Tender name is required.
+Error.customerreg.tenderdate=The Tender date is required.
+Tender.Create.Success=Tender posted successfully
+Tender.Create.Error=Tender not created
+Tender.Delete.Success= Tender deleted successfully
+Tender.Delete.Error= Error in tender delete. Please Try Again
+Text.Tenderfile =Tender File
+
+Tender.Update.Success=Tender updated successfully
+Tender.Update.Error=Tender not updated
+Text.Tender =Tender
+Text.Tender.view =Tender Detail
+
+
+#Merchant Management
+Text.merchant.sports=Accessories Name
+Text.merchant.quantity=Quantity
+Text.merchant.jewellery=Jewellery Type
+Text.merchant.medicine=Medicine
+Text.merchant.power=Power
+Text.merchant.company=Company
+Text.profile.detail=Profile Detail
+Text.merchant.category = Category
+Text.isdcode=ISD
+Text.key.for.search=Key For Search
+Text.store.location=Store Location
+Text.store.opentime=Store Open Time
+Text.store.closetime=Store Close Time
+Text.other.detail=Other Detail
+Text.website=Website
+Text.sports.detail = Sports Detail
+Text.restaurant.detail = Restaurant Detail
+Text.jewellery.detail = Jewellery Detail
+Text.pharmacy.detail = Pharmacy Detail
+Text.Title.Merchantshopname=Shop Name
+
+
+Error.merchant.name.require=Merchant name is required
+Error.merchant.category.require=Merchant category is required
+Error.merchant.email.require=Merchant email is required
+Error.merchant.email.lenght=Merchant email should be between 8 to 50 char
+Merchant.added.success=Merchant created successfully
+Merchant.added.error=Error while adding merchant.
+Merchant.view.error=Error while fetching data
+Merchant.offeradded.error=Error while adding offer for merchant
+Merchant.offeradded.success=Merchant offer added successfully
+Merchant.deleted.success=Merchant deleted successfully
+Merchant.offerdeleted.success=Merchant offer deleted successfully
+Merchant.offerdeleted.error=Error in deleting merchant offer
+Merchant.update.success=Merchant updated successfully
+Merchant.update.error=Error while updating merchant.
+Merchant.offerupdate.error=Error while updating offer for merchant
+Merchant.offerupdate.success=Merchant offer updated successfully
+
+
+
+#Material Mgmt
+Error.customerreg.material.category=The category name is required
+Error.customerreg.material.name=The material name is required
+Error.customerreg.material.name.length=The material name length between 2 to 100 characters
+Error.customerreg.material.qnty=The material quantity is required
+Error.customerreg.material.qnty.length=The material quantity is required
+Error.customerreg.material.total.qnty=The total quantity is required
+Error.customerreg.material.qnty.total.length=The total quantity is required
+Error.customerreg.material.used.qnty=The used quantity is required
+Error.customerreg.material.qnty.used.length=The used quantity is required
+Error.customerreg.material.price=The material price is required
+Error.customerreg.material.price.length=The material price is required
+Error.customerreg.material.purchasedate=The purchase date is required
+Text.material.desc = Description
+#Feedback Management
+Text.Utility.feedback.Management=Feedback
+Text.Utility.feedbackMgmt.Management=Feedback Management
+Text.Utility.feedback.to.Management=Feedback To
+Text.Utility.feedback.Rating.Management=Rating
+Text.Utility.feedback.Management.detail=Feedback Detail
+Text.Utility.feedback.Management.FeebbackTo=Feedback To
+Text.Utility.feedback.Management.EntryDate=Entry Date
+
+
+#Expences Mgmt
+Breadcrumb.util.expencesmgmt=Expenses
+Text.expences =Expense For
+Text.amount=Amount Per Product
+Text.no.prodcut=No. Of Product
+Text.totalamt=Total Amount
+Breadcrumb.util.Management.createexpences=Add Expense
+Error.customerreg.expences=The expenses  is required
+Error.expencesreg.product=The product  is required
+Error.expencesreg.amount=The amount  is required
+Error.expencesreg.totalamt=The total amount is required
+Expence.Create.Success=Expense created successfully
+Expence.Create.Error=Expense not created
+Expence.Delete.Success= Expense deleted successfully
+Expence.Delete.Error= Error in Expense delete. Please Try Again
+Text.Expencefile =Expense File
+Breadcrumb.util.Management.modifyexpence= eNew Modify
+Expence.Update.Success=Expense updated successfully
+Expence.Update.Error=Expense Not updated
+Breadcrumb.util.Management.detailexpence=Expense Detail
+Breadcrumb.util.Management.modifyexpense=Expense Modify
+#eNews
+Breadcrumb.util.eNewsmgmt =eNews
+text.create.eNew = Post eNews
+text.images =Images
+Error.reg.title=The Title is required
+eNew.Create.Success=eNews created successfully
+eNew.Create.Error=eNews not created
+eNew.update.Success=eNews updated successfully
+eNew.update.Error=eNews not updated
+eNew.Delete.Success= eNews deleted successfully
+eNew.Delete.Error= Error in eNew delete. Please Try Again
+eNew.Update.Success=eNews updated successfully
+eNew.Update.Error=eNews Not updated
+text.view.eNew = eNews Detail
+text.uploadfile=Uploaded File
+text.modify.eNew= eNews Modify
+text.view.eNewsfile = eNews File / Image
+
+#idcard
+Breadcrumb.util.configmgmt =Config Management
+Breadcrumb.util.Idcardmgmt =ID Card Master
+Idcard.Create.Success= New id card type added successfully
+Idcard.Create.Error= Id card not created
+Idcard.update.Success= Id card updated successfully
+Idcard.update.Error= Id card not updated
+Idcard.Delete.Success= Id card deactivate successfully
+Idcard.Delete.Error= Error in Id card deactivate. Please try again
+Idcard.Active.Success= Id card Active Successfully
+Idcard.Active.Error= Error in Id card active. Please try again
+Idcard.Update.Success=Id card updated successfully
+Idcard.Update.Error=Id card not updated
+text.view.Idcard = Id card View
+text.entryDateTime=Entry Date Time
+text.modifyDateTime=Modify Date Time
+text.modify.Idcard= Id card Modify
+Text.createnewidcard=Add New ID Card Type
+Text.Entry.By=Entry By
+Text.user.name = User Name
+Text.idcard.exist = Already id card name exist
+
+#category
+#Breadcrumb.util.Categorymgmt = Category
+Breadcrumb.util.Categorymgmt = Publish Ad Config
+text.create.Category = Add Category
+Category.Create.Success= Category added successfully
+Category.Create.Error= Category not added
+Category.update.Success= Category updated successfully
+Category.update.Error= Category not updated
+Category.Delete.Success= Category deactivate successfully
+Category.Delete.Error= Error in category deactivate. Please try again
+Category.Active.Success= Category active successfully
+Category.Active.Error= Error in category active. Please try again
+Text.add.category = Category
+Text.add.Mrchcategory = Add New Merchant Category
+Text.category.image = Category Image
+Text.cate.exist = Already category name exist
+
+#staff caregory
+#Breadcrumb.util.StaffCategorymgmt =Staff Category
+Breadcrumb.util.StaffCategorymgmt =Staff & Labor Config
+#Breadcrumb.util.StaffCategoryname =Staff Category Name
+Breadcrumb.util.StaffCategoryname =Staff & Labor Config Category Name
+text.create.StaffCategory =Staff Category Create
+StaffCategory.Create.Success= Staff category added successfully
+StaffCategory.Create.Error=Staff category not created
+StaffCategory.update.Success=Staff category updated successfully
+StaffCategory.update.Error=Staff category not updated
+StaffCategory.Delete.Success= Staff category deactivate successfully
+StaffCategory.Delete.Error= Error in staff category deactivate. Please try again
+StaffCategory.Active.Success= Staff category active successfully
+StaffCategory.Active.Error= Error in staff category active. Please try again
+StaffCategory.exist = Staff category already exists
+Text.add.satff.category = Add Staff Category
+
+#committee role
+Breadcrumb.util.committeerolemgmt =Committee Role
+Breadcrumb.util.committeerolename =Committee Role Name
+text.create.committeerole = Add New Role
+committeerole.Create.Success = Committee role added successfully
+committeerole.Create.Error = Committee role not added
+committeerole.update.Success = Committee role updated successfully
+committeerole.update.Error = Committee role not updated
+committeerole.Delete.Success = Committee role deactivated successfully
+committeerole.Delete.Error = Error in committee role deactivated. Please try again
+committeerole.Active.Success = Committee Role Active Successfully
+committeerole.Active.Error = Error in committee role active. Please try again
+committeerole.exist = Committee role already exists
+
+
+#Document config
+Breadcrumb.util.documentconfigmgmt =Document Config
+Breadcrumb.util.documentconfigname =Document Type
+text.create.documentconfig = New Document Type
+documentconfig.Create.Success=Document type added successfully
+documentconfig.Create.Error=Document type not added
+documentconfig.update.Success=Document type updated successfully
+documentconfig.update.Error=Document type not updated
+documentconfig.Delete.Success= Document type deactivate Successfully
+documentconfig.Delete.Error= Error in document type deactivate. Please try again
+documentconfig.Active.Success= Document type Active Successfully
+documentconfig.Active.Error= Error in document type active. Please try again
+documentconfig.exist = Document type already exists
+
+#education
+Breadcrumb.util.educationmgmt =Education
+Breadcrumb.util.educationname =Education Type
+text.create.education = New Education Type
+Error.regeducation.title=The Education is required
+education.Create.Success=Education added successfully
+education.Create.Error=Education not added
+education.update.Success=Education type updated successfully
+education.update.Error=Education type not updated
+education.Delete.Success= Education type deactivate Successfully
+education.Delete.Error= Error in Education type deactivate. Please try again
+education.Active.Success= Education type active successfully
+education.Active.Error= Error in education type active. Please try again
+education.exist = Education type already exists.
+
+#worktype
+Breadcrumb.util.worktypemgmt =Work Type
+Breadcrumb.util.worktypename =Work Type
+text.create.worktype = New Work Type
+Error.regworktype.title=The Work type is required.
+worktype.Create.Success=Work type added successfully
+worktype.Create.Error=Work type not added
+worktype.update.Success=Work type updated successfully
+worktype.update.Error=Work type not updated
+worktype.Delete.Success= Work type deactivate successfully
+worktype.Delete.Error= Error in work type deactivate. Please try again
+worktype.Active.Success= Work type active successfully
+worktype.Active.Error= Error in work type active. Please try again
+worktype.exits = Work type already exists.
+
+#Merchant category
+Breadcrumb.util.merchantCategorymgmt =Merchant Category
+Breadcrumb.util.merchantCategoryname =Merchant Category Name
+text.create.merchantCategory = Category
+Error.regmerchantCategory.title=The Merchant category is required.
+merchantCategory.Create.Success=Merchant category added successfully
+merchantCategory.Create.Error=Merchant category not added
+merchantCategory.update.Success=Merchant category updated successfully
+merchantCategory.update.Error=Merchant category not updated
+merchantCategory.Delete.Success= Merchant category deactivate successfully
+merchantCategory.Delete.Error= Error in merchant category deactivate. Please try again
+merchantCategory.Active.Success= Merchant category active successfully
+merchantCategory.Active.Error= Error in merchant category active. Please try again
+merchantcategory.exists = Merchant category already exists
+Text.mechnt.modfy.catg = Modify Category
+
+#Report
+Text.report.merchant=Merchant Report
+Text.report.staffSalary=Staff Report
+Text.report.resident=Resident Report
+Text.report.society=Society Report
+Text.report.committee=Committee Report
+Text.report.labor=Labor Report
+Text.report.township=Township Report
+
+#Email configuration
+config.mgmt=Config Management
+email.config=Email Config
+email.config.hostname=Host Name
+email.config.portno=Port No.
+email.config.Protocol=Protocol
+email.config.fetch=No.Of Fetch
+Text.button.startengine=Engine Start
+Text.button.stopengine=Engine Stop
+
+#SMS configration
+sms.config=SMS Config
+sms.config.httpurl=HTTP URL
+sms.config.httploginid=HTTP login ID
+sms.config.httppass=HTTP Password
+sms.config.CDMAName=CDMA Name
+sms.config.SenderName=Sender Name
+sms.config.ProviderName=Provider Name
+sms.config.FetchRow=Fetch Row
+sms.config.BulkFetch=Bulk Fetch
+
+#Audit Trial
+#Text.Audit.Trial=Audit Trial
+Text.Audit.Trial=User Activity
+Text.Log.Code=Log Code
+Text.Operations=Operations
+
+
+#Notification
+Text.notification=Notifications
+notification.Delete.Success= Notification deactivate Successfully
+notification.Delete.Error= Error in Notification deactivate. Please Try Again
+notification.Active.Success= Notification Active Successfully
+notification.Active.Error= Error in Notification active. Please Try Again
+
+
+#Disputetomerchant
+Breadcrumb.disputemgmt.disputemgmt =Dispute Management
+Breadcrumb.util.disputetomercht =To Merchant
+Breadcrumb.util.disputetolabor =To Labor
+Breadcrumb.util.disputetoadmin =To Social Admin
+Breadcrumb.util.disputetomerchtname =To Merchant Name
+Breadcrumb.util.disputetolaborname =To Labor Name
+text.residentname =Name[Resident]
+text.merchantname =Merchant Name
+text.laborname =Labor Name
+text.adminname =Social Admin Name
+text.create.disputetomercht = New To Merchant
+Error.regdisputetomercht.title=The To Merchant is required and cannot be empty
+disputetomercht.Create.Success=To Merchant created successfully
+disputetomercht.Create.Error=To Merchant not created
+disputetomercht.update.Success=To Merchant updated successfully
+disputetomercht.update.Error=To Merchant not updated
+disputetomercht.Delete.Success= To Merchant deactivate successfully
+disputetomercht.Delete.Error= Error in To Merchant deactivate. Please Try Again
+disputetomercht.Active.Success= To Merchant Active successfully
+disputetomercht.Active.Error= Error in To Merchant active. Please Try Again
+Breadcrumb.disputemgmt.tomerchtview =To Merchant
+text.disputemgmt.assigntosi=Assign To Social Admin
+Breadcrumb.disputemgmt.tolaborview =To Labor
+Breadcrumb.disputemgmt.toadminview =To Social Admin
+text.newcomplaint=New Complaint
+text.createcomplaint=Complaint Creation
+text.desccomplaint=Complaint Description
+Error.regdisputetomercht.cmplttitle=The complaint title is required and cannot be empty
+Error.regdisputetomercht.cmpltdesctitle=The complaint description is required and cannot be empty
+disputemgnmt.closereason.success=Complaint closed successfully
+disputemgnmt.closereason.error=Complaint not closed
+disputemgnmt.email.success=An Email has sent successfully.
+disputemgnmt.email.error= Email  sent failure.
+disputemgnmt.sms.success= SMS has sent successfully.
+disputemgnmt.sms.error= SMS  sent failure.
+
+text.selectall=Select All
+text.search=Search
+text.create.complaint=Create Complaint
+text.complantimage=Complaint Images
+text.forwardto=Forward To
+text.video=Video
+
+#System track
+text.currentprocess= Current Process
+text.freememory=Free Memory
+text.usedmemory=Used Memory
+text.totalmemory=TotalMemory
+text.maxmemory=Maximum Memory
+text.ramsize= Total RAM Size
+text.virtual.ramsize= Virtual RAM Size
+text.free.ramsize= Free RAM Size
+text.used.ramsize= Used RAM Size
+text.ram.details = RAM Details
+text.jvm.details = Memory Details
+
+Error.value.title=The Value is required and cannot be empty
+Error.email.title=The Email is required and cannot be empty
+Error.pass.title=The Password is required and cannot be empty
+Error.host.title=The Host Name is required and cannot be empty
+Error.port.title=The Port No. is required and cannot be empty
+Error.proto.title=The Protocol is required and cannot be empty
+Error.nofet.title=The No. Of Fetch is required and cannot be empty
+
+
+#email valid alert
+email.frmt.err.msg = The email address entered is invalid format
+emailfrmt.err.title = Check Your Email!
+
+# Mobile No. validate
+mobile.frmt.err.msg = Enter Contact / Mobile No. is not correct format
+mobile.err.title = Check Your Contact / Mobile No.!
+
+
+#content Monitoring
+text.contontmonotoring =Content Monitoring
+text.content=Content
+text.imagemonitoring=Image Monitoring
+text.imageon = Image On
+text.contenton = Content On
+
+# ISD Code - Value
+Text.ISD.value = 91
+
+#dispute mgmt
+text.disputemgmt.AssignToSocialIndia= Assign To Social Admin
+text.disputemgmt.AssignTolabor = Assign To Labor
+text.disputemgmt.AssignTomerchant = Assign To Merchant
+text.issue.on = Issue On
+#signon Failure
+text.monitoring.signonfailure=Signon Failure
+text.monitoring.signonfailuecount = Failure Count
+text.monitoring.signonfailuetime = Last Failure Time
+Text.createdocument.Management=Create Document
+
+# datatable heaading purpose
+Text.datetimeformats=Entry Date Time [YYYY-MM-DD]
+Text.dateformat=Entry Date
+Text.datetimeformat=Entry Date Time
+
+
+#blood group
+Breadcrumb.config.bloodgrpmgmt=Blood Group
+text.create.bloodgrptype = New Blood Group Type
+bloodtype.Delete.Success= Blood Group  type deactivate successfully
+bloodtype.Delete.Error= Error in blood group type deactivate. Please try again
+bloodtype.Active.Success= Blood group  type active successfully
+bloodtype.Active.Error= Error in blood group  type active. Please try again
+bloodtype.exits = Blood group  type already exists.
+
+#Title - Mr.Mrs, etc...
+Breadcrumb.config.titlemgmt=Title
+text.create.titletype = New Title
+title.Delete.Success= Title deactivate successfully
+title.Delete.Error= Error in title deactivate. Please try again
+title.Active.Success= Title active successfully
+title.Active.Error= Error in title active. Please try again
+title.exits = Title type already exists.
+
+
+
+
+
+########no use################
+#biller and biller category registration
+Text.Title.Billermanage=Biller Manage
+Text.billermanage.addbiller=Add Biller
+Text.billermanage.modifybiller=Modify Biller
+Text.billermanage.deletebiller=Delete Biller
+Text.billermanage.confirmmsg.deletebiller=Are You Sure To Delete Biller
+Text.table.action=Action
+Text.table.confirm=Confirm
+Text.billermanage.table.billername=Biller Name
+Text.billermanage.table.billercategory=Biller Category
+Text.billermanage.table.billerapiurl=Biller Api Url
+Text.billermanage.table.billerapikey=Biller Api Key
+Text.billermanage.table.billeradddata=Biller Additional Data
+Text.Title.BillerCategorymanage=Biller Category Manage
+Text.billermanage.addbillercategory=Add Biller Category
+Text.billermanage.modifybillercategory=Modify Biller Category
+Text.billermanage.deletebillercategory=Delete Biller Category
+Text.billermanage.confirmmsg.deletebillercategory=Are You Sure To Delete Biller Category
+Text.billermanage.table.blrcategoryname=Category Name
+Text.billermanage.table.blrcategorystatus=Status
+Text.billerreg.name=Biller Name
+Text.billerreg.category=Biller Category
+#Text.billerreg.categoryname=Category Type
+Text.billerreg.categoryname=Publish Ad Config Type
+
+Text.billerreg.apiurl=API Url
+Text.billerreg.apikey=API Key
+Text.billerreg.apipassword=API Password
+Text.billerreg.additionaldata=Additional Data
+create.billerreg.error=Biller creation error occurred. Please try again
+create.billerreg.success=Biller created successfully
+update.billerupd.error=Biller update error occurred. Please try again
+update.billerupd.success=Biller updated successfully
+delete.billerdel.error=Biller delete error occurred. Please try again
+delete.billerdel.success=Biller deleted successfully
+edit.billeredit.error=Biller edit error occurred. Please try again
+create.blrcategoryreg.error=Biller Category creation error occurred. Please try again
+create.blrcategoryreg.success=Biller Category created successfully
+update.blrcategoryupd.error=Biller Category update error occurred. Please try again
+update.blrcategoryupd.success=Biller Category updated successfully
+delete.blrcategorydel.error=Biller Category delete error occurred. Please try again
+delete.blrcategorydel.exist=Can't delete Category because biller exist.
+delete.blrcategorydel.success=Biller Category deleted successfully
+edit.blrcategoryedit.error=Biller Category edit error occurred. Please try again
+Error.billerreg.name.empty.validate=The Billername is required and cannot be empty
+Error.billerreg.name.length.validate=The Billername must less than 50 characters long
+Error.billerreg.name.validate=The Billername can only consist of alphabetical, number, dot and underscore
+Error.billerreg.category.validate=The Biller Category is required
+Error.billerreg.apiurl.empty.validate=The Biller API url is required
+Error.billerreg.apiurl.lengrth.validate=
+Error.billerreg.apikey.empty.validate=The Biller API key is required
+Error.billerreg.apikey.length.validate=
+Error.billerreg.apipassword.empty.validate=The Biller Password is required and cannot be empty
+Error.billerreg.apipassword.length.validate=The Biller Password must be more than 6 and less than 26 characters long
+Error.billerreg.apipassword.validate=
+Error.billerreg.additionaldata.empty.validate=The Additional Data is required and cannot be empty
+Error.billerreg.additionaldata.length.validate=The Biller Password must be less than 100 characters long
+Error.blrcategoryreg.name.empty.validate=The category name is required
+Error.blrcategoryreg.name.length.validate=The Category Name must less than 50 characters long
+Error.blrcategoryreg.name.validate=The Category Name can only consist of alphabetical, number, dot and underscore
+
+#Form Feedback Icons
+Text.feedback.ok=
+Text.feedback.remove=
+Text.feedback.refresh=
+
+
+Text.Form.MerchantIP=Merchant IP
+Text.Form.Licenceid=Licence Id
+Text.Form.Accessability=Accessability
+Text.Form.MobileAPIURL=Mobile API Url
+Text.Form.MobileAPIKEY=Mobile API Key
+Text.Form.MobileAPIPWD=Mobile API Password
+Text.Form.APIURL=API Url
+Text.Form.APIKEY=API Key
+Text.Form.APIPWD=API Password
+Text.Form.Expirydate=Expiry Date
+Text.Form.commprotocol=Comm Protocol
+Text.Form.preferredpgid=Preferred PG Id
+Text.Form.Interfaceaccess=Interface Access
+Text.Form.LastRenewaldate=Last Renewal Date
+Text.Form.NextRenewaldate=Next Renewal Date
+Error.isdcode.require=Isd is required
+Error.mobileno.require=Mobile number is required
+
+#merchant_licence_config_tbl
+Text.Form.MinValidDays=Min Valid Days
+
+Text.Form.NoOfAgents=No Of Agents
+Text.Form.IsMultiLoginAllow=Is Multi Login Allow
+Text.Form.AmtLimitPerDayVd=Amt Limit Per Day Vd
+Text.Form.AmtLimitPerDayNvd=Amt Limit Per Day Nvd
+Text.Form.TxnLimitPerDayVd=Txn Limit Per Day Vd
+Text.Form.TxnLimitPerDayNvd=Txn Limit Per Day Nvd
+Text.Form.MaxLimitPerTxn=Max Limit Per Txn
+Text.Form.MinLimitPerTxn=Min Limit Per Txn
+Text.Form.DisputeResolveDays=Resolve Days
+Text.Form.DisputeCharges=Dispute Charges
+Text.Form.DisputeChargePercent=Charge Percent
+Text.Form.DisputeChargeFlat=Dispute Charge Flat
+Text.Form.DisputeChargeIndicatorPf=Dispute Charge Indicator
+Text.From.AllowedCountries= Allowed Countries
+########no use End ################
+
+
+#merchant_settlement_info_tbl
+Text.Form.SettlementCcy=Settlement Ccy
+Text.Form.PayOutSequence=PayOut Sequence
+Text.Form.BillingEmailId=Billing Email
+Text.Form.BillingAddress=Billing Address
+
+#merchant_docs_tbl
+Text.Form.DocId=Doc Id
+Text.Form.FileName=File Name
+Text.Form.IsVerified=Is Verified
+Text.Form.UploadDate=Upload Date
+
+Text.Merchant.Add=Add Merchant
+Text.Merchant.Modify=Edit Merchant
+Text.Merchant.Delete=Delete Merchant
+Text.Merchant.ConfirmDelete=Are you sure to delete merchant
+Text.Merchant.Add.Success=Merchant created successfully
+Text.Merchant.Update.Success=Merchant updated successfully
+Text.Merchant.Update.Error=Error in merchant update. Please try again
+Text.Merchant.Add.Error=Error in merchant creation. Please try again
+Text.Merchant.Modify.Success=Merchant modified successfully
+Text.Merchant.Modify.Error=Error in merchant modification. Please try again
+Text.Merchant.Delete.Success=Merchant deleted successfully
+Text.Merchant.Delete.Error=Error in merchant deletion. Please try again
+Text.Merchant.OfferName.Require=Offer name is required
+Text.Merchant.ActualPrice.Require=Actual price is required
+Text.Merchant.BroucherName.Require=Brochure name is required
+Text.Merchant.OfferPrice.Require=Offer price is required
+Text.Merchant.catlogimage.require = Catalogue is required
+
+Text.Button.Add=Add
+Text.Button.Delete=Delete
+Text.Button.Modify=Modify
+Text.button.set= Set
+
+
+
+#Knownus -
+Breadcrumb.config.knownusmgmt= Relationships
+text.create.knownustype = Add New Relationships
+knownus.Delete.Success= Relationships deactivate successfully
+knownus.Delete.Error= Error in Relationships deactivate. Please try again
+knownus.Active.Success= Relationships active successfully
+knownus.Active.Error= Error in Relationships active. Please try again
+knownus.exits = Relationships already exists.
+update.emailtemplate.error=update error occurred. Please try again
+update.emailtemplate.Success=Mail template updated successfully
+
+#product Accept
+sucess.productorder.accept=Your Order Accepted, Please check again in app.
+error.productorder.accept=Your Order Not Accepted, Please check again in app.
+success.productorder.decline=Your Order Decline, Please check again in app.
+Text.selectfield.set= Select Criteria
+Text.report.uploadfailed=Upload Excel Failure
+Breadcrumb.config.function= Function
+Breadcrumb.config.newfunction= Add New Function
+Breadcrumb.config.functionname= Function Name
+Breadcrumb.config.templatetext= Template Text
+
+
+Breadcrumb.util.bookingmgmt=Booking
+Text.table.bookingusrname= User Name
+Text.table.bookingtitle=Booking Title
+Text.table.bookingplace=Booking Place
+Text.table.bookingmobno=Booking Mobile No.
+Text.table.bookingstarttime= Start Time
+Text.table.bookingendtime= End Time
+Breadcrumb.manage.bookingdetail=Booking Detail
+Text.table.bookingstatus=Approve Status
+
+#report issues
+Text.report.reportissue=Report Issues
+Breadcrumb.util.reportissueview=Report Issue Detail
+Text.report.reportto=Report To
+Text.report.reporttotype=Report To Type
+Breadcrumb.config.respnsemgmt=Response Message
+text.create.responsetype = Response Message
+text.new.response.add = Add New Response
+
+Issuelist.Create.Success= New issue list added successfully
+Issuelist.Create.Error= issue list not created
+Text.facility= Facility
+Text.facilityPlace=Place
+Text.facilityimage= Image
+Text.facilityname= Facility Name
+Text.newfacility=Add New Facility
+facility.Create.Success=New facility added successfully
+facility.Create.Error=Facility not created
+facility.update.Success=Facility updated successfully
+facility.update.Error=Facility not updated
+
+#whyshould
+Error.profile.whyshould.name=The why should is required
+Error.profile.whyshould.desc=The description is required
+whyshoudAction.Create.Success=Why should i update added successfully
+whyshoudAction.Create.Error=Why should i update not created
+whyshoudAction.Update.Success=Why should i update updated successfully
+whyshoudAction.Update.Error=Why should i update not updated
+
+# Facility
+Text.add.facility = Add Facility
+Text.modify.facility = Facility Modify
+
+# response
+Text.add.responsecdmsg = Add Response Message
+Error.response.resmsg= The response message is required
+
+#function
+Error.functionname.funname=The function is required
+Error.functiontext.funtemp=The template text is required
+
+#skill
+Text.skillname=Skill Name
+Text.skillnamemgmt =  Skills Manage
+Error.selcat.selc=The select category is required
+Error.skilnam.skillname=The skill name is required
+
+#Gatekeeper
+Breadcrumb.manage.gatepass= Gate pass
+Breadcrumb.manage.issuegatepass= Issue Gate pass
+Text.visitorname=Visitor Name
+Text.visitorno=Visitor No.
+Text.visitormobno=Visitor Mobile No.
+Text.accompanies=No of Accompanies
+Text.datevisit=Date of Issue
+Text.time=Time
+Text.vehicleno=Vehicle No
+Text.create.gatepass = Create Gate Pass
+Text.create1.gatepass = Create Gate Pass
+Text.create.dob = Date of Birth
+Text.expirydate=Expiry Date
+Text.passtype=Pass Type
+Error.visitorreg.gatepass=The visitor name is required
+Error.visitorreg.issuedate=The issue date is required
+Error.visitorreg.skill=The Skills is required
+Error.customerreg.expirydate=Expiry date is required
+Text.visitorlocation=Visitor Location
+Breadcrumb.manage.reusegatepass= Re-Issue Gate pass
+Breadcrumb.manage.viewgatepass = View Gate pass
+Breadcrumb.manage.issuegatepasshistory = Gatepass History
+Text.no.of.record = No. Of Record
+Text.no.of.grandtotal = Grand Total
+Text.no.of.maintenancebill = Maintenance Bill Report
+Text.issuetitle=Issue Title
+
+#Reconcile
+Breadcrumb.Reconcile = Reconcile
+Breadcrumb.paygaterecon = Paygate Reconcile
+Breadcrumb.cybrpltrecon = Cyberplat Reconcile
+Breadcrumb.reconresult = Reconcile Result
+
+Table.recnhead.filename = File Name
+Table.recnhead.sno = S.No.
+Table.recnhead.township = Township Name
+Table.recnhead.society = Society Name
+Table.recnhead.uplddate = Uploaded Date
+Table.recnhead.reconsts = Reconcile Status
+Table.recnhead.action = Action
+Table.recnhead.orderno= Order No
+Table.recnhead.amount= Amount
+Table.recnhead.transaction=Transaction Date
+Table.recnhead.marchstatus=Match Status
+Table.recnhead.reconicile=Reconcile Status
+Table.rechhead.reason = Status Reason
+Text.Utility.Management.flashnews= Flash News
+Text.Utility.Management.createflashnews= Flash News Modify 
+Text.Utility.Management.flashnewcontent= Flash News Content
+flashnew.Create.Success=Flash news created successfully.
+flashnew.Create.Error=Flash new Error.
+flashnew.update.Success=Flash news updated successfully.
+flashnew.update.Error=Flash new Update Error.
+Error.customerreg.time=Start time is required
+Error.customerreg.flashnews=Flash news content is required
+
+
+#campaign
+Text.Campaign.Imgae=Institution Logo
+Text.Campaign.Name=Institution Name
+Text.Campaign.Contact=Institution Contact No.
+Text.Campaign.Management=Donation
+Text.CreateCampaign.Management=Create Donation
+Text.ModifyCampaign.Management=Donation Modify
+Text.ViewCampaign.Management=Donation Detail
+
+Error.campaign.townshipname=Townshipname is required
+Error.campaign.societyname=Societyname is required
+Error.campaign.institutionname =Institution name is required
+Error.campaign.institutioncontact=Institution contact no. is required
+Error.campaign.images=Donation image is required
+#FLash News
+Text.label.Expirytime = Expiry Time
+Error.title.titlecontent=Flash news title is required

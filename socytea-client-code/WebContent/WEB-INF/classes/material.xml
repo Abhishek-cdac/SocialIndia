@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+<struts>
+
+ <package name="materialMgmt" extends="default">
+
+  
+   <action name="materialMgmt">
+   <result name="success">${getText("Text.utility.materialMgmt")}
+   </result>
+  </action>
+
+	<action name="materialMgmtTable" class="com.socialindia.material.materialMgmt">
+   <result type="json"></result>
+  </action>
+  
+  <action name="getmaterialcategory" class="com.socialindia.material.materialCategoryList">
+     <result name="success">resources/jsp/material/getCategoryList.jsp</result>
+    <result name="input">resources/jsp/material/getCategoryList.jsp</result>
+  </action>
+  
+  
+  <action name="createMaterialForm" class="com.socialindia.material.createMaterialAction">
+     <result name="success">resources/jsp/material/creatematerial.jsp</result>
+    <result name="input">resources/jsp/material/materialMgmt.jsp</result>
+  </action>
+  
+   <!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  <action name="materialmgmtcrtsts" class="com.socialindia.material.Materialcrtalertmsg">    
+    <result name="success">resources/jsp/material/materialMgmt.jsp</result>    	
+  </action>
+  <!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+  
+   <action name="materialCreateAction" class="com.socialindia.material.createMaterialAction" method="materialCreateAction">
+    <!--  <result name="success">resources/jsp/material/materialMgmt.jsp</result>
+     <result name="input">resources/jsp/material/materialMgmt.jsp</result> -->
+     <result name="success" type="redirectAction">materialmgmtcrtsts</result>
+     <result name="input" type="redirectAction">materialmgmtcrtsts</result> 
+  </action>
+  
+   <action name="materialViewAction" class="com.socialindia.material.materialViewAction">
+     <result name="success">resources/jsp/material/materialView.jsp</result>
+    <result name="input">resources/jsp/material/materialMgmt.jsp</result>
+  </action>
+  
+   <action name="deleteMaterial" class="com.socialindia.material.deleteMaterial">
+     <result name="success">resources/jsp/material/materialMgmt.jsp</result>
+    <result name="input">resources/jsp/material/materialMgmt.jsp</result>
+  </action>
+  
+  <action name="materialEditAction" class="com.socialindia.material.materialEditAction">
+     <result name="success">resources/jsp/material/materialEditForm.jsp</result>
+    <result name="input">resources/jsp/material/materialMgmt.jsp</result>
+  </action>
+  
+  <action name="materialUpdateAction" class="com.socialindia.material.materialUpdateAction">
+     <result name="success">resources/jsp/material/materialMgmt.jsp</result>
+    <result name="input">resources/jsp/material/materialEditForm.jsp</result>
+  </action>
+  
+ </package>
+</struts>

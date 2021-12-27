@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.letspay.vo.IsdcodeMasterTblVo" table="isdcode_mst_tbl">
+		<id name="isdCodeid" column="ISD_CODE_ID" type="integer">
+			<generator class="native"></generator>
+		</id>
+		<property name="isdCodevalue" column="ISD_CODE" type="integer"></property>
+		<property name="entryBy" column="ENTRY_BY" type="integer"></property>
+		<property name="entryDatetime" column="ENTRY_DATETIME" type="date"></property>
+		<property name="modifyDatetime" column="MODY_DATETIME" type="date"></property>
+		<many-to-one name="countryId" column="COUNTRY_ID" class="com.letspay.vo.CountryMasterTblVo" lazy="false"></many-to-one>
+	</class>
+</hibernate-mapping>

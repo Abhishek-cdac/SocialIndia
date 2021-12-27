@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"  "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="documentconfiglist" extends="default">
+
+  <action name="documentconfigmanagedatatable" class="com.socialindia.documentconfiglistmaster.DocumentconfigMasterDTable">
+    <result type="json"></result>
+  </action>
+  
+  	<!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  	<action name="doctypctrstss" class="com.socialindia.documentconfiglistmaster.DoctypAlertMsg">    
+    	<result name="success">resources/jsp/documentconfiglist/documentconfig.jsp</result>  
+  	</action>
+  	<!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+  
+   <action name="createdocumentconfigtype" class="com.socialindia.documentconfiglistmaster.DocumentconfigServices"  method="documentconfigCreateFun">	
+    <result name="success" type="redirectAction">doctypctrstss</result>
+    <result name="input" type="redirectAction">doctypctrstss</result>
+    <result name="error" type="redirectAction">doctypctrstss</result>
+    <!-- <result name="success">resources/jsp/documentconfiglist/documentconfig.jsp</result>
+    <result name="input">resources/jsp/documentconfiglist/documentconfig.jsp</result>
+    <result name="error">resources/jsp/documentconfiglist/documentconfig.jsp</result> -->
+  </action> 
+   <action name="deleteactiondocumentconfig" class="com.socialindia.documentconfiglistmaster.DocumentconfigServices"
+   method="deleteActionfun">	
+    <result name="success">resources/jsp/documentconfiglist/documentconfig.jsp</result>
+    <result name="input">resources/jsp/documentconfiglist/documentconfig.jsp</result>
+    <result name="error">resources/jsp/documentconfiglist/documentconfig.jsp</result>
+  </action> 
+   <action name="activeactiondocumentconfig" class="com.socialindia.documentconfiglistmaster.DocumentconfigServices"
+   method="activeActionfun">	
+    <result name="success">resources/jsp/documentconfiglist/documentconfig.jsp</result>
+    <result name="input">resources/jsp/documentconfiglist/documentconfig.jsp</result>
+    <result name="error">resources/jsp/documentconfiglist/documentconfig.jsp</result>
+  </action> 
+ </package>
+</struts>

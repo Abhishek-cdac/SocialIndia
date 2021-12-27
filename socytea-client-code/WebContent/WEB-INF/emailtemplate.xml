@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="emailtemp" extends="default">
+
+ <action name="getemailtemplatesub" class="com.socialindia.emailtemplate.EmailTemp" method="emailTemplatesub">
+ <result name="success">resources/jsp/templateDesign/emailTemplatesub.jsp</result>
+    <result name="input">resources/jsp/templateDesign/emailTemplatesub.jsp</result>
+  </action>
+  
+   <action name="templatesubject" class="com.socialindia.emailtemplate.EmailTemp" method="templatesubjectadcontent">
+ 	<result name="success">resources/jsp/templateDesign/emailsubcon.jsp</result>
+    <result name="input">resources/jsp/templateDesign/emailsubcon.jsp</result>
+  </action>
+  <action name="tempUpdate" class="com.socialindia.emailtemplate.EmailTemp" method="tempUpdateAction">
+ 	<result name="success">resources/jsp/templateDesign/tempDesign.jsp</result>
+    <result name="input">resources/jsp/templateDesign/tempDesign.jsp</result>
+  </action>
+ </package>
+</struts>

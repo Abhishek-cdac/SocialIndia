@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+
+<struts>
+
+	<package name="menuProcess" extends="default">
+
+		<action name="usermgmt">
+			<result name="success">${getText("Text.Uam.User")}
+			</result>
+		</action>
+		<action name="group">
+			<result name="success">${getText("Text.Uam.Groups")}
+			</result>
+		</action>
+		<action name="rights" class="com.socialindia.uam.GroupAction">
+			<result name="success">${getText("Text.Uam.Rights")}
+			</result>
+		</action>
+
+		<action name="staffmgmt">
+			<result name="success">${getText("Text.general.Staffmgnt")}
+			</result>
+		</action>
+
+		<action name="labourmgmt">
+			<result name="success">${getText("Text.general.Labourmgnt")}
+			</result>
+		</action>
+
+
+		<action name="townshipmgmt">
+			<result name="success">${getText("Text.general.townshipMgmt")}
+			</result>
+		</action>
+
+		<action name="underconstraction" class="com.socialindia.login.underconstraction">
+			<result name="success">${getText("Text.under.constraction")}
+			</result>
+		</action>
+		<action name="companymgmt">
+			<result name="success">${getText("Text.company.companymgmt")}
+			</result>
+		</action>
+		<action name="residentmgmt">
+			<result name="success">${getText("Text.resident.residentmgmt")}
+			</result>
+		</action>
+		<action name="ipTrack">
+			<result name="success">${getText("Text.monitoring.iptrack")}
+			</result>
+		</action>
+		<!-- <action name="merchantManage" class="com.letspay.merchant.MerchantAction"> 
+			<result name="success">${getText("Text.Merchant.MerchantManage")} </result> 
+			</action> -->
+		<action name="utititymgmt">
+			<result name="success">${getText("Text.utility.documentmgmt")}
+			</result>
+		</action>
+		<action name="eventMgmt">
+			<result name="success">${getText("Text.utilitymgmt.event")}
+			</result>
+		</action>
+		<action name="complaintsmgmt">
+			<result name="success">${getText("Text.utility.complaintsmgmt")}
+			</result>
+		</action>
+		<action name="merchantMgmtTbl">
+			<result name="success">${getText("Text.manage.merchant")}</result>
+		</action>
+		<action name="tendermgmt">
+			<result name="success">${getText("Text.utility.tender")}</result>
+		</action>
+		<action name="feedbackMgmt">
+			<result name="success">${getText("Text.utility.feedbackMgmt")}
+			</result>
+		</action>
+		<action name="expencesmgmt">
+			<result name="success">${getText("Text.utility.expences")}</result>
+		</action>
+		<action name="eNewsmgmt">
+			<result name="success">${getText("Text.utility.enews")}</result>
+		</action>
+		<action name="idcardmgmt">
+			<result name="success">${getText("Text.configmegmt.idcardmaster")}</result>
+		</action>
+		<action name="category">
+			<result name="success">${getText("Text.configmegmt.category")}</result>
+		</action>
+		<action name="staffcategory">
+			<result name="success">${getText("Text.configmegmt.staffcategory")}
+			</result>
+		</action>
+		<action name="committeerole">
+			<result name="success">${getText("Text.configmegmt.committeerole")}
+			</result>
+		</action>
+		<action name="documentconfig">
+			<result name="success">${getText("Text.configmegmt.documentconfig")}
+			</result>
+		</action>
+		<action name="merchantReportTbl">
+			<result name="success">${getText("Text.merchant.reportTbl")}</result>
+		</action>
+		<action name="education">
+			<result name="success">${getText("Text.configmegmt.education")}</result>
+		</action>
+		<action name="stafReportTbl">
+			<result name="success">${getText("Text.report.stafTbl")}</result>
+		</action>
+		<action name="worktypetbl">
+			<result name="success">${getText("Text.configmegmt.worktype")}</result>
+		</action>
+		<action name="merchantcategtbl">
+			<result name="success">${getText("Text.configmegmt.merchantcateg")}
+			</result>
+		</action>
+		<action name="residentReportTbl">
+			<result name="success">${getText("Text.report.residentReportTbl")}
+			</result>
+		</action>
+		<action name="labourReportTbl">
+			<result name="success">${getText("Text.report.labourReportTbl")}
+			</result>
+		</action>
+		<action name="emailconfig" class="com.socialindia.emailconfig.Emailconfigmgmt">
+			<result name="success">${getText("Text.configmegmt.emailconfig")}
+			</result>
+		</action>
+		<action name="smsconfig" class="com.socialindia.SMSconfig.SMSconfigmgmt">
+			<result name="success">${getText("Text.configmegmt.smsconfig")}</result>
+		</action>
+		<action name="societyReportTbl">
+			<result name="success">${getText("Text.report.societyReportTbl")}
+			</result>
+		</action>
+		<action name="townshipReportTbl">
+			<result name="success">${getText("Text.report.townshipReportTbl")}
+			</result>
+		</action>
+		<action name="auditTrialReportTbl">
+			<result name="success">${getText("Text.report.auditTrialReportTbl")}
+			</result>
+		</action>
+		<action name="committeeReportTbl">
+			<result name="success">${getText("Text.report.committeeReportTbl")}
+			</result>
+		</action>
+		<action name="tomerchanttbl">
+			<result name="success">${getText("Text.disputemegmt.tomerchanttbl")}
+			</result>
+		</action>
+		<action name="tolabortbl">
+			<result name="success">${getText("Text.disputemegmt.tolabortbl")}
+			</result>
+		</action>
+		<action name="tosocialadmintbl">
+			<result name="success">${getText("Text.disputemegmt.tosocialadmintbl")}
+			</result>
+		</action>
+		<action name="systemtrack">
+			<result name="success">${getText("Text.monitoring.systemtrack")}
+			</result>
+		</action>
+		<action name="forummgmt">
+			<result name="success">${getText("Text.utility.forumMgmt")}</result>
+		</action>
+		<action name="contentmonitoring">
+			<result name="success">${getText("Text.monitoring.contentmonitoring")}
+			</result>
+		</action>
+		<action name="imagemonitoring">
+			<result name="success">${getText("Text.monitoring.imagemonitoring")}
+			</result>
+		</action>
+		<action name="signonfailurereport">
+			<result name="success">${getText("Text.monitoring.signonfailure")}
+			</result>
+		</action>
+		<action name="bloodgroup">
+			<result name="success">${getText("Text.configmegmt.bloodgroup")}
+			</result>
+		</action>
+		<action name="titlelist">
+			<result name="success">${getText("Text.configmegmt.title")}</result>
+		</action>
+		<action name="knownus">
+			<result name="success">${getText("Text.configmegmt.knownus")}</result>
+		</action>
+		<action name="mailtemdesign">
+			<result name="success">${getText("Text.configmegmt.mailtemdesign")}
+			</result>
+		</action>
+		<action name="uploadexcelfailed">
+			<result name="success">${getText("Text.report.uploadexcelfailed")}
+			</result>
+		</action>
+
+		<action name="function">
+			<result name="success">${getText("Text.configmegmt.function")}</result>
+		</action>
+		<action name="bookingmgmttbl">
+			<result name="success">${getText("Text.utility.bookingmgmt")}</result>
+		</action>
+		<action name="reportissuetbl">
+			<result name="success">${getText("Text.report.reportissuemgmttbl")}
+			</result>
+		</action>
+		<action name="responsecodetbl">
+			<result name="success">${getText("Text.configmegmt.responsecodetbl")}
+			</result>
+		</action>
+		<action name="issuemstrtbl">
+			<result name="success">${getText("Text.configmegmt.issuemstrtbl")}
+			</result>
+		</action>
+
+		<action name="facilitymgmt">
+			<result name="success">${getText("Text.configmegmt.facilitymgmt")}
+			</result>
+		</action>
+		<action name="whyshould">
+			<result name="success">${getText("Text.whyshouldmgmt.whyshouldmgmttbl")}
+			</result>
+		</action>
+		<action name="skillmgmt">
+			<result name="success">${getText("Text.skillmgmt.skillmgmtbl")}</result>
+		</action>
+		<action name="Issuegatepassmgmttbl">
+			<result name="success">${getText("Text.utility.Issuegatepassmgmttbl")}
+			</result>
+		</action>
+		<action name="maintenancebill">
+			<result name="success">${getText("Text.utility.maintancebill")}</result>
+		</action>
+		<action name="maintenancebillreport">
+			<result name="success">${getText("Text.utility.maintancebillreport")}</result>
+		</action>
+		<action name="gatepasshistory">
+			<result name="success">${getText("Text.gatepass.gatepasshistory")}</result>
+		</action>
+
+		<action name="paygatereconnmgmt">
+			<result name="success">${getText("Text.recon.paygatereconmgmt")}</result>
+		</action>
+	
+		<action name="cyberplatreconnmgmt">
+			<result name="success">${getText("Text.recon.cyberpltreconmgmt")}</result>
+		</action>
+			<action name="reconicileresult">
+			<result name="success">${getText("Text.recon.reconicileresult")}</result>
+		</action>
+			<action name="flashnews">
+			<result name="success">${getText("Text.flashnews.flashnewsmgmt")}</result>
+		</action>
+		
+	<action name="donate">
+			<result name="success">${getText("Text.donate.donatemgmt")}</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC  "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN" "../lib/struts-2.3.dtd">
+
+<struts>
+ <package name="bloodgrouplist" extends="default">
+  <action name="bloodtypemanagedatatable" class="com.socialindia.bloodtypelistmaster.bloodtypeMasterDTable">
+    <result type="json"></result>
+  </action>
+   
+    <!--Refresh / reload avoid to recall or reinsert [Alert Purpose Start] -->
+  	<action name="bloodcrtsts" class="com.socialindia.bloodtypelistmaster.BloodtypAlertMsg">    
+    	<result name="success">resources/jsp/config/bloodgroup.jsp</result>
+  	</action>
+  	<!--Refresh / reload avoid to recall or reinsert [Alert Purpose End] -->
+   
+   <action name="createbloodgrouptype" class="com.socialindia.bloodtypelistmaster.bloodtypeServices" method="bloodtypeCreateFun">	
+    <result name="success" type="redirectAction">bloodcrtsts</result>
+    <result name="input" type="redirectAction">bloodcrtsts</result>
+    <result name="error" type="redirectAction">bloodcrtsts</result>
+    <!-- <result name="success">resources/jsp/config/bloodgroup.jsp</result>
+    <result name="input">resources/jsp/config/bloodgroup.jsp</result>
+    <result name="error">resources/jsp/config/bloodgroup.jsp</result> -->
+  </action> 
+   <action name="deleteactionbloodtype" class="com.socialindia.bloodtypelistmaster.bloodtypeServices"  method="deleteActionfun">	
+    <result name="success">resources/jsp/config/bloodgroup.jsp</result>
+    <result name="input">resources/jsp/config/bloodgroup.jsp</result>
+    <result name="error">resources/jsp/config/bloodgroup.jsp</result>
+  </action> 
+   <action name="activeactionbloodtype" class="com.socialindia.bloodtypelistmaster.bloodtypeServices"
+   method="activeActionfun">	
+    <result name="success">resources/jsp/config/bloodgroup.jsp</result>
+    <result name="input">resources/jsp/config/bloodgroup.jsp</result>
+    <result name="error">resources/jsp/config/bloodgroup.jsp</result>
+  </action> 
+ </package>
+</struts>
